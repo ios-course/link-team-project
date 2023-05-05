@@ -12,8 +12,8 @@ Each user can then add expenses they have incurred, such as meals, transportatio
 
 ## Instalation
 To install the application, please, see the list of requirements and restrictions settings below:
-* Deployment target for iOS SDKs - 15.0
-* Supported devices - iPhone only
+* Deployment target for iOS SDKs - 16.0
+* Supported devices - iPhone
 * Supported modes - portrait
 * Dark/night theme - deactivate
 
