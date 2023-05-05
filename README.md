@@ -13,3 +13,11 @@ Each user can then add expenses they have incurred, such as meals, transportatio
 ## Instalation
 
 Will be added later when we release the first version of the project.
+
+## Authors
+
+| Name                | Github Contact     | Role    |
+|---------------------|--------------------|---------|
+| Yuliya Nastiushkina | @YuliaNastiushkina | TL, SWE |
+| Ivan Kirpichonok    | @kirpichonok       | PO, SWE |
+| Alex Levitski       | @levvaa            | PM, SWE |
