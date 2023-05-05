@@ -11,8 +11,13 @@ Each user can then add expenses they have incurred, such as meals, transportatio
 ![Swift](https://img.shields.io/badge/Swift-5.8-blueviolet) ![macOS](https://img.shields.io/badge/macOS-13.3.1-green) ![Xcode](https://img.shields.io/badge/Xcode-14.3-blue) ![swiftFormat](https://img.shields.io/badge/swiftFormat-0.51.7-yellow) ![swiftLint](https://img.shields.io/badge/swiftLint-0.51.0-orange)
 
 ## Instalation
+To install the application, please, see the list of requirements and restrictions settings below:
+* Deployment target for iOS SDKs - 15.0
+* Supported devices - iPhone only
+* Supported modes - portrait
+* Dark/night theme - deactivate
 
-Will be added later when we release the first version of the project.
+Instruction about instalation will be added later when we release the first version of the project.
 
 ## Authors
 
