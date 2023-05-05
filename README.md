@@ -26,3 +26,11 @@ Instruction about instalation will be added later when we release the first vers
 | Yuliya Nastiushkina | @YuliaNastiushkina | TL, SWE |
 | Ivan Kirpichonok    | @kirpichonok       | PO, SWE |
 | Alex Levitski       | @levvaa            | PM, SWE |
+
+## License
+
+Will be added later.
+
+## Notes
+
+More information about application will ba added during development.
