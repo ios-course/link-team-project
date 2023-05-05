@@ -2,9 +2,8 @@
 
 ## Description
 
-JourneySquad is an iOS application that allows groups of travelers to share expenses and keep track of their spending during their trip. 
-With JourneySquad, users can easily create a group for trip and add other users to it. 
-Each user can then add expenses they have incurred, such as meals, transportation, or hotels and apartments, and the app will automatically calculate each user's share of the total cost.
+The repo contains implementation of the JourneySquad app.
+JourneySquad is an iOS application to allow groups of travelers to share expenses and keep track of their spending during their trip.
 
 ### The app is under active development.
 
