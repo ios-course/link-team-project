@@ -1,0 +1,14 @@
+# minimum swiftformat version
+--minversion 0.51.7
+
+# options
+--funcattributes same-line
+--ranges no-space
+
+# rules
+--enable \
+	wrapEnumCases
+
+--disable \
+	redundantPattern, \
+	wrapMultilineStatementBraces,
