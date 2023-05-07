@@ -15,14 +15,12 @@ Versions of our environment:
 
 ## Additional info
 
-* Deployment target for iOS SDKs - 16.0
+* Deployment target for iOS SDKs - 16.0+
 * Supported devices - iPhone
-* Supported modes - portrait
-* Dark/night theme - deactivate
 
 ## Authors
 
-| Name| Github Contact | Role |
+| Name | Github Contact | Role |
 |---------------------|--------------------|---------|
 | Yuliya Nastiushkina | @YuliaNastiushkina | TL, SWE |
 | Ivan Kirpichonok    | @kirpichonok       | PO, SWE |
