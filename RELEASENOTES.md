@@ -1,5 +1,3 @@
-Version 0.0.0
-Release date dd.mm.yy
+All notable release notes to this project will be published in this file.
 
-## What changed ?
-1.
+Information about format of this file you can find here(https://github.com/ios-course/link-team-project/wiki/Release-notes-format).
