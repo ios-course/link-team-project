@@ -1,5 +1,7 @@
 # Release Notes
 
-All notable release notes to this project will be published in this file.
+This file contains information for the users about the actual changes in the latest version.
 
-Information about format of this file you can find here(https://github.com/ios-course/link-team-project/wiki/Release-notes-format).
+This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
+
+Information about format of this file you can find [here](https://github.com/ios-course/link-team-project/wiki/Release-notes-format).
