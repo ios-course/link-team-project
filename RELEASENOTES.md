@@ -1,6 +1,6 @@
 # Release Notes
 
-This file contains information for the users about the actual changes in the latest version.
+This file contains information for the users about the actual changes in the latest release.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
