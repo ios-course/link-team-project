@@ -1,8 +1,10 @@
 import Foundation
 /// Indicates error that can be caused by incorrect input data for the bill.
 enum BillValidationError: LocalizedError {
-    /// Indicates invalid participant's name.
-    case invalidParticipantName(String)
+    /// Indicates too long participant's name.
+    case tooLongName
+    /// Occurs when the participant's name doesn't contain no one letter.
+    case noOneLetterInName(String)
     /// Occurs when negative value is passed for fields that  can't be such.
     case negativeValue(Decimal)
     /// Occurs when the number of decimal places is greater than two.
@@ -16,18 +18,20 @@ enum BillValidationError: LocalizedError {
     /// The text message to output according to the error.
     var errorDescription: String? {
         switch self {
-        case let .invalidParticipantName(participant):
-            return "Invalid participant name: \(participant)."
+        case .tooLongName:
+            return "The maximum name length is 50 characters."
+        case let .noOneLetterInName(incorrectName):
+            return "The name: \(incorrectName) doesn't contain no one letter."
         case let .negativeValue(negativeSum):
             return "The money can't be negative: \(negativeSum)."
-        case let .invalidFormatOfSum(invalidSum):
-            return "Invalid format of the currency: \(invalidSum). Maximum accuracy is two decimal places."
+        case let .invalidFormatOfSum(invalidFormattedSum):
+            return "Invalid format of the currency: \(invalidFormattedSum). Maximum accuracy is two decimal places."
         case .zeroSumOfBill:
             return "The sum of bill can't be equal to zero."
         case .balanceIsViolated:
-            return "The sum of the bill must equal the sum of all the participants' sums."
-        case let .futureDate(date):
-            return "Error! This is a date in the future: \(date) ."
+            return "The sum of the bill must equal the sum of all the participants's sums."
+        case let .futureDate(futureDate):
+            return "Error! This is a date in the future: \(futureDate)."
         }
     }
 }
