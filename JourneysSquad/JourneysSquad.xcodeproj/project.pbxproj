@@ -11,8 +11,17 @@
 		9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0383B82A04D7F4005E333D /* ContentView.swift */; };
 		9B0383BB2A04D7F6005E333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BA2A04D7F6005E333D /* Assets.xcassets */; };
 		9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */; };
-		9BB770FF2A0E1E8100C14987 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB770FE2A0E1E8100C14987 /* BillValidationError.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B1DBD992A0E2EE50082999A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B0383AB2A04D7F4005E333D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B0383B22A04D7F4005E333D;
+			remoteInfo = JourneysSquad;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9B0383B32A04D7F4005E333D /* JourneysSquad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JourneysSquad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,11 +29,18 @@
 		9B0383B82A04D7F4005E333D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9B0383BA2A04D7F6005E333D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9BB770FE2A0E1E8100C14987 /* BillValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
+		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9B0383B02A04D7F4005E333D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B1DBD922A0E2EE40082999A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0383B52A04D7F4005E333D /* JourneysSquad */,
+				9B1DBD962A0E2EE40082999A /* JourneysSquadTests */,
 				9B0383B42A04D7F4005E333D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				9B0383B32A04D7F4005E333D /* JourneysSquad.app */,
+				9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,7 +73,6 @@
 			children = (
 				9B0383B62A04D7F4005E333D /* JourneysSquadApp.swift */,
 				9B0383B82A04D7F4005E333D /* ContentView.swift */,
-				9BB771002A0E1E9100C14987 /* Model */,
 				9B0383BA2A04D7F6005E333D /* Assets.xcassets */,
 				9B0383BC2A04D7F6005E333D /* Preview Content */,
 			);
@@ -70,12 +87,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9BB771002A0E1E9100C14987 /* Model */ = {
+		9B1DBD962A0E2EE40082999A /* JourneysSquadTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BB770FE2A0E1E8100C14987 /* BillValidationError.swift */,
 			);
-			path = Model;
+			path = JourneysSquadTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +115,24 @@
 			productReference = 9B0383B32A04D7F4005E333D /* JourneysSquad.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9B1DBD942A0E2EE40082999A /* JourneysSquadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B1DBD9D2A0E2EE50082999A /* Build configuration list for PBXNativeTarget "JourneysSquadTests" */;
+			buildPhases = (
+				9B1DBD922A0E2EE40082999A /* Frameworks */,
+				9B1DBD912A0E2EE40082999A /* Sources */,
+				9B1DBD932A0E2EE40082999A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B1DBD9A2A0E2EE50082999A /* PBXTargetDependency */,
+			);
+			name = JourneysSquadTests;
+			productName = JourneysSquadTests;
+			productReference = 9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +145,10 @@
 				TargetAttributes = {
 					9B0383B22A04D7F4005E333D = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					9B1DBD942A0E2EE40082999A = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 9B0383B22A04D7F4005E333D;
 					};
 				};
 			};
@@ -128,6 +166,7 @@
 			projectRoot = "";
 			targets = (
 				9B0383B22A04D7F4005E333D /* JourneysSquad */,
+				9B1DBD942A0E2EE40082999A /* JourneysSquadTests */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +178,13 @@
 			files = (
 				9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */,
 				9B0383BB2A04D7F6005E333D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B1DBD932A0E2EE40082999A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,13 +217,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BB770FF2A0E1E8100C14987 /* BillValidationError.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B1DBD912A0E2EE40082999A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B1DBD9A2A0E2EE50082999A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B0383B22A04D7F4005E333D /* JourneysSquad */;
+			targetProxy = 9B1DBD992A0E2EE50082999A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9B0383BF2A04D7F6005E333D /* Debug */ = {
@@ -362,6 +422,48 @@
 			};
 			name = Release;
 		};
+		9B1DBD9B2A0E2EE50082999A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.link-team-project.iOS.JourneysSquadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JourneysSquad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JourneysSquad";
+			};
+			name = Debug;
+		};
+		9B1DBD9C2A0E2EE50082999A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.link-team-project.iOS.JourneysSquadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JourneysSquad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JourneysSquad";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -379,6 +481,15 @@
 			buildConfigurations = (
 				9B0383C22A04D7F6005E333D /* Debug */,
 				9B0383C32A04D7F6005E333D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B1DBD9D2A0E2EE50082999A /* Build configuration list for PBXNativeTarget "JourneysSquadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B1DBD9B2A0E2EE50082999A /* Debug */,
+				9B1DBD9C2A0E2EE50082999A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
