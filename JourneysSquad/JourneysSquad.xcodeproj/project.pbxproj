@@ -11,7 +11,8 @@
 		9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0383B82A04D7F4005E333D /* ContentView.swift */; };
 		9B0383BB2A04D7F6005E333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BA2A04D7F6005E333D /* Assets.xcassets */; };
 		9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */; };
-		9B1DBD982A0E2EE40082999A /* JourneysSquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* JourneysSquadTests.swift */; };
+		9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */; };
+		9B1DBD9F2A0E31E40082999A /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB770FE2A0E1E8100C14987 /* BillValidationError.swift */; };
 		9BB770FF2A0E1E8100C14987 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB770FE2A0E1E8100C14987 /* BillValidationError.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,7 @@
 		9B0383BA2A04D7F6005E333D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B1DBD972A0E2EE40082999A /* JourneysSquadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneysSquadTests.swift; sourceTree = "<group>"; };
+		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
 		9BB770FE2A0E1E8100C14987 /* BillValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,9 +96,17 @@
 		9B1DBD962A0E2EE40082999A /* JourneysSquadTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B1DBD972A0E2EE40082999A /* JourneysSquadTests.swift */,
+				9B1DBD9E2A0E30ED0082999A /* Model */,
 			);
 			path = JourneysSquadTests;
+			sourceTree = "<group>";
+		};
+		9B1DBD9E2A0E30ED0082999A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9BB771002A0E1E9100C14987 /* Model */ = {
@@ -241,7 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B1DBD982A0E2EE40082999A /* JourneysSquadTests.swift in Sources */,
+				9B1DBD9F2A0E31E40082999A /* BillValidationError.swift in Sources */,
+				9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
