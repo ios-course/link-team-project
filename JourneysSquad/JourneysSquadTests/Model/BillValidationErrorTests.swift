@@ -2,65 +2,57 @@ import XCTest
 
 final class BillValidationErrorTests: XCTestCase {
     func testErrorDescriptionPresentsInAPIForTooLongError() {
-        _ = BillValidationError.tooLongName.errorDescription
+        _ = BillValidationError.tooLongParticipantName(name: "Abu Ibn .....").errorDescription
+        _ = BillValidationError.emptyParticipantName(name: " ").errorDescription
+        _ = BillValidationError.negativeAmountOfMoney(number: 10).errorDescription
+        _ = BillValidationError.invalidFormatOfMoneyAmount(number: 10.111).errorDescription
+        _ = BillValidationError.incorrectSumOfBill(sum: 0)
+        _ = BillValidationError.equalityIsViolated.errorDescription
     }
 
-    func testErrorDescriptionPresentsInAPIForInvalidParticipantNameError() {
-        _ = BillValidationError.noOneLetterInName("#@").errorDescription
+    func testErrorDescriptionReturnsCorrespondingMessageForTooLongParticipantNameError() {
+        let longName = "Abu Ali Ibn ......"
+        XCTAssertEqual(BillValidationError.tooLongParticipantName(name: longName).errorDescription,
+                       "The name length exceeds 50 characters: \(longName).")
     }
 
-    func testErrorDescriptionPresentsInAPIFornegativeValueError() {
-        _ = BillValidationError.balanceIsViolated.errorDescription
+    func testErrorDescriptionReturnsCorrespondingMessageForEmptyNameError() {
+        let emptyName = " "
+        XCTAssertEqual(BillValidationError.emptyParticipantName(name: emptyName).errorDescription,
+                       "The name: \(emptyName) contains only spaces or no one sign.")
     }
 
-    func testErrorDescriptionPresentsInAPIForNegativeValueError() {
-        _ = BillValidationError.negativeValue(10).errorDescription
+    func testErrorDescriptionReturnsCorrespondingMessageForNegativeAmountOfMoneyError() {
+        let negativeAmount: Decimal = -4
+        XCTAssertEqual(BillValidationError.negativeAmountOfMoney(number: negativeAmount).errorDescription,
+                       "The money can't be negative: \(negativeAmount).")
     }
 
-    func testErrorDescriptionPresentsInAPIForInvalidFormatOfSumError() {
-        _ = BillValidationError.invalidFormatOfSum(10).errorDescription
-    }
-
-    func testErrorDescriptionReturnsCorrespondingMessageForTooLondNameError() {
-        XCTAssertEqual(BillValidationError.tooLongName.errorDescription,
-                       "The maximum name length is 50 characters.")
-    }
-
-    func testErrorDescriptionReturnsCorrespondingMessageForNoOneLetterInNameError() {
-        let incorrectName = "#@"
-        XCTAssertEqual(BillValidationError.noOneLetterInName(incorrectName).errorDescription,
-                       "The name: \(incorrectName) doesn't contain no one letter.")
-    }
-
-    func testErrorDescriptionReturnsCorrespondingMessageForNegativeValueError() {
-        let negativeSum: Decimal = -4
-        XCTAssertEqual(BillValidationError.negativeValue(negativeSum).errorDescription,
-                       "The money can't be negative: \(negativeSum).")
-    }
-
-    func testErrorDescriptionReturnsCorrespondingMessageForInvalidFormatOfSumError() {
-        let invalidFormattedSum: Decimal = 1.123
+    func testErrorDescriptionReturnsCorrespondingMessageForInvalidFormatOfNumberError() {
+        let number: Decimal = 1.123
         XCTAssertEqual(
-            BillValidationError.invalidFormatOfSum(invalidFormattedSum).errorDescription,
+            BillValidationError.invalidFormatOfMoneyAmount(number: number).errorDescription,
             """
-            Invalid format of the currency: \(invalidFormattedSum). Maximum accuracy is two decimal places.
+            Invalid format of money amount: \(number). Maximum accuracy is two decimal places.
             """
         )
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForZeroSumOfBillError() {
-        XCTAssertEqual(BillValidationError.zeroSumOfBill.errorDescription,
-                       "The sum of bill can't be equal to zero.")
+    func testErrorDescriptionReturnsCorrespondingMessageForIncorrectSumOfBillError() {
+        let incorrectSumOfBill: Decimal = 0
+        XCTAssertEqual(BillValidationError.incorrectSumOfBill(sum: incorrectSumOfBill).errorDescription,
+                       "Sum: \(incorrectSumOfBill) is less than or equal to zero.")
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForBalanceIsViolatedError() {
-        XCTAssertEqual(BillValidationError.balanceIsViolated.errorDescription,
+    func testErrorDescriptionReturnsCorrespondingMessageForEqualityIsViolatedError() {
+        XCTAssertEqual(BillValidationError.equalityIsViolated.errorDescription,
                        "The sum of the bill must equal the sum of all the participants's sums.")
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForfutureDateError() {
-        let futureDate = Date.now + 10
-        XCTAssertEqual(BillValidationError.futureDate(futureDate).errorDescription,
-                       "Error! This is a date in the future: \(futureDate).")
+    func testErrorDescriptionReturnsCorrespondingMessageForFutureDateError() {
+        let tenSecondsDuration: TimeInterval = 10
+        let tenSecondsFromNowDate = Date.now + tenSecondsDuration
+        XCTAssertEqual(BillValidationError.futureDate(tenSecondsFromNowDate).errorDescription,
+                       "This is a date in the future: \(tenSecondsFromNowDate).")
     }
 }
