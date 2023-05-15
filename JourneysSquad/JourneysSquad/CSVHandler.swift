@@ -24,6 +24,9 @@ struct CSVHandler {
         filePath = fileURL
     }
     
+    /// Appends a CSV record to the end of the file.
+    /// - Parameter csvRecord: A single row of CSV data to be written to the file.
+    /// - Returns: True if the write was successful, false otherwise.
     func appendToTheFile(_ csvRecord: DataRecord) -> Bool {
         let csvString = csvRecord.joined(separator: ",")
         guard let result = try? csvString.write(to: filePath, atomically: false, encoding: defaultEncoding) else { return false
