@@ -31,11 +31,8 @@ struct CSVHandler {
     /// - Returns: True if the write was successful, false otherwise.
     func appendToTheFile(_ csvRecord: DataRecord) -> Bool {
         let csvString = csvRecord.joined(separator: ",")
-        guard let result = try? csvString.write(
-            to: filePath, atomically: false, encoding: defaultEncoding
-        ) else { return false
-        }
-        return true
+        let result: ()? = try? csvString.write(to: filePath, atomically: false, encoding: defaultEncoding)
+        return result != nil
     }
 
     /// Reads all data from the CSV file.
