@@ -5,48 +5,58 @@ typealias DataRecord = [String]
 
 /// Provides functionality to handle CSV files.
 struct CSVHandler {
-    
-    /// Initializes a CSVHandler with a specified file name.  If the file cannot be created or located, this initializer returns `nil`.
+    /// Initializes a CSVHandler with a specified file name.
+    /// If the file cannot be created or located, this initializer returns `nil`.
     /// - Parameter fileName: The name of the CSV file to be handled.
     /// Don't need provide file extention to the name of file, ".csv" will be appended automatically.
     init?(fileName: String) {
         let fileManager = FileManager.default
-        guard let documentsDirectory = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true) else { return nil }
+        guard let documentsDirectory = try? fileManager.url(
+            for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true
+        ) else { return nil }
         let fileURL = documentsDirectory.appending(path: fileName).appendingPathExtension(defaultExtention)
-        
+
         if !fileManager.fileExists(atPath: fileURL.path) {
             let createdSuccessfully = fileManager.createFile(atPath: fileURL.path, contents: nil)
-            
+
             if !createdSuccessfully {
                 return nil
             }
         }
         filePath = fileURL
     }
-    
+
     /// Appends a CSV record to the end of the file.
     /// - Parameter csvRecord: A single row of CSV data to be written to the file.
     /// - Returns: True if the write was successful, false otherwise.
     func appendToTheFile(_ csvRecord: DataRecord) -> Bool {
         let csvString = csvRecord.joined(separator: ",")
-        guard let result = try? csvString.write(to: filePath, atomically: false, encoding: defaultEncoding) else { return false
+        guard let result = try? csvString.write(
+            to: filePath, atomically: false, encoding: defaultEncoding
+        ) else { return false
         }
         return true
     }
-    
+
     /// Reads all data from the CSV file.
     /// - Returns: An array of DataRecord objects, or nil if the file cannot be read.
     func readAllData() -> [DataRecord]? {
-        guard let rawString = try? String.init(contentsOf: filePath, encoding: defaultEncoding) else { return nil }
+        guard let rawString = try? String(contentsOf: filePath, encoding: defaultEncoding) else { return nil }
+
         let dataRecordStrings = rawString.split(whereSeparator: { $0.isNewline })
         let dataRecords = dataRecordStrings.map { $0.components(separatedBy: ",") }
-        
+
         return dataRecords
     }
-    
+
     // MARK: - Private interface
+
     /// The URL path to the CSV file.
     private let filePath: URL
+
+    /// The default encoding used for reading and writing CSV files.
     private let defaultEncoding = String.Encoding.utf8
+
+    /// The default file extension for CSV files.
     private let defaultExtention = "csv"
 }
