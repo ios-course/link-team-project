@@ -35,7 +35,11 @@ struct CSVHandler {
     }
     
     func readAllData() -> [DataRecord]? {
-        return [[]]
+        guard let rawString = try? String.init(contentsOf: filePath, encoding: defaultEncoding) else { return nil }
+        let dataRecordStrings = rawString.split(whereSeparator: { $0.isNewline })
+        let dataRecords = dataRecordStrings.map { $0.components(separatedBy: ",") }
+        
+        return dataRecords
     }
     
     // MARK: - Private interface
