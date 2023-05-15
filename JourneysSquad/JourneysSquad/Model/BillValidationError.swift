@@ -1,37 +1,56 @@
 import Foundation
-/// Indicates error that can be caused by incorrect input data for the bill.
-enum BillValidationError: LocalizedError {
+
+/// An error that can be caused by incorrect input data for the bill.
+enum BillValidationError: Error {
     /// Indicates too long participant's name.
-    case tooLongName
-    /// Occurs when the participant's name doesn't contain no one letter.
-    case noOneLetterInName(String)
-    /// Occurs when negative value is passed for fields that  can't be such.
-    case negativeValue(Decimal)
-    /// Occurs when the number of decimal places is greater than two.
-    case invalidFormatOfSum(Decimal)
-    /// Indicates, that  the overall sum of the bill is equal to zero.
-    case zeroSumOfBill
+    ///
+    /// - Parameter name: The name that exceeds allowed length and causes the error.
+    case tooLongParticipantName(name: String)
+
+    /// Occurs when the participant's name contains only spaces or no one character.
+    ///
+    /// - Parameter name: The name that causes the error.
+    case emptyParticipantName(name: String)
+
+    /// Occurs when a negative number is passed for fields that reflects the amount of money and can't be such.
+    ///
+    /// - Parameter number: The negative number that causes the error.
+    case negativeAmountOfMoney(number: Decimal)
+
+    /// Occurs when the amount of decimal places in the number that is used to note money is greater than two.
+    ///
+    /// - Parameter number: The number whose format causes the error.
+    case invalidFormatOfMoneyAmount(number: Decimal)
+
+    /// Indicates, that the overall sum of the bill is less than or equal to zero.
+    ///
+    /// - Parameter sum: The sum of the bill that causes the error.
+    case incorrectSumOfBill(sum: Decimal)
+
     /// Indicates that the overall sum of the bill isn't equal to the sum of the participants's sums.
-    case balanceIsViolated
+    case equalityIsViolated
+
     /// Occurs when the input date is in the future.
     case futureDate(Date)
-    /// The text message to output according to the error.
+}
+
+extension BillValidationError: LocalizedError {
     var errorDescription: String? {
         switch self {
-        case .tooLongName:
-            return "The maximum name length is 50 characters."
-        case let .noOneLetterInName(incorrectName):
-            return "The name: \(incorrectName) doesn't contain no one letter."
-        case let .negativeValue(negativeSum):
-            return "The money can't be negative: \(negativeSum)."
-        case let .invalidFormatOfSum(invalidFormattedSum):
-            return "Invalid format of the currency: \(invalidFormattedSum). Maximum accuracy is two decimal places."
-        case .zeroSumOfBill:
-            return "The sum of bill can't be equal to zero."
-        case .balanceIsViolated:
+        case let .tooLongParticipantName(tooLongName):
+            return "The name length exceeds 50 characters: \(tooLongName)."
+        case let .emptyParticipantName(emptyName):
+            return "The name: \(emptyName) contains only spaces or no one sign."
+        case let .negativeAmountOfMoney(negativeAmount):
+            return "The money can't be negative: \(negativeAmount)."
+        case let .invalidFormatOfMoneyAmount(invalidFormattedNumber):
+            return "Invalid format of money amount: \(invalidFormattedNumber). Maximum accuracy is two decimal places."
+        case let .incorrectSumOfBill(incorrectSum):
+            return "Sum: \(incorrectSum) is less than or equal to zero."
+        case .equalityIsViolated:
             return "The sum of the bill must equal the sum of all the participants's sums."
         case let .futureDate(futureDate):
-            return "Error! This is a date in the future: \(futureDate)."
+            return "This is a date in the future: \(futureDate)."
         }
     }
 }
