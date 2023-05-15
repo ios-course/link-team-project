@@ -34,6 +34,8 @@ struct CSVHandler {
         return true
     }
     
+    /// Reads all data from the CSV file.
+    /// - Returns: An array of DataRecord objects, or nil if the file cannot be read.
     func readAllData() -> [DataRecord]? {
         guard let rawString = try? String.init(contentsOf: filePath, encoding: defaultEncoding) else { return nil }
         let dataRecordStrings = rawString.split(whereSeparator: { $0.isNewline })
