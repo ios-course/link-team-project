@@ -25,7 +25,10 @@ struct CSVHandler {
     }
     
     func appendToTheFile(_ csvRecord: DataRecord) -> Bool {
-       return true
+        let csvString = csvRecord.joined(separator: ",")
+        guard let result = try? csvString.write(to: filePath, atomically: false, encoding: defaultEncoding) else { return false
+        }
+        return true
     }
     
     func readAllData() -> [DataRecord]? {
