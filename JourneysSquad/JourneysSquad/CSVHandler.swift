@@ -5,8 +5,8 @@ typealias CSVFileRow = [String]
 
 /// Handles operations with  files that store data as a comma-separated values (CSV).
 /// Example of CSV data:
-/// "`John,Doe,120 jefferson st.,Riverside, NJ, 08075
-/// `Jack,McGinnis,220 hobo Av.,Phila, PA,09119`"
+/// "`John,Doe,120 jefferson st.,Riverside,NJ,08075
+/// `Jack,McGinnis,220 hobo Av.,Phila,PA,09119`"
 
 struct CSVHandler {
     /// Initializes a CSVHandler with a specified file name within the `Documents` directory.
@@ -30,7 +30,7 @@ struct CSVHandler {
             .appendingPathExtension(csvExtention)
 
         guard let fileURL,
-              fileManager.fileExists(atPath: fileURL.path),
+              fileManager.fileExists(atPath: fileURL.path) ||
               fileManager.createFile(atPath: fileURL.path, contents: nil)
         else {
             return nil
