@@ -41,7 +41,7 @@ struct Bill {
         sumOfBill: Decimal,
         date: Date
     ) throws {
-        guard date < Date() else { throw BillValidationError.futureDate(date) }
+        guard date <= Date() else { throw BillValidationError.futureDate(date) }
 
         guard sumOfBill > 0 else { throw BillValidationError.incorrectSumOfBill(sum: sumOfBill) }
 
