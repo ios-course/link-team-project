@@ -1,5 +1,6 @@
 import Foundation
 
+/// Describes data, that contains in bill.
 struct BillsModel {
     var items: [[String: Any]] = [
         ["date": "09 May 2023", "amount": 150.12, "description": "Macdonalds that we have visited at 9 o'clock", "participants": ["John", "Jane"]],

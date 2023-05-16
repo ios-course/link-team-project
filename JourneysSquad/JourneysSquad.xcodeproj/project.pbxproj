@@ -79,9 +79,7 @@
 			children = (
 				9B0383B62A04D7F4005E333D /* JourneysSquadApp.swift */,
 				9B0383B82A04D7F4005E333D /* ContentView.swift */,
-				ABC183A02A136DFA00666FED /* HistoryOfOperationsView.swift */,
-				ABC183A22A13838A00666FED /* BillListView.swift */,
-				ABC183A62A13840000666FED /* BillsModel.swift */,
+				ABC183A92A13892A00666FED /* HistoryOfOperations */,
 				9B0383BA2A04D7F6005E333D /* Assets.xcassets */,
 				9B0383BC2A04D7F6005E333D /* Preview Content */,
 			);
@@ -101,6 +99,16 @@
 			children = (
 			);
 			path = JourneysSquadTests;
+			sourceTree = "<group>";
+		};
+		ABC183A92A13892A00666FED /* HistoryOfOperations */ = {
+			isa = PBXGroup;
+			children = (
+				ABC183A02A136DFA00666FED /* HistoryOfOperationsView.swift */,
+				ABC183A22A13838A00666FED /* BillListView.swift */,
+				ABC183A62A13840000666FED /* BillsModel.swift */,
+			);
+			path = HistoryOfOperations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
