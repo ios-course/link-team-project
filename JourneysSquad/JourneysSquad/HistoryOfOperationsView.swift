@@ -19,6 +19,8 @@ struct HistoryOfOperationsView: View {
                 .background(Color.black)
 
             Spacer()
+
+            BillListView()
         }
         .padding(.horizontal, 15)
     }

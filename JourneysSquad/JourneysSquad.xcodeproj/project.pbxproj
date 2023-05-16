@@ -12,6 +12,8 @@
 		9B0383BB2A04D7F6005E333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BA2A04D7F6005E333D /* Assets.xcassets */; };
 		9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */; };
 		ABC183A12A136DFA00666FED /* HistoryOfOperationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC183A02A136DFA00666FED /* HistoryOfOperationsView.swift */; };
+		ABC183A32A13838A00666FED /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC183A22A13838A00666FED /* BillListView.swift */; };
+		ABC183A72A13840000666FED /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC183A62A13840000666FED /* BillsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC183A02A136DFA00666FED /* HistoryOfOperationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOfOperationsView.swift; sourceTree = "<group>"; };
+		ABC183A22A13838A00666FED /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
+		ABC183A62A13840000666FED /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				9B0383B62A04D7F4005E333D /* JourneysSquadApp.swift */,
 				9B0383B82A04D7F4005E333D /* ContentView.swift */,
 				ABC183A02A136DFA00666FED /* HistoryOfOperationsView.swift */,
+				ABC183A22A13838A00666FED /* BillListView.swift */,
+				ABC183A62A13840000666FED /* BillsModel.swift */,
 				9B0383BA2A04D7F6005E333D /* Assets.xcassets */,
 				9B0383BC2A04D7F6005E333D /* Preview Content */,
 			);
@@ -220,9 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC183A72A13840000666FED /* BillsModel.swift in Sources */,
 				ABC183A12A136DFA00666FED /* HistoryOfOperationsView.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
+				ABC183A32A13838A00666FED /* BillListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
