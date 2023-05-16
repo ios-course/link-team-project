@@ -74,8 +74,3 @@ struct BillListView_Previews: PreviewProvider {
         BillListView()
     }
 }
-struct BillsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        BillListView()
-    }
-}
