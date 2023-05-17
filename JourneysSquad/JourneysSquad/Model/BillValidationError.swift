@@ -5,12 +5,12 @@ enum BillValidationError: Error {
     /// Indicates too long participant's name.
     ///
     /// - Parameter name: The name that exceeds allowed length and causes the error.
-    case tooLongParticipantName(name: String)
+    case tooLongPersonName(name: String)
 
     /// Occurs when the participant's name contains only spaces or no one character.
     ///
     /// - Parameter name: The name that causes the error.
-    case emptyParticipantName(name: String)
+    case emptyPersonName(name: String)
 
     /// Occurs when a negative number is passed for fields that reflects the amount of money and can't be such.
     ///
@@ -20,37 +20,37 @@ enum BillValidationError: Error {
     /// Occurs when the amount of decimal places in the number that is used to note money is greater than two.
     ///
     /// - Parameter number: The number whose format causes the error.
-    case invalidFormatOfMoneyAmount(number: Decimal)
+    case moreThanTwoDecimalPlacesForMoney(amount: Decimal)
 
     /// Indicates, that the overall sum of the bill is less than or equal to zero.
     ///
     /// - Parameter sum: The sum of the bill that causes the error.
-    case incorrectSumOfBill(sum: Decimal)
+    case invalidSumOfBill(sum: Decimal)
 
-    /// Indicates that the overall sum of the bill isn't equal to the sum of the participants's sums.
-    case equalityIsViolated
+    /// Indicates that the sum of the bill doesn't equal the sum of all the participants's pays.
+    case incorrectEstimatedSumOfTheBill
 
     /// Occurs when the input date is in the future.
-    case futureDate(Date)
+    case theDateIsInFuture(Date)
 }
 
 extension BillValidationError: LocalizedError {
     var errorDescription: String? {
         switch self {
-        case let .tooLongParticipantName(tooLongName):
-            return "The name length exceeds 50 characters: \(tooLongName)."
-        case let .emptyParticipantName(emptyName):
-            return "The name: \(emptyName) contains only spaces or no one sign."
+        case let .tooLongPersonName(tooLongName):
+            return "The length of the person's name exceeds the maximum allowed length: \(tooLongName)."
+        case let .emptyPersonName(emptyPersonName):
+            return "The name: \(emptyPersonName) contains only spaces or no one sign."
         case let .negativeAmountOfMoney(negativeAmount):
-            return "The money can't be negative: \(negativeAmount)."
-        case let .invalidFormatOfMoneyAmount(invalidFormattedNumber):
-            return "Invalid format of money amount: \(invalidFormattedNumber). Maximum accuracy is two decimal places."
-        case let .incorrectSumOfBill(incorrectSum):
-            return "Sum: \(incorrectSum) is less than or equal to zero."
-        case .equalityIsViolated:
-            return "The sum of the bill must equal the sum of all the participants's sums."
-        case let .futureDate(futureDate):
-            return "This is a date in the future: \(futureDate)."
+            return "The amount of money <= 0: \(negativeAmount)."
+        case let .moreThanTwoDecimalPlacesForMoney(number):
+            return "The given amount of money has accuracy more than two decimal places: \(number)."
+        case let .invalidSumOfBill(invalidSum):
+            return "Sum of bill is less than or equal to zero: \(invalidSum)."
+        case .incorrectEstimatedSumOfTheBill:
+            return "The sum of the bill doesn't equal the sum of all the participants's pays."
+        case let .theDateIsInFuture(dateInFuture):
+            return "This is a date in the future: \(dateInFuture)."
         }
     }
 }
