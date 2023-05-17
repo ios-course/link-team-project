@@ -1,58 +1,70 @@
 import XCTest
 
 final class BillValidationErrorTests: XCTestCase {
-    func testErrorDescriptionPresentsInAPIForTooLongError() {
-        _ = BillValidationError.tooLongParticipantName(name: "Abu Ibn .....").errorDescription
-        _ = BillValidationError.emptyParticipantName(name: " ").errorDescription
-        _ = BillValidationError.negativeAmountOfMoney(number: 10).errorDescription
-        _ = BillValidationError.invalidFormatOfMoneyAmount(number: 10.111).errorDescription
-        _ = BillValidationError.incorrectSumOfBill(sum: 0)
-        _ = BillValidationError.equalityIsViolated.errorDescription
+    func testErrorDescriptionPresentsInAPI() {
+        _ = BillValidationError.tooLongPersonName(name: "").errorDescription
+        _ = BillValidationError.emptyPersonName(name: "").errorDescription
+        _ = BillValidationError.negativeAmountOfMoney(number: 0).errorDescription
+        _ = BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: 0).errorDescription
+        _ = BillValidationError.invalidSumOfBill(sum: 0)
+        _ = BillValidationError.incorrectEstimatedSumOfTheBill.errorDescription
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForTooLongParticipantNameError() {
-        let longName = "Abu Ali Ibn ......"
-        XCTAssertEqual(BillValidationError.tooLongParticipantName(name: longName).errorDescription,
-                       "The name length exceeds 50 characters: \(longName).")
+    func testErrorDescriptionReturnsCorrespondingMessageForTooLongPersonNameError() {
+        let name = "test"
+        let expectedErrorDescription = "The length of the person's name exceeds the maximum allowed length: \(name)."
+        let actualErrorDescription = BillValidationError.tooLongPersonName(name: name).errorDescription
+
+        XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForEmptyNameError() {
-        let emptyName = " "
-        XCTAssertEqual(BillValidationError.emptyParticipantName(name: emptyName).errorDescription,
-                       "The name: \(emptyName) contains only spaces or no one sign.")
+    func testErrorDescriptionReturnsCorrespondingMessageForEmptyPersonNameError() {
+        let name = ""
+        let expectedErrorDescription = "The name: \(name) contains only spaces or no one character."
+        let actualErrorDescription = BillValidationError.emptyPersonName(name: name).errorDescription
+
+        XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
 
     func testErrorDescriptionReturnsCorrespondingMessageForNegativeAmountOfMoneyError() {
-        let negativeAmount: Decimal = -4
-        XCTAssertEqual(BillValidationError.negativeAmountOfMoney(number: negativeAmount).errorDescription,
-                       "The money can't be negative: \(negativeAmount).")
+        let amount: Decimal = 0
+        let expectedErrorDescription = "The amount of money <= 0: \(amount)."
+        let actualErrorDescription = BillValidationError.negativeAmountOfMoney(number: amount).errorDescription
+
+        XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForInvalidFormatOfNumberError() {
-        let number: Decimal = 1.123
-        XCTAssertEqual(
-            BillValidationError.invalidFormatOfMoneyAmount(number: number).errorDescription,
-            """
-            Invalid format of money amount: \(number). Maximum accuracy is two decimal places.
-            """
-        )
+    func testErrorDescriptionReturnsCorrespondingMessageForMoreThanTwoDecimalPlacesForMoneyError() {
+        let amount: Decimal = 0
+        let expectedErrorDescription = "The given amount of money has accuracy more than two decimal places: \(amount)."
+        let actualErrorDescription =
+            BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amount).errorDescription
+
+        XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForIncorrectSumOfBillError() {
-        let incorrectSumOfBill: Decimal = 0
-        XCTAssertEqual(BillValidationError.incorrectSumOfBill(sum: incorrectSumOfBill).errorDescription,
-                       "Sum: \(incorrectSumOfBill) is less than or equal to zero.")
+    func testErrorDescriptionReturnsCorrespondingMessageForInvalidSumOfBillError() {
+        let sum: Decimal = 0
+        let expectedErrorDescription = "Sum of bill is less than or equal to zero: \(sum)."
+        let actualErrorDescription = BillValidationError.invalidSumOfBill(sum: sum).errorDescription
+
+        XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForEqualityIsViolatedError() {
-        XCTAssertEqual(BillValidationError.equalityIsViolated.errorDescription,
-                       "The sum of the bill must equal the sum of all the participants's sums.")
+    func testErrorDescriptionReturnsCorrespondingMessageForIncorrectEstimatedSumOfTheBillError() {
+        let expectedErrorDescription = "The sum of the bill doesn't equal the sum of all the person's pays."
+        let actualErrorDescription = BillValidationError.incorrectEstimatedSumOfTheBill.errorDescription
+
+        XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
 
-    func testErrorDescriptionReturnsCorrespondingMessageForFutureDateError() {
+    func testErrorDescriptionReturnsCorrespondingMessageForTheDateIsInFutureError() {
         let tenSecondsDuration: TimeInterval = 10
         let tenSecondsFromNowDate = Date.now + tenSecondsDuration
-        XCTAssertEqual(BillValidationError.futureDate(tenSecondsFromNowDate).errorDescription,
-                       "This is a date in the future: \(tenSecondsFromNowDate).")
+        
+        let expectedErrorDescription = "This is a date in the future: \(tenSecondsFromNowDate)."
+        let actualErrorDescription = BillValidationError.theDateIsInFuture(tenSecondsFromNowDate).errorDescription
+
+        XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
 }
