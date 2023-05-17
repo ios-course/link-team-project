@@ -46,7 +46,7 @@ final class BillValidationErrorTests: XCTestCase {
         let expectedErrorDescription = "The given amount of money has accuracy more than two decimal places: \(amount)."
 
         let actualErrorDescription =
-        BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amount).errorDescription
+            BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amount).errorDescription
 
         XCTAssertEqual(actualErrorDescription, expectedErrorDescription)
     }
