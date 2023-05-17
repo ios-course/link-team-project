@@ -2,12 +2,12 @@ import Foundation
 
 /// An error that can be caused by incorrect input data for the bill.
 enum BillValidationError: Error {
-    /// Indicates too long participant's name.
+    /// Indicates too long person's name.
     ///
     /// - Parameter name: The name that exceeds allowed length and causes the error.
     case tooLongPersonName(name: String)
 
-    /// Occurs when the participant's name contains only spaces or no one character.
+    /// Occurs when the person's name contains only spaces or no one character.
     ///
     /// - Parameter name: The name that causes the error.
     case emptyPersonName(name: String)
@@ -27,7 +27,7 @@ enum BillValidationError: Error {
     /// - Parameter sum: The sum of the bill that causes the error.
     case invalidSumOfBill(sum: Decimal)
 
-    /// Indicates that the sum of the bill doesn't equal the sum of all the participants's pays.
+    /// Indicates that the sum of the bill doesn't equal the sum of all the person's pays.
     case incorrectEstimatedSumOfTheBill
 
     /// Occurs when the input date is in the future.
@@ -40,7 +40,7 @@ extension BillValidationError: LocalizedError {
         case let .tooLongPersonName(tooLongName):
             return "The length of the person's name exceeds the maximum allowed length: \(tooLongName)."
         case let .emptyPersonName(emptyPersonName):
-            return "The name: \(emptyPersonName) contains only spaces or no one sign."
+            return "The name: \(emptyPersonName) contains only spaces or no one character."
         case let .negativeAmountOfMoney(negativeAmount):
             return "The amount of money <= 0: \(negativeAmount)."
         case let .moreThanTwoDecimalPlacesForMoney(number):
@@ -48,7 +48,7 @@ extension BillValidationError: LocalizedError {
         case let .invalidSumOfBill(invalidSum):
             return "Sum of bill is less than or equal to zero: \(invalidSum)."
         case .incorrectEstimatedSumOfTheBill:
-            return "The sum of the bill doesn't equal the sum of all the participants's pays."
+            return "The sum of the bill doesn't equal the sum of all the person's pays."
         case let .theDateIsInFuture(dateInFuture):
             return "This is a date in the future: \(dateInFuture)."
         }
