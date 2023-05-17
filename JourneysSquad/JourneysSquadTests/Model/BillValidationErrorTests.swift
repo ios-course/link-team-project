@@ -61,7 +61,7 @@ final class BillValidationErrorTests: XCTestCase {
     func testErrorDescriptionReturnsCorrespondingMessageForTheDateIsInFutureError() {
         let tenSecondsDuration: TimeInterval = 10
         let tenSecondsFromNowDate = Date.now + tenSecondsDuration
-        
+
         let expectedErrorDescription = "This is a date in the future: \(tenSecondsFromNowDate)."
         let actualErrorDescription = BillValidationError.theDateIsInFuture(tenSecondsFromNowDate).errorDescription
 
