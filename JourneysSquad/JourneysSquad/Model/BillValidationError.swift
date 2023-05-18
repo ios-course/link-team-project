@@ -12,7 +12,7 @@ enum BillValidationError: Error {
     /// - Parameter name: The name that causes the error.
     case emptyPersonName(name: String)
 
-    /// Occurs when a negative number is passed for fields that reflects the amount of money and can't be such.
+    /// Occurs when a passed amount of money is negative number.
     ///
     /// - Parameter number: The negative number that causes the error.
     case negativeAmountOfMoney(number: Decimal)
