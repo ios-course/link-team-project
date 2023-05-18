@@ -57,20 +57,28 @@ struct Bill {
             throw BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: sumOfBill)
         }
 
-        for (participantName, spentAmount) in personPaid {
-            try Bill.validateParticipantName(participantName)
+        var sumOfAmountPaid: Decimal = 0
 
-            guard spentAmount >= 0 else {
-                throw BillValidationError.negativeAmountOfMoney(number: spentAmount)
+        for (personName, amountPaid) in personPaid {
+            try Bill.validatePersonName(personName)
+
+            guard amountPaid >= 0 else {
+                throw BillValidationError.negativeAmountOfMoney(number: amountPaid)
             }
 
-            guard !Bill.hasMoreThanTwoDecimalPlaces(spentAmount) else {
-                throw BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: spentAmount)
+            guard !Bill.hasMoreThanTwoDecimalPlaces(amountPaid) else {
+                throw BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amountPaid)
             }
+
+            sumOfAmountPaid += amountPaid
+        }
+
+        guard sumOfBill == sumOfAmountPaid else {
+            throw BillValidationError.incorrectEstimatedSumOfTheBill
         }
     }
 
-    private static func validateParticipantName(_ name: String) throws {
+    private static func validatePersonName(_ name: String) throws {
         guard name.count <= Bill.maxPersonNameLength else {
             throw BillValidationError.tooLongPersonName(name: name)
         }
@@ -88,5 +96,5 @@ struct Bill {
 
 extension Bill {
     /// The max length of the person's name.
-    private static let maxPersonNameLength = 50
+    static let maxPersonNameLength = 50
 }
