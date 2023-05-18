@@ -25,7 +25,7 @@ struct Bill {
     ///    - sumOfBill: The sum of money that was spent by participants within the bill.
     ///    - date: A date when the bill was created.
     ///
-    /// - Throws: The `BillValidationError` if the bill can't be created or doesn't make sense.
+    /// - Throws: The `BillValidationError` if the bill can't be created because the passed parameters aren't sufficient or valid.
     init(
         personPaid: [String: Decimal],
         description: String,

@@ -36,7 +36,7 @@ final class BillTests: XCTestCase {
         XCTAssertNotEqual(firstBill?.id, secondBill?.id)
     }
 
-    func testInitThrowsTooLongPersonNameErrorWhenOneOfNamesIsLongerThenMaxPersonNameLength() {
+    func testInitThrowsTooLongPersonNameErrorWhenOneOfNamesIsLongerThanMaxPersonNameLength() {
         let name = String(repeating: "A",
                           count: Bill.maxPersonNameLength + 1)
 
@@ -53,7 +53,7 @@ final class BillTests: XCTestCase {
         }
     }
 
-    func testInitThrowsTooLongPersonNameErrorWhenMultipleNamesAreLongerThenMaxPersonNameLength() {
+    func testInitThrowsTooLongPersonNameErrorWhenMultipleNamesAreLongerThanMaxPersonNameLength() {
         let nameOne = String(repeating: "A", count: Bill.maxPersonNameLength + 1)
         let nameTwo = String(repeating: "B", count: Bill.maxPersonNameLength + 1)
 
@@ -77,7 +77,7 @@ final class BillTests: XCTestCase {
         }
     }
 
-    func testInitThrowsEmptyPesonNameErrorWhenOneOfNamesIsEmptyString() {
+    func testInitThrowsEmptyPersonNameErrorWhenOneOfNamesIsEmptyString() {
         let name = ""
 
         XCTAssertThrowsError(
@@ -93,7 +93,7 @@ final class BillTests: XCTestCase {
         }
     }
 
-    func testInitThrowsEmptyPesonNameErrorWhenOneOfNamesContainOnlySpaces() {
+    func testInitThrowsEmptyPersonNameErrorWhenOneOfNamesContainsOnlySpaces() {
         let name = " "
 
         XCTAssertThrowsError(
@@ -109,7 +109,7 @@ final class BillTests: XCTestCase {
         }
     }
 
-    func testInitThrowsEmptyPesonNameErrorWhenOneOfNamesContainsOnlySpacesAndAnotherNameIsEmpty() {
+    func testInitThrowsEmptyPersonNameErrorWhenOneOfNamesContainsOnlySpacesAndAnotherNameIsEmpty() {
         let nameOne = ""
         let nameTwo = " "
 
@@ -132,7 +132,7 @@ final class BillTests: XCTestCase {
         }
     }
 
-    func testInitThrowsNegativeAmountOfMoneyErrorWhenThePersonPaidAmountIsLessThenZero() {
+    func testInitThrowsNegativeAmountOfMoneyErrorWhenPersonPaidAmountOfMoneyIsLessThanZero() {
         let amount: Decimal = -1
 
         XCTAssertThrowsError(
@@ -164,7 +164,7 @@ final class BillTests: XCTestCase {
         }
     }
 
-    func testInitThrowsMoreThanTwoDecimalPlacesForMoneyErrorWhenTheSumOfBillHasMoreThanTwoDecimalPlaces() {
+    func testInitThrowsMoreThanTwoDecimalPlacesForMoneyErrorWhenSumOfBillHasMoreThanTwoDecimalPlaces() {
         let amount: Decimal = 1.111
 
         XCTAssertThrowsError(
@@ -212,7 +212,7 @@ final class BillTests: XCTestCase {
         }
     }
 
-    func testInitThrowsIncorrectEstimatedSumOfTheBilErrorlWhenSumOfBillIsNotEqualToSumOfPersonPaid() {
+    func testInitThrowsIncorrectEstimatedSumOfTheBillErrorWhenSumOfBillIsNotEqualToSumOfPersonPaid() {
         XCTAssertThrowsError(
             try Bill(
                 personPaid: ["name": 1],
