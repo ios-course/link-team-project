@@ -227,18 +227,19 @@ final class BillTests: XCTestCase {
     }
 
     func testInitThrowsTheDateIsInFutureErrorWhenTheInputDateIsInTheFuture() {
-        let date = Date.now + 10
+        let tenSecondsDuration: TimeInterval = 10
+        let tenSecondsFromNowDate = Date.now + tenSecondsDuration
 
         XCTAssertThrowsError(
             try Bill(
                 personPaid: ["name": 1],
                 description: "Description",
                 sumOfBill: 2,
-                date: date
+                date: tenSecondsFromNowDate
             )
         ) { error in
             XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.theDateIsInFuture(date))
+                           BillValidationError.theDateIsInFuture(tenSecondsFromNowDate))
         }
     }
 }
