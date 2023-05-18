@@ -2,13 +2,13 @@ import Foundation
 
 /// A statement of the money owed for goods or services by different people.
 struct Bill {
-    /// How much each participant has paid within the bill.
+    /// How much each person has paid within the bill.
     let personPaid: [String: Decimal]
 
     /// The description of the bill.
     let description: String
 
-    /// The sum of money that was spent by participants within the bill.
+    /// The overall sum of money that was spent within the bill.
     let sumOfBill: Decimal
 
     /// A date when the bill was created.

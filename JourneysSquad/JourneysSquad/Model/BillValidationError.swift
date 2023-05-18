@@ -58,33 +58,33 @@ extension BillValidationError: LocalizedError {
 extension BillValidationError: Equatable {
     static func == (_ lhs: BillValidationError, _ rhs: BillValidationError) -> Bool {
         switch (lhs, rhs) {
-        case let (.tooLongPersonName(name: string1),
-                  .tooLongPersonName(name: string2)):
-            return string1 == string2
+        case let (.tooLongPersonName(name: nameLhs),
+                  .tooLongPersonName(name: nameRhs)):
+            return nameLhs == nameRhs
 
-        case let (.emptyPersonName(name: string1),
-                  .emptyPersonName(name: string2)):
-            return string1 == string2
+        case let (.emptyPersonName(name: nameLhs),
+                  .emptyPersonName(name: nameRhs)):
+            return nameLhs == nameRhs
 
-        case let (.negativeAmountOfMoney(number: number1),
-                  .negativeAmountOfMoney(number: number2)):
-            return number1 == number2
+        case let (.negativeAmountOfMoney(number: numberLhs),
+                  .negativeAmountOfMoney(number: numberRhs)):
+            return numberLhs == numberRhs
 
-        case let (.moreThanTwoDecimalPlacesForMoney(amount: number1),
-                  .moreThanTwoDecimalPlacesForMoney(amount: number2)):
-            return number1 == number2
+        case let (.moreThanTwoDecimalPlacesForMoney(amount: numberLhs),
+                  .moreThanTwoDecimalPlacesForMoney(amount: numberRhs)):
+            return numberLhs == numberRhs
 
-        case let (.invalidSumOfBill(sum: number1),
-                  .invalidSumOfBill(sum: number2)):
-            return number1 == number2
+        case let (.invalidSumOfBill(sum: numberLhs),
+                  .invalidSumOfBill(sum: numberRhs)):
+            return numberLhs == numberRhs
 
         case (.incorrectEstimatedSumOfTheBill,
               .incorrectEstimatedSumOfTheBill):
             return true
 
-        case let (.theDateIsInFuture(date1),
-                  .theDateIsInFuture(date2)):
-            return date1 == date2
+        case let (.theDateIsInFuture(dateLhs),
+                  .theDateIsInFuture(dateRhs)):
+            return dateLhs == dateRhs
 
         default:
             return false
