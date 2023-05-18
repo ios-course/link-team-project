@@ -54,3 +54,40 @@ extension BillValidationError: LocalizedError {
         }
     }
 }
+
+extension BillValidationError: Equatable {
+    static func == (_ lhs: BillValidationError, _ rhs: BillValidationError) -> Bool {
+        switch (lhs, rhs) {
+        case let (.tooLongPersonName(name: string1),
+                  .tooLongPersonName(name: string2)):
+            return string1 == string2
+
+        case let (.emptyPersonName(name: string1),
+                  .emptyPersonName(name: string2)):
+            return string1 == string2
+
+        case let (.negativeAmountOfMoney(number: number1),
+                  .negativeAmountOfMoney(number: number2)):
+            return number1 == number2
+
+        case let (.moreThanTwoDecimalPlacesForMoney(amount: number1),
+                  .moreThanTwoDecimalPlacesForMoney(amount: number2)):
+            return number1 == number2
+
+        case let (.invalidSumOfBill(sum: number1),
+                  .invalidSumOfBill(sum: number2)):
+            return number1 == number2
+
+        case (.incorrectEstimatedSumOfTheBill,
+              .incorrectEstimatedSumOfTheBill):
+            return true
+
+        case let (.theDateIsInFuture(date1),
+                  .theDateIsInFuture(date2)):
+            return date1 == date2
+
+        default:
+            return false
+        }
+    }
+}
