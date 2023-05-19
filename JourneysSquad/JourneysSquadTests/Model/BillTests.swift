@@ -4,73 +4,78 @@ final class BillTests: XCTestCase {
     func testInitCreatesAnObjectWhenValidParametersArePassed() {
         XCTAssertNoThrow(
             try Bill(personPaid: ["A": 1],
-                     description: "Description",
+                     description: "",
                      sumOfBill: 1,
-                     date: Date.now)
+                     date: .now)
         )
     }
 
     func testInitCreatesAnObjectWhosePropertiesHaveTheValuesOfThePassedParameters() {
-        let date = Date.now
-        let bill = try? Bill(personPaid: ["A": 1],
-                             description: "Description",
-                             sumOfBill: 1,
-                             date: date)
+        let initialPersonPaidList: [String: Decimal] = ["A": 1]
+        let initialBillDescription = ""
+        let initialSumOfBill: Decimal = 1
+        let initialDate = Date.now
 
-        XCTAssertEqual(bill?.personPaid, ["A": 1])
-        XCTAssertEqual(bill?.description, "Description")
-        XCTAssertEqual(bill?.sumOfBill, 1)
-        XCTAssertEqual(bill?.date, date)
+        let bill = try? Bill(personPaid: initialPersonPaidList,
+                             description: initialBillDescription,
+                             sumOfBill: initialSumOfBill,
+                             date: initialDate)
+
+        XCTAssertEqual(bill?.personPaid, initialPersonPaidList)
+        XCTAssertEqual(bill?.description, initialBillDescription)
+        XCTAssertEqual(bill?.sumOfBill, initialSumOfBill)
+        XCTAssertEqual(bill?.date, initialDate)
     }
 
     func testInitCreatesAnObjectWithUniqueIDEachTime() {
         let firstBill = try? Bill(personPaid: ["A": 1],
-                                  description: "Description",
+                                  description: "",
                                   sumOfBill: 1,
-                                  date: Date.now)
+                                  date: .now)
         let secondBill = try? Bill(personPaid: ["A": 1],
-                                   description: "Description",
+                                   description: "",
                                    sumOfBill: 1,
-                                   date: Date.now)
+                                   date: .now)
 
         XCTAssertNotEqual(firstBill?.id, secondBill?.id)
     }
 
     func testInitThrowsTooLongPersonNameErrorWhenOneOfNamesIsLongerThanMaxPersonNameLength() {
-        let name = String(repeating: "A",
-                          count: Bill.maxPersonNameLength + 1)
+        let nameLengthThatExceedsLimit = Bill.maxPersonNameLength + 1
+        let nameThatExceedsMaxLength = String(repeating: "A",
+                                              count: nameLengthThatExceedsLimit)
+        let expectedError = BillValidationError.tooLongPersonName(name: nameThatExceedsMaxLength)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: [name: 1],
-                description: "Description",
+                personPaid: [nameThatExceedsMaxLength: 1],
+                description: "",
                 sumOfBill: 1,
-                date: Date.now
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.tooLongPersonName(name: name))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsTooLongPersonNameErrorWhenMultipleNamesAreLongerThanMaxPersonNameLength() {
-        let nameOne = String(repeating: "A", count: Bill.maxPersonNameLength + 1)
-        let nameTwo = String(repeating: "B", count: Bill.maxPersonNameLength + 1)
+        let nameLengthThatExceedsLimit = Bill.maxPersonNameLength + 1
+        let nameThatExceedsMaxLengthOne = String(repeating: "A", count: nameLengthThatExceedsLimit)
+        let nameThatExceedsMaxLengthTwo = String(repeating: "B", count: nameLengthThatExceedsLimit)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: [nameOne: 1, nameTwo: 1],
-                description: "Description",
+                personPaid: [nameThatExceedsMaxLengthOne: 1, nameThatExceedsMaxLengthTwo: 1],
+                description: "",
                 sumOfBill: 1,
-                date: Date.now
+                date: .now
             )
         ) { error in
             let actualError = error as? BillValidationError
 
             switch actualError {
-            case let .tooLongPersonName(name: name):
-                XCTAssertEqual(actualError,
-                               BillValidationError.tooLongPersonName(name: name))
+            case .tooLongPersonName:
+                break
             default:
                 XCTFail("Unexpected error")
             }
@@ -78,54 +83,55 @@ final class BillTests: XCTestCase {
     }
 
     func testInitThrowsEmptyPersonNameErrorWhenOneOfNamesIsEmptyString() {
-        let name = ""
+        let emptyName = ""
+        let expectedError = BillValidationError.emptyPersonName(name: emptyName)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: [name: 1],
-                description: "Description",
+                personPaid: [emptyName: 1],
+                description: "",
                 sumOfBill: 1,
-                date: Date.now
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.emptyPersonName(name: name))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsEmptyPersonNameErrorWhenOneOfNamesContainsOnlySpaces() {
-        let name = " "
+        let nameContainingOnlySpaces = " "
+        let expectedError = BillValidationError.emptyPersonName(name: nameContainingOnlySpaces)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: [name: 1],
-                description: "Description",
+                personPaid: [nameContainingOnlySpaces: 1],
+                description: "",
                 sumOfBill: 1,
-                date: Date.now
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.emptyPersonName(name: name))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsEmptyPersonNameErrorWhenOneOfNamesContainsOnlySpacesAndAnotherNameIsEmpty() {
-        let nameOne = ""
-        let nameTwo = " "
+        let emptyName = ""
+        let nameContainingOnlySpaces = " "
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: [nameOne: 1, nameTwo: 1],
-                description: "Description",
+                personPaid: [emptyName: 1, nameContainingOnlySpaces: 1],
+                description: "",
                 sumOfBill: 2,
-                date: Date.now
+                date: .now
             )
         ) { error in
             let actualError = error as? BillValidationError
 
             switch actualError {
-            case let .emptyPersonName(name: name):
-                XCTAssertEqual(actualError, BillValidationError.emptyPersonName(name: name))
+            case let .emptyPersonName(name: triggeringName):
+                let expectedError = BillValidationError.emptyPersonName(name: triggeringName)
+                XCTAssertEqual(actualError, expectedError)
             default:
                 XCTFail("Unexpected error")
             }
@@ -133,113 +139,116 @@ final class BillTests: XCTestCase {
     }
 
     func testInitThrowsNegativeAmountOfMoneyErrorWhenPersonPaidAmountOfMoneyIsLessThanZero() {
-        let amount: Decimal = -1
+        let negativeAmountOfMoney: Decimal = -1
+        let expectedError = BillValidationError.negativeAmountOfMoney(number: negativeAmountOfMoney)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: ["name": amount, "name2": 2],
-                description: "Description",
+                personPaid: ["A": negativeAmountOfMoney, "B": 2],
+                description: "",
                 sumOfBill: 1,
-                date: Date.now
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.negativeAmountOfMoney(number: amount))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsMoreThanTwoDecimalPlacesForMoneyErrorWhenPersonPaidAmountOfMoneyHasMoreThanTwoDecimalPlaces() {
-        let amount: Decimal = 1.111
+        let amountWithMoreThanTwoDecimalPlaces: Decimal = 1.111
+        let expectedError =
+            BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amountWithMoreThanTwoDecimalPlaces)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: ["name": amount],
-                description: "Description",
+                personPaid: ["A": amountWithMoreThanTwoDecimalPlaces],
+                description: "",
                 sumOfBill: 1,
-                date: Date.now
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amount))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsMoreThanTwoDecimalPlacesForMoneyErrorWhenSumOfBillHasMoreThanTwoDecimalPlaces() {
-        let amount: Decimal = 1.111
+        let amountWithMoreThanTwoDecimalPlaces: Decimal = 1.111
+        let expectedError =
+            BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amountWithMoreThanTwoDecimalPlaces)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: ["name": 1],
-                description: "Description",
-                sumOfBill: amount,
-                date: Date.now
+                personPaid: ["A": 1],
+                description: "",
+                sumOfBill: amountWithMoreThanTwoDecimalPlaces,
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amount))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsInvalidSumOfBillErrorWhenSumOfBillIsLessThanZero() {
-        let sum: Decimal = -1
+        let negativeAmountOfBill: Decimal = -1
+        let expectedError = BillValidationError.invalidSumOfBill(sum: negativeAmountOfBill)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: ["name": 1],
-                description: "Description",
-                sumOfBill: sum,
-                date: Date.now
+                personPaid: ["A": 1],
+                description: "",
+                sumOfBill: negativeAmountOfBill,
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.invalidSumOfBill(sum: sum))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsInvalidSumOfBillErrorWhenSumOfBillEqualsToZero() {
-        let sum: Decimal = 0
+        let zeroAmountOfBill: Decimal = 0
+        let expectedError = BillValidationError.invalidSumOfBill(sum: zeroAmountOfBill)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: ["name": 1],
-                description: "Description",
-                sumOfBill: sum,
-                date: Date.now
+                personPaid: ["A": 1],
+                description: "",
+                sumOfBill: zeroAmountOfBill,
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.invalidSumOfBill(sum: sum))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsIncorrectEstimatedSumOfTheBillErrorWhenSumOfBillIsNotEqualToSumOfPersonPaid() {
+        let expectedError = BillValidationError.incorrectEstimatedSumOfTheBill
+
         XCTAssertThrowsError(
             try Bill(
-                personPaid: ["name": 1],
-                description: "Description",
+                personPaid: ["A": 1],
+                description: "",
                 sumOfBill: 2,
-                date: Date.now
+                date: .now
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.incorrectEstimatedSumOfTheBill)
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 
     func testInitThrowsTheDateIsInFutureErrorWhenTheInputDateIsInTheFuture() {
         let tenSecondsDuration: TimeInterval = 10
         let tenSecondsFromNowDate = Date.now + tenSecondsDuration
+        let expectedError = BillValidationError.theDateIsInFuture(tenSecondsFromNowDate)
 
         XCTAssertThrowsError(
             try Bill(
-                personPaid: ["name": 1],
-                description: "Description",
+                personPaid: ["A": 1],
+                description: "",
                 sumOfBill: 2,
                 date: tenSecondsFromNowDate
             )
         ) { error in
-            XCTAssertEqual(error as? BillValidationError,
-                           BillValidationError.theDateIsInFuture(tenSecondsFromNowDate))
+            XCTAssertEqual(error as? BillValidationError, expectedError)
         }
     }
 }
