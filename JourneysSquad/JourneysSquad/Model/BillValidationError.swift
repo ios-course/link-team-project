@@ -54,3 +54,5 @@ extension BillValidationError: LocalizedError {
         }
     }
 }
+
+extension BillValidationError: Equatable {}
