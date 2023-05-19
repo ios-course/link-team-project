@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A view displaying one bill.
-struct BillRowView: View {
+struct BillRow: View {
 
     var bill: DummyBillModel
 
@@ -29,8 +29,8 @@ struct BillRowView: View {
     }
 }
 
-struct BillRowView_Previews: PreviewProvider {
+struct BillRow_Previews: PreviewProvider {
     static var previews: some View {
-        BillRowView(bill: DummyBillModel())
+        BillRow(bill: DummyBillModel())
     }
 }
