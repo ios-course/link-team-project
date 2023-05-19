@@ -15,6 +15,7 @@
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRowView.swift */; };
+		AB1377002A1786F90085CEFE /* DummyBillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FF2A1786F90085CEFE /* DummyBillModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 		AB1376FC2A173F530085CEFE /* BillRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowView.swift; sourceTree = "<group>"; };
+		AB1376FF2A1786F90085CEFE /* DummyBillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */,
+				AB1376FF2A1786F90085CEFE /* DummyBillModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
+				AB1377002A1786F90085CEFE /* DummyBillModel.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
