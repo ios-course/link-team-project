@@ -77,7 +77,7 @@ final class BillTests: XCTestCase {
             case .tooLongPersonName:
                 break
             default:
-                XCTFail("Unexpected error")
+                XCTFail("Unexpected error: \(error)")
             }
         }
     }
@@ -133,7 +133,7 @@ final class BillTests: XCTestCase {
                 let expectedError = BillValidationError.emptyPersonName(name: triggeringName)
                 XCTAssertEqual(actualError, expectedError)
             default:
-                XCTFail("Unexpected error")
+                XCTFail("Unexpected error: \(error)")
             }
         }
     }
