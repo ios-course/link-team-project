@@ -3,7 +3,6 @@ import SwiftUI
 
 /// The view model for a bill responsible for preparing and providing data for the view.
 class BillRowViewModel: ObservableObject {
-
     /// Description of the bill.
     @Published var dummyDescription = "Description"
 
@@ -15,6 +14,6 @@ class BillRowViewModel: ObservableObject {
 
     /// A formatted string representing the members, separated by a comma.
     var formattedParticipants: String {
-            dummyParticipants.joined(separator: ", ")
-        }
+        dummyParticipants.joined(separator: ", ")
+    }
 }

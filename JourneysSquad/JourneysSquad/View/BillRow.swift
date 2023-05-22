@@ -30,7 +30,7 @@ struct BillRowView: View {
 
 struct BillRow_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = BillRowViewModel()
-        BillRowView(viewModel: viewModel)
+        let dummyBill = BillRowViewModel()
+        BillRowView(viewModel: dummyBill)
     }
 }
