@@ -78,11 +78,11 @@ struct Bill {
     }
 
     private static func validatePersonName(_ name: String) throws {
-        guard name.count <= Bill.maxPersonNameLength else {
+        if name.count > Bill.maxPersonNameLength {
             throw BillValidationError.tooLongPersonName(name: name)
         }
 
-        guard !name.trimmingCharacters(in: .whitespaces).isEmpty else {
+        if name.trimmingCharacters(in: .whitespaces).isEmpty {
             throw BillValidationError.emptyPersonName(name: name)
         }
     }

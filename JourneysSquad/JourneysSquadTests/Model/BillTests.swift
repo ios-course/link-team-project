@@ -148,7 +148,7 @@ final class BillTests: XCTestCase {
                 date: .now
             )
         ) { error in
-            guard case .tooLongPersonName = error as? BillValidationError else {
+            guard case .emptyPersonName = error as? BillValidationError else {
                 XCTFail("Unexpected error \(error)")
                 return
             }
