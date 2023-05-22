@@ -17,7 +17,7 @@ struct Bill {
     /// The unique identifier for the bill.
     let id = UUID()
 
-    /// Create a new instance of bill.
+    /// Creates a new instance of bill.
     ///
     /// - Parameters:
     ///    - personPaid: The list of the people and according amount of money that each of them paid.
