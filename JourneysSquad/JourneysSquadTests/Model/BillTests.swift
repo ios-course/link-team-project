@@ -71,14 +71,36 @@ final class BillTests: XCTestCase {
                 date: .now
             )
         ) { error in
-            let actualError = error as? BillValidationError
-
-            switch actualError {
-            case .tooLongPersonName:
-                break
-            default:
-                XCTFail("Unexpected error: \(error)")
+            guard case .tooLongPersonName = error as? BillValidationError else {
+                XCTFail("Unexpected error \(error)")
+                return
             }
+        }
+    }
+
+    // swiftlint:disable:next line_length
+    func testInitThrowsTooLongPersonNameErrorWithAccordingTriggeringNameWhenMultipleNamesAreLongerThanMaxPersonNameLength() {
+        let nameLengthThatExceedsLimit = Bill.maxPersonNameLength + 1
+        let tooLongName = String(repeating: "A", count: nameLengthThatExceedsLimit)
+        let anotherTooLongName = String(repeating: "B", count: nameLengthThatExceedsLimit)
+        let expectedPossibleErrors = [
+            BillValidationError.tooLongPersonName(name: tooLongName),
+            BillValidationError.tooLongPersonName(name: anotherTooLongName),
+        ]
+
+        XCTAssertThrowsError(
+            try Bill(
+                personPaid: [tooLongName: 1, anotherTooLongName: 1],
+                description: "",
+                sumOfBill: 1,
+                date: .now
+            )
+        ) { error in
+            guard let caughtError = error as? BillValidationError else {
+                XCTFail("Unexpected error \(error)")
+                return
+            }
+            XCTAssertTrue(expectedPossibleErrors.contains(caughtError))
         }
     }
 
@@ -126,14 +148,9 @@ final class BillTests: XCTestCase {
                 date: .now
             )
         ) { error in
-            let actualError = error as? BillValidationError
-
-            switch actualError {
-            case let .emptyPersonName(name: triggeringName):
-                let expectedError = BillValidationError.emptyPersonName(name: triggeringName)
-                XCTAssertEqual(actualError, expectedError)
-            default:
-                XCTFail("Unexpected error: \(error)")
+            guard case .tooLongPersonName = error as? BillValidationError else {
+                XCTFail("Unexpected error \(error)")
+                return
             }
         }
     }
