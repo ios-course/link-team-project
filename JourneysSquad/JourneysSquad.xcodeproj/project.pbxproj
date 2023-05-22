@@ -14,7 +14,7 @@
 		9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */; };
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
-		AB1376FD2A173F530085CEFE /* BillRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRow.swift */; };
+		AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRowView.swift */; };
 		AB1377032A1A56550085CEFE /* DummyBillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1377022A1A56550085CEFE /* DummyBillRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
-		AB1376FC2A173F530085CEFE /* BillRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRow.swift; sourceTree = "<group>"; };
+		AB1376FC2A173F530085CEFE /* BillRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowView.swift; sourceTree = "<group>"; };
 		AB1377022A1A56550085CEFE /* DummyBillRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 		AB1376FE2A173F5E0085CEFE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AB1376FC2A173F530085CEFE /* BillRow.swift */,
+				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 			files = (
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
-				AB1376FD2A173F530085CEFE /* BillRow.swift in Sources */,
+				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
 				AB1377032A1A56550085CEFE /* DummyBillRowViewModel.swift in Sources */,
 			);
