@@ -6,10 +6,10 @@ class BillRowViewModel: ObservableObject {
     /// Description of the bill.
     @Published var dummyDescription = "Description"
 
-    /// Participants,who participate in the bill.
+    /// Participants between whom the amount of the bill is divided.
     @Published var dummyParticipants = ["Participant 1", "Participant 2"]
 
-    /// Total amoun of the bill.
+    /// Total amount of the bill.
     @Published var dummySumOfBill = "50.00"
 
     /// A formatted string representing the members, separated by a comma.
