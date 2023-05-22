@@ -50,11 +50,9 @@ struct Bill {
         sumOfBill: Decimal,
         date: Date
     ) throws {
-        guard date <= Date() else { throw BillValidationError.theDateIsInFuture(date) }
-
-        guard sumOfBill > 0 else { throw BillValidationError.invalidSumOfBill(sum: sumOfBill) }
-
-        guard !Bill.hasMoreThanTwoDecimalPlaces(sumOfBill) else {
+        if date > Date() { throw BillValidationError.theDateIsInFuture(date) }
+        if sumOfBill <= 0 { throw BillValidationError.invalidSumOfBill(sum: sumOfBill) }
+        if Bill.hasMoreThanTwoDecimalPlaces(sumOfBill) {
             throw BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: sumOfBill)
         }
 
@@ -63,18 +61,18 @@ struct Bill {
         for (personName, amountPaid) in personPaid {
             try Bill.validatePersonName(personName)
 
-            guard amountPaid >= 0 else {
+            if amountPaid < 0 {
                 throw BillValidationError.negativeAmountOfMoney(number: amountPaid)
             }
 
-            guard !Bill.hasMoreThanTwoDecimalPlaces(amountPaid) else {
+            if Bill.hasMoreThanTwoDecimalPlaces(amountPaid) {
                 throw BillValidationError.moreThanTwoDecimalPlacesForMoney(amount: amountPaid)
             }
 
             sumOfAmountPaid += amountPaid
         }
 
-        guard sumOfBill == sumOfAmountPaid else {
+        if sumOfBill != sumOfAmountPaid {
             throw BillValidationError.incorrectEstimatedSumOfTheBill
         }
     }
