@@ -12,7 +12,7 @@ class BillRowViewModel: ObservableObject {
     /// Total amount of the bill.
     @Published var dummySumOfBill = "50.00"
 
-    /// A formatted string representing the members, separated by a comma.
+    /// A formatted string representing the participants, separated by a comma.
     var formattedParticipants: String {
         dummyParticipants.joined(separator: ", ")
     }
