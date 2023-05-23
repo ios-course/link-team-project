@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FieldToInputView: View {
+struct DataInputFieldView: View {
     @Binding var input: String
     let labelOfField: String
     let placeholder: String
@@ -21,22 +21,13 @@ struct FieldToInputView: View {
         }
         .padding()
     }
-
-//    init(input: Binding<String>,
-//         labelOfField: String,
-//         placeholder: String,
-//         keyboardType: UIKeyboardType = .default) {
-//        self.input = input
-//        self.labelOfField = labelOfField
-//        self.placeholder = placeholder
-//    }
 }
 
 struct FieldToInputView_Previews: PreviewProvider {
     static var previews: some View {
-        FieldToInputView(input: .constant("500"),
+        DataInputFieldView(input: .constant("500"),
                          labelOfField: "Label",
                          placeholder: "Placeholder",
-                         keyboardType: .numberPad)
+                         keyboardType: .default)
     }
 }
