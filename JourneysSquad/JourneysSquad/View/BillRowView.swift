@@ -8,7 +8,7 @@ struct BillRowView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(viewModel.dummyDescription)
+                Text(viewModel.description)
                     .lineLimit(1)
                     .font(.system(size: bodySize))
 
@@ -19,7 +19,7 @@ struct BillRowView: View {
             }
             Spacer()
 
-            Text(viewModel.dummySumOfBill)
+            Text(viewModel.sumOfBill)
                 .font(.system(size: bodySize))
                 .lineLimit(1)
         }
