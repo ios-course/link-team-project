@@ -25,6 +25,7 @@ struct BillRowView: View {
         }
         .padding()
     }
+
     /// Font "Note" used as required [App style guidlines]
     /// (https://github.com/ios-course/link-team-project/wiki/App-style-guidelines)
     private let noteSize: CGFloat = 14
