@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-/// The view model for a bill responsible for preparing and providing data for the view.
+/// The view model responsible for preparing and providing data for the BillRowView.
 class BillRowViewModel: ObservableObject {
     /// Description of the bill.
     @Published var dummyDescription = "Description"
