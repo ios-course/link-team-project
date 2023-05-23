@@ -19,6 +19,7 @@
 		9BE6A3AA2A1CE60500B68023 /* FieldToInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3A92A1CE60500B68023 /* FieldToInputView.swift */; };
 		9BE6A3AC2A1CF67900B68023 /* AddPersonPaidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AB2A1CF67900B68023 /* AddPersonPaidButton.swift */; };
 		9BE6A3AE2A1D03FC00B68023 /* DateFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AD2A1D03FC00B68023 /* DateFieldView.swift */; };
+		9BE6A3B42A1D0A8100B68023 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3B32A1D0A8100B68023 /* SaveButton.swift */; };
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		9BE6A3A92A1CE60500B68023 /* FieldToInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldToInputView.swift; sourceTree = "<group>"; };
 		9BE6A3AB2A1CF67900B68023 /* AddPersonPaidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonPaidButton.swift; sourceTree = "<group>"; };
 		9BE6A3AD2A1D03FC00B68023 /* DateFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFieldView.swift; sourceTree = "<group>"; };
+		9BE6A3B32A1D0A8100B68023 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 			children = (
 				9B635ADD2A17425F0011C49E /* AddBillView.swift */,
 				9BE6A3AB2A1CF67900B68023 /* AddPersonPaidButton.swift */,
+				9BE6A3B32A1D0A8100B68023 /* SaveButton.swift */,
 				9BE6A3AD2A1D03FC00B68023 /* DateFieldView.swift */,
 				9BE6A3A92A1CE60500B68023 /* FieldToInputView.swift */,
 			);
@@ -280,6 +283,7 @@
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				9BE6A3AA2A1CE60500B68023 /* FieldToInputView.swift in Sources */,
 				9BE6A3AE2A1D03FC00B68023 /* DateFieldView.swift in Sources */,
+				9BE6A3B42A1D0A8100B68023 /* SaveButton.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
 				9BE6A3AC2A1CF67900B68023 /* AddPersonPaidButton.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
