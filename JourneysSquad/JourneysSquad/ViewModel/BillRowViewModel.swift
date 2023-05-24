@@ -1,10 +1,7 @@
-import Foundation
-import SwiftUI
-
 /// Responsible for managing the data associated with a BillRowView.
 final class BillRowViewModel {
     /// Description of the bill to be shown in the view.
-    var description = "Description"
+    let description = "Description"
 
     /// List of the participants of the bill separated by a comma to be shown in the view.
     var participants: String {
@@ -12,5 +9,5 @@ final class BillRowViewModel {
     }
 
     /// Total amount of the bill to be shown in the view.
-    var sumOfBill = "50.00"
+    let sumOfBill = "50.00"
 }

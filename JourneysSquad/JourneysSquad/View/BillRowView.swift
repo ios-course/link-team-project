@@ -2,6 +2,8 @@ import SwiftUI
 
 /// A view displaying information of the one bill.
 struct BillRowView: View {
+    // MARK: - Internal interface
+
     /// The view model to provide data to the view.
     var viewModel: BillRowViewModel
 
@@ -25,6 +27,8 @@ struct BillRowView: View {
         }
         .padding()
     }
+
+    // MARK: - Private interface
 
     /// Font "Note" used as required [App style guidlines]
     /// (https://github.com/ios-course/link-team-project/wiki/App-style-guidelines)
