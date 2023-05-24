@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 /// Responsible for managing the data associated with a BillRowView.
-final class BillRowViewModel: ObservableObject {
+final class BillRowViewModel {
     /// Description of the bill to be shown in the view.
     var description = "Description"
 
@@ -12,5 +12,5 @@ final class BillRowViewModel: ObservableObject {
     }
 
     /// Total amount of the bill to be shown in the view.
-    @Published var sumOfBill = "50.00"
+    var sumOfBill = "50.00"
 }

@@ -3,7 +3,7 @@ import SwiftUI
 /// A view displaying information of the one bill.
 struct BillRowView: View {
     /// The view model to provide data to the view.
-    @ObservedObject var viewModel: BillRowViewModel
+    var viewModel: BillRowViewModel
 
     var body: some View {
         HStack {
