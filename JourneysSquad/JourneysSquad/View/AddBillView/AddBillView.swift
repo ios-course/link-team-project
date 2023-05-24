@@ -38,7 +38,9 @@ struct AddBillView: View {
 
             HStack {
                 Spacer()
-                CircleWithPlusView()
+                Button {} label: {
+                    CircleWithPlusView()
+                }
             }
             .padding(EdgeInsets(top: buttonVerticalIndent,
                                 leading: buttonHorizontalIndent,
@@ -51,8 +53,10 @@ struct AddBillView: View {
             }
             .padding()
 
-            RoundedRectangleView(label: "Save")
-                .padding(.top, buttonVerticalIndent)
+            Button {} label: {
+                RoundedRectangleView(label: "Save")
+                    .padding(.top, buttonVerticalIndent)
+            }
         }
     }
 
