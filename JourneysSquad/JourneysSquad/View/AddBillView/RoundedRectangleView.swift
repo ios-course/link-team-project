@@ -19,11 +19,11 @@ struct RoundedRectangleView: View {
     private let fontBodySize: CGFloat = 20
     private let buttonWidth: CGFloat = 150
     private let buttonHeight: CGFloat = 40
-    private let buttonCornerRadius: CGFloat = 10
+    private let buttonCornerRadius: CGFloat = 15
 }
 
 struct RoundedRectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedRectangleView(label: "Hello")
+        RoundedRectangleView(label: "Save")
     }
 }

@@ -12,13 +12,13 @@ struct AddBillView: View {
     var body: some View {
         ScrollView {
             DataInputFieldView(input: $sumOfBill,
-                               labelOfField: "How much",
+                               labelOfField: "How much?",
                                placeholder: "$0",
                                keyboardType: .default)
 
             DataInputFieldView(input: $purchaseDescription,
-                               labelOfField: "What is it",
-                               placeholder: "Describe your purchase",
+                               labelOfField: "What is it?",
+                               placeholder: "Describe your spending",
                                keyboardType: .default)
 
             HStack {
@@ -47,11 +47,8 @@ struct AddBillView: View {
                                 bottom: buttonVerticalIndent,
                                 trailing: buttonHorizontalIndent))
 
-            HStack {
-                DatePickFieldView(value: $selectedDate)
-                Spacer()
-            }
-            .padding()
+            DatePickFieldView(value: $selectedDate)
+                .padding()
 
             Button {} label: {
                 RoundedRectangleView(label: "Save")
