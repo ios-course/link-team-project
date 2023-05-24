@@ -1,16 +1,14 @@
 import SwiftUI
 
-/// A view that allows to select a calendar date.
-struct DateInputFieldView: View {
-    /// A date on the view.
+/// A view that allows selecting a calendar date.
+struct DatePickFieldView: View {
+    /// The selected date that is shown in the view.
     @Binding var value: Date
 
     var body: some View {
         VStack(alignment: .leading) {
             Text("Date".uppercased())
-                .font(.system(size: fontBodySize,
-                              weight: .bold,
-                              design: .rounded))
+                .font(.system(size: fontBodySize, weight: .bold, design: .rounded))
 
             Divider()
 
@@ -25,8 +23,8 @@ struct DateInputFieldView: View {
     private let fontBodySize: CGFloat = 20
 }
 
-struct DateFieldView_Previews: PreviewProvider {
+struct DatePickFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        DateInputFieldView(value: .constant(.now))
+        DatePickFieldView(value: .constant(Date()))
     }
 }
