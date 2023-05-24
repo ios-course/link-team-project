@@ -1,24 +1,24 @@
 import SwiftUI
 
-struct AddPersonPaidButton: View {
-    let action: () -> Void = {}
+/// The black circle view with white plus in the center.
+struct CircleWithPlusView: View {
     var body: some View {
-        Button(action: action,
-               label: {
                    Image(systemName: "plus")
                        .resizable()
-                       .frame(width: 25, height: 25)
+                       .frame(width: frameWidthAndHeight, height: frameWidthAndHeight)
                        .padding(7)
                        .background(Color.black)
                        .foregroundColor(.white)
                        .clipShape(Circle())
-               })
-               .padding(Edge.Set.trailing, 40)
     }
+
+    // MARK: - Private interface
+
+    private let frameWidthAndHeight: CGFloat = 25
 }
 
-struct AddPersonButton_Previews: PreviewProvider {
+struct CircleWithPlusView_Previews: PreviewProvider {
     static var previews: some View {
-        AddPersonPaidButton()
+        CircleWithPlusView()
     }
 }
