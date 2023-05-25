@@ -1,5 +1,5 @@
 /// Responsible for managing the data associated with a BillRowView.
-final class BillRowViewModel {
+final class DummyBillRowViewModel {
     /// Description of the bill to be shown in the view.
     let description = "Description"
 
