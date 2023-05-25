@@ -69,7 +69,6 @@
 		9B0383AA2A04D7F4005E333D = {
 			isa = PBXGroup;
 			children = (
-				BA7BE3042A1DFEC8005D0395 /* NavigationBarForHistoryOfOperationView.swift */,
 				9B0383B52A04D7F4005E333D /* JourneysSquad */,
 				9B1DBD962A0E2EE40082999A /* JourneysSquadTests */,
 				9B0383B42A04D7F4005E333D /* Products */,
@@ -136,6 +135,7 @@
 		AB1376FE2A173F5E0085CEFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA7BE3042A1DFEC8005D0395 /* NavigationBarForHistoryOfOperationView.swift */,
 				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 			);
 			path = View;
