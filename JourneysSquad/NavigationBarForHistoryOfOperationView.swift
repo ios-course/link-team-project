@@ -11,7 +11,7 @@ struct NavigationBarForHistoryOfOperationView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Text("Add")
-                    .font(.system(size: fontBodySize, design: .default))
+                    .font(.system(size: fontBodySize))
                     .fontWeight(.bold)
                     .foregroundColor(.blue)
             }
@@ -22,8 +22,6 @@ struct NavigationBarForHistoryOfOperationView: View {
 
     private let fontBodySize: CGFloat = 20
 }
-
-// MARK: Internal Interface
 
 struct NavigationBarForHistoryOfOperationView_Previews: PreviewProvider {
     static var previews: some View {
