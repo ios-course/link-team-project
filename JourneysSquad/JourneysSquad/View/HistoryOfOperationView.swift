@@ -4,19 +4,21 @@ import SwiftUI
 struct HistoryOfOperationView: View {
     var body: some View {
         NavigationStack {
-            Text("Any other view can be placed here")
-                .navigationTitle("History of Operations")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    Button("Add") {}
-                        .font(.system(size: fontBodySize))
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
-                }
+            VStack {
+                Text("Any other view can be placed here")
+            }
+            .navigationTitle("History of Operations")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button("Add") {}
+                    .font(.system(size: fontBodySize))
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+            }
         }
     }
 
-    // MARK: Private interface
+    // MARK: - Private interface
 
     private let fontBodySize: CGFloat = 20
 }
