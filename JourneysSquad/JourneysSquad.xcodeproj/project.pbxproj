@@ -18,7 +18,7 @@
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BE6A3AA2A1CE60500B68023 /* DataInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */; };
-		9BE6A3AC2A1CF67900B68023 /* CircleWithPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AB2A1CF67900B68023 /* CircleWithPlusView.swift */; };
+		9BE6A3AC2A1CF67900B68023 /* BlackCircleWithPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AB2A1CF67900B68023 /* BlackCircleWithPlusButton.swift */; };
 		9BE6A3AE2A1D03FC00B68023 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AD2A1D03FC00B68023 /* DatePickerView.swift */; };
 		9BE6A3B42A1D0A8100B68023 /* BlackRoundedRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3B32A1D0A8100B68023 /* BlackRoundedRectangleButton.swift */; };
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
@@ -48,7 +48,7 @@
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputFieldView.swift; sourceTree = "<group>"; };
-		9BE6A3AB2A1CF67900B68023 /* CircleWithPlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWithPlusView.swift; sourceTree = "<group>"; };
+		9BE6A3AB2A1CF67900B68023 /* BlackCircleWithPlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCircleWithPlusButton.swift; sourceTree = "<group>"; };
 		9BE6A3AD2A1D03FC00B68023 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		9BE6A3B32A1D0A8100B68023 /* BlackRoundedRectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRoundedRectangleButton.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			children = (
 				9B635ADD2A17425F0011C49E /* AddBillView.swift */,
 				9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */,
-				9BE6A3AB2A1CF67900B68023 /* CircleWithPlusView.swift */,
+				9BE6A3AB2A1CF67900B68023 /* BlackCircleWithPlusButton.swift */,
 				9BE6A3AD2A1D03FC00B68023 /* DatePickerView.swift */,
 				9BE6A3B32A1D0A8100B68023 /* BlackRoundedRectangleButton.swift */,
 			);
@@ -305,7 +305,7 @@
 				9BE6A3B42A1D0A8100B68023 /* BlackRoundedRectangleButton.swift in Sources */,
 				9B58E7D92A20BC2F009A3036 /* String+AppIconName.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
-				9BE6A3AC2A1CF67900B68023 /* CircleWithPlusView.swift in Sources */,
+				9BE6A3AC2A1CF67900B68023 /* BlackCircleWithPlusButton.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
