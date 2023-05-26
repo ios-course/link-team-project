@@ -11,10 +11,10 @@ class DummyBillRowViewModel: Identifiable {
     /// Total amount of the bill to be shown in the view.
     let sumOfBill: String
 
-    /// Date of the bill.
+    /// Date of bill.
     let date: String
 
-    /// Unique identifier for the account.
+    /// Unique identifier for bill.
     let id = UUID()
 
     /// A formatted string representing the participants, separated by a comma.

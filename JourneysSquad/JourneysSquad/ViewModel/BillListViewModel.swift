@@ -2,7 +2,7 @@ import Foundation
 
 struct BillListViewModel: Identifiable {
     /// The unique identifier of the bill list view model.
-    var id: String { return headerText }
+    var id: String { headerText }
 
     /// The header text shown at the top of the bill list.
     let headerText: String
