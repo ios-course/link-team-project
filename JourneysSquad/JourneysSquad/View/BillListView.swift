@@ -1,12 +1,14 @@
 import SwiftUI
-/// A view displaying the list of bills.
+/// Displays the list of bills.
 struct BillListView: View {
     // MARK: - Internal interface
+    /// Dummy view model that provides data for the view.
+    let billListViewModel = DummyBillListViewModel()
 
     var body: some View {
         List {
-            ForEach(BillListDummyData.listData, id: \.headerText) { section in
-                Section(header: Text(section.headerText).font(.system(size: fontBodySize))) {
+            ForEach(billListViewModel.listData) { section in
+                Section(header: Text(section.sectionHeader).font(.system(size: fontBodySize))) {
                     ForEach(section.rows) { row in
                         BillRowView(viewModel: row)
                     }

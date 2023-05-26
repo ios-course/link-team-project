@@ -1,10 +1,10 @@
 import Foundation
 
-/// The instance of dummy list of bills to use in preview of views.
-enum BillListDummyData {
-    /// List with data that will be displayed in the preview.
-    static let listData: [BillListViewModel] = [
-        BillListViewModel(
+/// Dummy view model for the BillListView.
+class DummyBillListViewModel {
+    /// A dummy list of bills grouped into sections by date.
+    let listData: [SectionViewModel] = [
+        SectionViewModel(
             headerText: "2023-05-24",
             rows: [
                 DummyBillRowViewModel(
@@ -29,7 +29,7 @@ enum BillListDummyData {
                 ),
             ]
         ),
-        BillListViewModel(
+        SectionViewModel(
             headerText: "2023-05-23",
             rows: [
                 DummyBillRowViewModel(
@@ -53,7 +53,7 @@ enum BillListDummyData {
                 ),
             ]
         ),
-        BillListViewModel(
+        SectionViewModel(
             headerText: "2023-05-20",
             rows: [
                 DummyBillRowViewModel(
@@ -68,7 +68,7 @@ enum BillListDummyData {
                 ),
             ]
         ),
-        BillListViewModel(
+        SectionViewModel(
             headerText: "2023-05-17",
             rows: [
                 DummyBillRowViewModel(
