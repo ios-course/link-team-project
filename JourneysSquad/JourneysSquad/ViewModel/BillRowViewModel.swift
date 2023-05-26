@@ -1,7 +1,7 @@
 import Foundation
 
 /// Responsible for managing the data associated with a BillRowView.
-class DummyBillRowViewModel: Identifiable {
+final class DummyBillRowViewModel: Identifiable {
     /// Description of the bill to be shown in the view.
     let description: String
 

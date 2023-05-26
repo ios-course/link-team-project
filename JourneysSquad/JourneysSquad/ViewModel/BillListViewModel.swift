@@ -1,6 +1,7 @@
 import Foundation
 
-struct BillListViewModel: Identifiable {
+/// Responsible for managing the data to show list of bills.
+final class BillListViewModel: Identifiable {
     /// The unique identifier of the bill list view model.
     var id: String { headerText }
 
