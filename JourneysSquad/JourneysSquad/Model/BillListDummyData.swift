@@ -2,6 +2,7 @@ import Foundation
 
 /// The instance of dummy list of bills to use in preview of views.
 enum BillListDummyData {
+    /// List with data that will be displayed in the preview.
     static let listData: [BillListViewModel] = [
         BillListViewModel(
             headerText: "2023-05-24",
