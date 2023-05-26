@@ -8,7 +8,7 @@ struct HistoryOfOperationsView: View {
             VStack {
                 Text("No operations found")
             }
-            .navigationTitle(title)
+            .navigationTitle(titleText)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button(labelText) {}
@@ -19,7 +19,7 @@ struct HistoryOfOperationsView: View {
 
     // MARK: - Private interface
 
-    private let title = "History of Operations"
+    private let titleText = "History of Operations"
     private let labelText = "Add"
 }
 
