@@ -4,11 +4,13 @@ import SwiftUI
 struct BlackRoundedRectangleButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.system(size: BlackRoundedRectangleButton.fontBodySize,
-                          weight: .bold))
-            .frame(width: BlackRoundedRectangleButton.buttonWidth,
-                   height: BlackRoundedRectangleButton.buttonHeight)
-            .background(Color.black)
+            .font(.system(size: BlackRoundedRectangleButton.fontBodySize))
+            .fontWeight(.bold)
+            .frame(
+                width: BlackRoundedRectangleButton.buttonWidth,
+                height: BlackRoundedRectangleButton.buttonHeight
+            )
+            .background(.black)
             .foregroundColor(.white)
             .cornerRadius(BlackRoundedRectangleButton.buttonCornerRadius)
     }
