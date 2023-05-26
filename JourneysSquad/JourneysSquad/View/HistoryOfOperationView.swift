@@ -1,30 +1,29 @@
 import SwiftUI
 
 /// View with a navigation bar, a title and a toolbar item.
-struct HistoryOfOperationView: View {
+struct HistoryOfOperationsView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Any other view can be placed here")
+                Text("No operations found")
             }
-            .navigationTitle("History of Operations")
+            .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button("Add") {}
-                    .font(.system(size: fontBodySize))
-                    .fontWeight(.bold)
-                    .foregroundColor(.blue)
+                Button(lableText) {}
+                    .buttonStyle(NavigationBarBlueButtonStyle())
             }
         }
     }
 
     // MARK: - Private interface
 
-    private let fontBodySize: CGFloat = 20
+    private let title = "History of Operations"
+    private let lableText = "Add"
 }
 
-struct NavigationBarForHistoryOfOperationView_Previews: PreviewProvider {
+struct HistoryOfOperationsView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryOfOperationView()
+        HistoryOfOperationsView()
     }
 }
