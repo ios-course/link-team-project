@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// View with a navigation bar, a title and a toolbar item.
+/// View to see list of added bills split on sections and sorted by date.
+/// Contain navigation bar with title and button now.
 struct HistoryOfOperationsView: View {
     var body: some View {
         NavigationStack {
@@ -10,8 +11,8 @@ struct HistoryOfOperationsView: View {
             .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button(lableText) {}
-                    .buttonStyle(NavigationBarBlueButtonStyle())
+                Button(labelText) {}
+                    .buttonStyle(NavigationBarItemBlue())
             }
         }
     }
@@ -19,7 +20,7 @@ struct HistoryOfOperationsView: View {
     // MARK: - Private interface
 
     private let title = "History of Operations"
-    private let lableText = "Add"
+    private let labelText = "Add"
 }
 
 struct HistoryOfOperationsView_Previews: PreviewProvider {
