@@ -13,7 +13,6 @@
 		9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */; };
 		9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */; };
 		9B58E7D92A20BC2F009A3036 /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58E7D82A20BC2F009A3036 /* String+AppIconName.swift */; };
-		9B635ADE2A17425F0011C49E /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B635ADD2A17425F0011C49E /* AddBillView.swift */; };
 		9B66673A2A152B95006AB63B /* BillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6667392A152B95006AB63B /* BillTests.swift */; };
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9B8B807F2A22129B006EEF35 /* DataInputFieldViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B807E2A22129B006EEF35 /* DataInputFieldViewAlignment.swift */; };
@@ -45,7 +44,6 @@
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
 		9B58E7D82A20BC2F009A3036 /* String+AppIconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppIconName.swift"; sourceTree = "<group>"; };
-		9B635ADD2A17425F0011C49E /* AddBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillView.swift; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9B8B807E2A22129B006EEF35 /* DataInputFieldViewAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputFieldViewAlignment.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 		9BE6A3A82A1CE59200B68023 /* AddBillView */ = {
 			isa = PBXGroup;
 			children = (
-				9B635ADD2A17425F0011C49E /* AddBillView.swift */,
 				9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */,
 				9B8B807E2A22129B006EEF35 /* DataInputFieldViewAlignment.swift */,
 				9BE6A3AB2A1CF67900B68023 /* BlackCircleWithPlusButton.swift */,
@@ -301,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8B807F2A22129B006EEF35 /* DataInputFieldViewAlignment.swift in Sources */,
-				9B635ADE2A17425F0011C49E /* AddBillView.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				9BE6A3AA2A1CE60500B68023 /* DataInputFieldView.swift in Sources */,
