@@ -1,67 +1,76 @@
 import SwiftUI
 
-/// A view for adding a bill with various details such as the sum of the bill,
-/// purchase description, person names, paid amount, and date.
+/// A view for adding a bill,
 struct AddBillView: View {
-    @State private var sumOfBill = ""
-    @State private var purchaseDescription = ""
-    @State private var participantName = ""
-    @State private var paidAmount = ""
-    @State private var selectedDate = Date()
-
     var body: some View {
         ScrollView {
             DataInputFieldView(input: $sumOfBill,
-                               labelOfField: "How much?",
-                               placeholder: "$0",
-                               keyboardType: .default)
-
-            DataInputFieldView(input: $purchaseDescription,
-                               labelOfField: "What is it?",
-                               placeholder: "Describe your spending",
-                               keyboardType: .default)
-
-            HStack {
-                DataInputFieldView(input: $participantName,
-                                   labelOfField: "Participant",
-                                   placeholder: "Name",
-                                   keyboardType: .default)
-
-                Spacer()
-
-                DataInputFieldView(input: $paidAmount,
-                                   labelOfField: "Paid",
-                                   placeholder: "$0",
-                                   keyboardType: .numberPad)
-                    .frame(maxWidth: paidFieldMaxWidth)
-            }
-
-            HStack {
-                Spacer()
-                Button {} label: {
-                    CircleWithPlusView()
-                }
-            }
-            .padding(EdgeInsets(top: buttonVerticalIndent,
-                                leading: buttonHorizontalIndent,
-                                bottom: buttonVerticalIndent,
-                                trailing: buttonHorizontalIndent))
-
-            DatePickFieldView(value: $selectedDate)
+                               label: howMuchFieldLabel,
+                               placeholder: howMuchFieldPlaceholder,
+                               keyboardType: .numberPad,
+                               alignment: .leading)
                 .padding()
 
-            Button {} label: {
-                RoundedRectangleView(label: "Save")
-                    .padding(.top, buttonVerticalIndent)
+            DataInputFieldView(input: $spendingDescription,
+                               label: whatIsItFieldLabel,
+                               placeholder: whatIsItFieldPlaceholder,
+                               keyboardType: .default,
+                               alignment: .leading)
+                .padding()
+
+            HStack(alignment: .top) {
+                DataInputFieldView(input: $participantName,
+                                   label: participantFieldLabel,
+                                   placeholder: participantFieldPlaceholder,
+                                   keyboardType: .default,
+                                   alignment: .leading)
+
+                Spacer()
+
+                VStack {
+                    DataInputFieldView(input: $paidAmount,
+                                       label: paidFieldLabel,
+                                       placeholder: paidFieldPlaceholder,
+                                       keyboardType: .numberPad,
+                                       alignment: .center)
+                        .frame(maxWidth: paidFieldMaxWidth)
+
+                    Button("") {}
+                        .buttonStyle(BlackCircleWithPlusButton())
+                        .padding(.top)
+                }
             }
+            .padding()
+
+            DatePickerView(date: $selectedDate)
+                .padding()
+
+            Button(String.AppIconName.save) {}
+                .buttonStyle(BlackRoundedRectangleButton())
+                .padding()
         }
     }
 
     // MARK: - Private interface
 
+    @State private var sumOfBill = ""
+    @State private var spendingDescription = ""
+    @State private var participantName = ""
+    @State private var paidAmount = ""
+    @State private var selectedDate = Date()
+
+    private let howMuchFieldLabel = "How much?"
+    private let howMuchFieldPlaceholder = "$0"
+    private let whatIsItFieldLabel = "What is it?"
+    private let whatIsItFieldPlaceholder = "Describe your spending"
+    private let participantFieldLabel = "Participant"
+    private let participantFieldPlaceholder = "Name"
+    private let paidFieldLabel = "Paid"
+    private let paidFieldPlaceholder = "$0"
+
     private let buttonVerticalIndent: CGFloat = 30
     private let buttonHorizontalIndent: CGFloat = 35
-    private let paidFieldMaxWidth: CGFloat = 100
+    private let paidFieldMaxWidth: CGFloat = 80
 }
 
 struct AddBillView_Previews: PreviewProvider {

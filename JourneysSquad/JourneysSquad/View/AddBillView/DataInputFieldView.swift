@@ -1,33 +1,35 @@
 import SwiftUI
 
-/// A field to enter text with a label above one.
+/// A text field that allows to enter and edit text and has a label above itself.
 struct DataInputFieldView: View {
-    /// The text entered in the field.
+    /// The text entered into the field.
     @Binding var input: String
 
-    /// The label displayed above the field.
-    let labelOfField: String
+    /// A label displayed above the field.
+    let label: String
 
-    /// The placeholder text displayed within the field.
+    /// A placeholder text displayed within the field.
     let placeholder: String
 
-    /// The type of keyboard to display when the field is tapped.
+    /// A type of keyboard to display when the field is tapped.
     let keyboardType: UIKeyboardType
 
+    /// An alignment of the label and the text field inside the view.
+    let alignment: DataInputFieldViewAlignment
+
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(labelOfField.uppercased())
-                .font(.system(size: fontBodySize, weight: .bold, design: .rounded))
+        VStack(alignment: alignment.horizontalAlignment) {
+            Text(label)
+                .font(.system(size: fontBodySize, weight: .bold))
 
             Divider()
 
             TextField(placeholder, text: $input)
-                .font(.system(size: fontBodySize, weight: .medium, design: .rounded))
+                .font(.system(size: fontBodySize))
                 .keyboardType(keyboardType)
                 .lineLimit(dataInputFieldLineLimit)
-                .padding(.top)
+                .multilineTextAlignment(alignment.textAlignment)
         }
-        .padding()
     }
 
     // MARK: - Private interface
@@ -39,8 +41,9 @@ struct DataInputFieldView: View {
 struct DataInputFieldView_Previews: PreviewProvider {
     static var previews: some View {
         DataInputFieldView(input: .constant(""),
-                           labelOfField: "Label",
+                           label: "Label",
                            placeholder: "Placeholder",
-                           keyboardType: .default)
+                           keyboardType: .default,
+                           alignment: .leading)
     }
 }
