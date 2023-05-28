@@ -132,6 +132,7 @@
 		9B58E7DA2A20BC37009A3036 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9B5F2D182A237B9200B0874E /* ReusableUIElements */,
 				9B58E7DB2A20BC54009A3036 /* AppStyle */,
 			);
 			path = Helpers;
@@ -143,6 +144,15 @@
 				9B58E7D82A20BC2F009A3036 /* String+AppIconName.swift */,
 			);
 			path = AppStyle;
+			sourceTree = "<group>";
+		};
+		9B5F2D182A237B9200B0874E /* ReusableUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				9BE6A3AB2A1CF67900B68023 /* BlackCircleWithPlusButton.swift */,
+				9BE6A3B32A1D0A8100B68023 /* BlackRoundedRectangleButton.swift */,
+			);
+			path = ReusableUIElements;
 			sourceTree = "<group>";
 		};
 		9B635ADF2A1742770011C49E /* View */ = {
@@ -158,9 +168,7 @@
 			children = (
 				9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */,
 				9B8B807E2A22129B006EEF35 /* DataInputFieldViewAlignment.swift */,
-				9BE6A3AB2A1CF67900B68023 /* BlackCircleWithPlusButton.swift */,
 				9BE6A3AD2A1D03FC00B68023 /* DatePickerView.swift */,
-				9BE6A3B32A1D0A8100B68023 /* BlackRoundedRectangleButton.swift */,
 			);
 			path = AddBillView;
 			sourceTree = "<group>";
