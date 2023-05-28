@@ -128,15 +128,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9BE7DB112A23C4FA00B4ADA4 /* ReusableUIElements */ = {
-			isa = PBXGroup;
-			children = (
-				9BE7DB0D2A23C4D200B4ADA4 /* BlackCircleWithPlusButton.swift */,
-				9BE7DB0F2A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift */,
-			);
-			path = ReusableUIElements;
-			sourceTree = "<group>";
-		};
 		9BE7DB122A23C51800B4ADA4 /* App Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,9 +140,17 @@
 			isa = PBXGroup;
 			children = (
 				9BE7DB122A23C51800B4ADA4 /* App Style */,
-				9BE7DB112A23C4FA00B4ADA4 /* ReusableUIElements */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9BE7DB142A23CD6F00B4ADA4 /* ReusableStyles */ = {
+			isa = PBXGroup;
+			children = (
+				9BE7DB0D2A23C4D200B4ADA4 /* BlackCircleWithPlusButton.swift */,
+				9BE7DB0F2A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift */,
+			);
+			path = ReusableStyles;
 			sourceTree = "<group>";
 		};
 		9BF8522F2A0F6E7E0000E0C0 /* Model */ = {
@@ -166,6 +165,7 @@
 		AB1376FE2A173F5E0085CEFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BE7DB142A23CD6F00B4ADA4 /* ReusableStyles */,
 				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 			);
 			path = View;
