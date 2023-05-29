@@ -7,14 +7,13 @@ struct BillSectionView: View {
     let sectionViewModel: DummySectionViewModel
 
     var body: some View {
-        Section(
-            header:
-            Text(sectionViewModel.header)
-                .font(.system(size: fontBodySize))
-        ) {
+        Section {
             ForEach(sectionViewModel.rows) { row in
                 BillRowView(viewModel: row)
             }
+        } header: {
+            Text(sectionViewModel.header)
+                .font(.system(size: fontBodySize))
         }
     }
 

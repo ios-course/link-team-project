@@ -1,6 +1,6 @@
 import Foundation
 
-/// Dummy view model for a list row.
+/// Dummy view model that provides data to display for a list row.
 final class DummyBillRowViewModel: Identifiable {
     /// Description of the bill to be shown in the view.
     let description: String

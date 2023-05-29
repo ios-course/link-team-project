@@ -1,8 +1,8 @@
 import Foundation
 
-/// Dummy view model for a bills list section.
+/// Dummy view model that provides data to display for a bills list section.
 final class DummySectionViewModel: Identifiable {
-    /// A unique identifier of the section.
+    /// The section's unique identifier.
     var id: String { header }
 
     /// A text shown as a header of the section in the view.
