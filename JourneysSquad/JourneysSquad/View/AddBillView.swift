@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// View for adding new bill with input fields to enter details of a new bill.
-/// Contain navigation bar with title and button `Back` now.
+/// A view that allows to create a new bill to split.
+/// The user can navigate back from the view.
 struct AddBillView: View {
     var body: some View {
         NavigationStack {
@@ -13,11 +13,13 @@ struct AddBillView: View {
             .navigationBarBackButtonHidden(false)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {},
-                           label: {
-                               Image(systemName: "chevron.backward")
-                           })
-                           .foregroundColor(.black)
+                    Button(
+                        action: {},
+                        label: {
+                            Image(systemName: .AppIconName.backwardChevron)
+                        }
+                    )
+                    .foregroundColor(.black)
                 }
             }
         }
@@ -25,7 +27,7 @@ struct AddBillView: View {
 
     // MARK: - Private interface
 
-    private let titleText = "Add new bill"
+    private let titleText = "Add a new bill"
 }
 
 struct AddBillView_Previews: PreviewProvider {
