@@ -17,7 +17,21 @@ final class DummySectionViewModel: Identifiable {
     ///   - headerText: A header text of the section.
     ///   - rows: A list of hardcoded bills those are grouped into the current section.
     init(headerText: String, rows: [DummyBillRowViewModel]) {
-        self.sectionHeader = headerText
+        sectionHeader = headerText
         self.rows = rows
     }
+
+    /// A dummy instance of the section.
+    static let dummyBillSectionViewModelInstance = BillSectionView(
+        sectionViewModel: DummySectionViewModel(
+            headerText: "2023-05-23",
+            rows: [
+                DummyBillRowViewModel(
+                    description: "Restaurant near center",
+                    participants: "Ivan, Ulia, Egor",
+                    sumOfBill: "50.12"
+                ),
+            ]
+        )
+    )
 }

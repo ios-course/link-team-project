@@ -30,4 +30,13 @@ final class DummyBillRowViewModel: Identifiable {
         self.participants = participants
         self.sumOfBill = sumOfBill
     }
+
+    /// A dummy instance of the row.
+    static let dummyBillRowViewModelInstance = BillRowView(
+        viewModel: DummyBillRowViewModel(
+            description: "Description",
+            participants: "Egor, Dima",
+            sumOfBill: "50.00"
+        )
+    )
 }

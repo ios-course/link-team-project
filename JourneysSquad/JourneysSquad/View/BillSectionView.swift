@@ -1,13 +1,26 @@
 import SwiftUI
 
 struct BillSectionView: View {
+    let sectionViewModel: DummySectionViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Section(header: Text(sectionViewModel.sectionHeader).font(.system(size: fontBodySize))) {
+            ForEach(sectionViewModel.rows) { row in
+                BillRowView(viewModel: row)
+            }
+        }
+        .compositingGroup()
     }
+
+    // MARK: - Private interface
+
+    private let fontBodySize: CGFloat = 20
 }
 
 struct BillSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        BillSectionView()
+        List {
+            DummySectionViewModel.dummyBillSectionViewModelInstance
+        }
     }
 }

@@ -2,7 +2,7 @@ import Foundation
 
 /// Dummy view model for the BillListView.
 class DummyBillListViewModel {
-    /// A dummy list of bills grouped into sections by date.
+    /// A list of bills grouped into sections by date.
     let listData: [DummySectionViewModel] = [
         DummySectionViewModel(
             headerText: "2023-05-24",
@@ -19,7 +19,6 @@ class DummyBillListViewModel {
                 ),
             ]
         ),
-
         DummySectionViewModel(
             headerText: "2023-05-23",
             rows: [
@@ -31,7 +30,6 @@ class DummyBillListViewModel {
                 ),
             ]
         ),
-
         DummySectionViewModel(
             headerText: "2023-05-22",
             rows: [
