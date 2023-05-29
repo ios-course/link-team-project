@@ -4,7 +4,7 @@ import SwiftUI
 struct CircleWithPlusButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-        Image(systemName: String.AppIconName.plus)
+        Image(systemName: .AppIconName.plus)
             .resizable()
             .frame(width: frameWidth,
                    height: frameHeight)
