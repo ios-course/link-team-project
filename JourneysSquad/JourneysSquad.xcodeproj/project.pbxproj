@@ -24,6 +24,7 @@
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
 		BAB398F82A24FC4F001328ED /* StringExtensionAppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F72A24FC4F001328ED /* StringExtensionAppIconName.swift */; };
 		BAB398FD2A2501E7001328ED /* StringExtensionAppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F72A24FC4F001328ED /* StringExtensionAppIconName.swift */; };
+		BAB398FF2A2503A7001328ED /* StringExtensionAppIconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398FE2A2503A7001328ED /* StringExtensionAppIconNameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BAB398EE2A20E13B001328ED /* NavigationBarItemBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItemBlue.swift; sourceTree = "<group>"; };
 		BAB398F32A24997B001328ED /* AddBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillView.swift; sourceTree = "<group>"; };
 		BAB398F72A24FC4F001328ED /* StringExtensionAppIconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionAppIconName.swift; sourceTree = "<group>"; };
+		BAB398FE2A2503A7001328ED /* StringExtensionAppIconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionAppIconNameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		BAB398FA2A250050001328ED /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
+				BAB398FE2A2503A7001328ED /* StringExtensionAppIconNameTests.swift */,
 			);
 			path = AppStyle;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB398FF2A2503A7001328ED /* StringExtensionAppIconNameTests.swift in Sources */,
 				9B66673A2A152B95006AB63B /* BillTests.swift in Sources */,
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
 				BAB398FD2A2501E7001328ED /* StringExtensionAppIconName.swift in Sources */,
