@@ -14,7 +14,7 @@ struct BillRowView: View {
                     .lineLimit(1)
                     .font(.system(size: bodySize))
 
-                Text(viewModel.formattedParticipants)
+                Text(viewModel.participants)
                     .lineLimit(1)
                     .foregroundColor(.gray)
                     .font(.system(size: noteSize))
@@ -40,10 +40,12 @@ struct BillRowView: View {
 
 struct BillRow_Previews: PreviewProvider {
     static var previews: some View {
-        BillRowView(viewModel: DummyBillRowViewModel(
-            description: "Description",
-            participants: ["Participant1", "Partiсipant2"],
-            sumOfBill: "50.00",
-            date: "22.12.22"))
+        BillRowView(
+            viewModel: DummyBillRowViewModel(
+                description: "Description",
+                participants: "Egor, Dima",
+                sumOfBill: "50.00"
+            )
+        )
     }
 }
