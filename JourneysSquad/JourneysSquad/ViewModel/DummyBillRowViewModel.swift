@@ -1,26 +1,25 @@
 import Foundation
 
-/// Responsible for managing the data associated with a BillRowView.
+/// Dummy view model for a list row.
 final class DummyBillRowViewModel: Identifiable {
     /// Description of the bill to be shown in the view.
     let description: String
 
-    /// List of the participants of the bill separated by a comma to be shown in the view.
+    /// List of the participants of the bill.
     let participants: String
 
     /// Total amount of the bill to be shown in the view.
     let sumOfBill: String
 
-    /// Unique identifier for bill.
+    /// The bill's unique identifier.
     let id = UUID()
 
-    /// Initializes a new instance of BillRow with the provided information.
+    /// Initializes a new instance with the provided data.
     ///
     /// - Parameters:
-    /// - description: A string describing the bill.
-    /// - participants: An array of strings representing the names of the participants involved in the bill.
-    /// - sumOfBill: A string representing the total sum of the bill.
-    /// - date: A string representing the date of the bill.
+    ///   - description: Description of the spending in the bill.
+    ///   - participants:  A list of the participants' names involved in the bill.
+    ///   - sumOfBill: Total amount of the bill.
     init(
         description: String,
         participants: String,
@@ -30,13 +29,4 @@ final class DummyBillRowViewModel: Identifiable {
         self.participants = participants
         self.sumOfBill = sumOfBill
     }
-
-    /// A dummy instance of the row.
-    static let dummyBillRowViewModelInstance = BillRowView(
-        viewModel: DummyBillRowViewModel(
-            description: "Description",
-            participants: "Egor, Dima",
-            sumOfBill: "50.00"
-        )
-    )
 }

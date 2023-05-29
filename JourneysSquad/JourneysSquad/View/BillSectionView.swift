@@ -1,15 +1,21 @@
 import SwiftUI
 
 struct BillSectionView: View {
+    // MARK: - Internal interface
+
+    /// Dummy view model that provides data for the view.
     let sectionViewModel: DummySectionViewModel
 
     var body: some View {
-        Section(header: Text(sectionViewModel.sectionHeader).font(.system(size: fontBodySize))) {
+        Section(
+            header:
+            Text(sectionViewModel.header)
+                .font(.system(size: fontBodySize))
+        ) {
             ForEach(sectionViewModel.rows) { row in
                 BillRowView(viewModel: row)
             }
         }
-        .compositingGroup()
     }
 
     // MARK: - Private interface
@@ -20,7 +26,18 @@ struct BillSectionView: View {
 struct BillSectionView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            DummySectionViewModel.dummyBillSectionViewModelInstance
+            BillSectionView(
+                sectionViewModel: DummySectionViewModel(
+                    header: "2023-05-23",
+                    rows: [
+                        DummyBillRowViewModel(
+                            description: "Restaurant near center",
+                            participants: "Ivan, Ulia, Egor",
+                            sumOfBill: "50.12"
+                        ),
+                    ]
+                )
+            )
         }
     }
 }

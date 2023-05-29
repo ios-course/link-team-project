@@ -1,12 +1,12 @@
 import Foundation
 
-/// Dummy view model for a section of a list of bills.
+/// Dummy view model for a bills list section.
 final class DummySectionViewModel: Identifiable {
-    /// The unique identifier of a section.
-    var id: String { sectionHeader }
+    /// A unique identifier of the section.
+    var id: String { header }
 
-    /// Provides a text shown as a header of the section in the view.
-    let sectionHeader: String
+    /// A text shown as a header of the section in the view.
+    let header: String
 
     /// Dummy data that provides a list of bills under the header of the section.
     let rows: [DummyBillRowViewModel]
@@ -14,24 +14,10 @@ final class DummySectionViewModel: Identifiable {
     /// Initializes a new instance of the `SectionViewModel`.
     ///
     /// - Parameters:
-    ///   - headerText: A header text of the section.
+    ///   - header: A header text of the section.
     ///   - rows: A list of hardcoded bills those are grouped into the current section.
-    init(headerText: String, rows: [DummyBillRowViewModel]) {
-        sectionHeader = headerText
+    init(header: String, rows: [DummyBillRowViewModel]) {
+        self.header = header
         self.rows = rows
     }
-
-    /// A dummy instance of the section.
-    static let dummyBillSectionViewModelInstance = BillSectionView(
-        sectionViewModel: DummySectionViewModel(
-            headerText: "2023-05-23",
-            rows: [
-                DummyBillRowViewModel(
-                    description: "Restaurant near center",
-                    participants: "Ivan, Ulia, Egor",
-                    sumOfBill: "50.12"
-                ),
-            ]
-        )
-    )
 }

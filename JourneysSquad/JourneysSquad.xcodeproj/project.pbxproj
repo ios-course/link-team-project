@@ -19,12 +19,12 @@
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRowView.swift */; };
-		BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */; };
-		BAB398EF2A20E13B001328ED /* NavigationBarItemBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398EE2A20E13B001328ED /* NavigationBarItemBlue.swift */; };
 		AB1377032A1A56550085CEFE /* DummyBillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1377022A1A56550085CEFE /* DummyBillRowViewModel.swift */; };
 		ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */; };
-		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
 		ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */; };
+		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
+		BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */; };
+		BAB398EF2A20E13B001328ED /* NavigationBarItemBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398EE2A20E13B001328ED /* NavigationBarItemBlue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,9 +147,9 @@
 			children = (
 				ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */,
 				9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */,
+				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 				BAB398F02A20F54E001328ED /* ReusableStyles */,
 				BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */,
-				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,9 +157,9 @@
 		AB1377012A1A56330085CEFE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				AB1377022A1A56550085CEFE /* DummyBillRowViewModel.swift */,
-				ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */,
 				ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */,
+				ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */,
+				AB1377022A1A56550085CEFE /* DummyBillRowViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

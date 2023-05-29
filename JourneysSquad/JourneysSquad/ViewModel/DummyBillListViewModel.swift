@@ -1,11 +1,11 @@
 import Foundation
 
-/// Dummy view model for the BillListView.
+/// Dummy view model for the `BillListView`.
 class DummyBillListViewModel {
     /// A list of bills grouped into sections by date.
-    let listData: [DummySectionViewModel] = [
+    let billsGroupedIntoSectionsByDate: [DummySectionViewModel] = [
         DummySectionViewModel(
-            headerText: "2023-05-24",
+            header: "2023-05-24",
             rows: [
                 DummyBillRowViewModel(
                     description: "Rent of an apartment",
@@ -20,7 +20,7 @@ class DummyBillListViewModel {
             ]
         ),
         DummySectionViewModel(
-            headerText: "2023-05-23",
+            header: "2023-05-23",
             rows: [
                 DummyBillRowViewModel(
                     description: "Restaurant near center",
@@ -31,7 +31,7 @@ class DummyBillListViewModel {
             ]
         ),
         DummySectionViewModel(
-            headerText: "2023-05-22",
+            header: "2023-05-22",
             rows: [
                 DummyBillRowViewModel(
                     description: "Ticket to the zoo",
