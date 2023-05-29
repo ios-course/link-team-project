@@ -8,21 +8,24 @@ struct AddBillView: View {
             VStack {
                 Text("")
             }
-            .navigationTitle("Add new bill")
+            .navigationTitle(titleText)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(false)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(
-                        destination: HistoryOfOperationsView()
-                    ) {
-                        Image(systemName: "chevron.backward")
-                    }
-                    .foregroundColor(.black)
+                    Button(action: {},
+                           label: {
+                               Image(systemName: "chevron.backward")
+                           })
+                           .foregroundColor(.black)
                 }
             }
         }
     }
+
+    // MARK: - Private interface
+
+    private let titleText = "Add new bill"
 }
 
 struct AddBillView_Previews: PreviewProvider {
