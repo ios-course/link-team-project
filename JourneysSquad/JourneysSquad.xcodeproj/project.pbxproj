@@ -16,7 +16,7 @@
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */; };
-		9BE7DB0E2A23C4D200B4ADA4 /* BlackCircleWithPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0D2A23C4D200B4ADA4 /* BlackCircleWithPlusButton.swift */; };
+		9BE7DB0E2A23C4D200B4ADA4 /* CircleWithPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0D2A23C4D200B4ADA4 /* CircleWithPlusButton.swift */; };
 		9BE7DB102A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0F2A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift */; };
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
@@ -45,7 +45,7 @@
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppIconName.swift"; sourceTree = "<group>"; };
-		9BE7DB0D2A23C4D200B4ADA4 /* BlackCircleWithPlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackCircleWithPlusButton.swift; sourceTree = "<group>"; };
+		9BE7DB0D2A23C4D200B4ADA4 /* CircleWithPlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWithPlusButton.swift; sourceTree = "<group>"; };
 		9BE7DB0F2A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRoundedRectangleButton.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 		AB1376FC2A173F530085CEFE /* BillRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowView.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		9BE7DB142A23CD6F00B4ADA4 /* ReusableStyles */ = {
 			isa = PBXGroup;
 			children = (
-				9BE7DB0D2A23C4D200B4ADA4 /* BlackCircleWithPlusButton.swift */,
+				9BE7DB0D2A23C4D200B4ADA4 /* CircleWithPlusButton.swift */,
 				9BE7DB0F2A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift */,
 			);
 			path = ReusableStyles;
@@ -304,7 +304,7 @@
 			files = (
 				9BE7DB102A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
-				9BE7DB0E2A23C4D200B4ADA4 /* BlackCircleWithPlusButton.swift in Sources */,
+				9BE7DB0E2A23C4D200B4ADA4 /* CircleWithPlusButton.swift in Sources */,
 				9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
@@ -462,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
+				DEVELOPMENT_TEAM = S294JL6K3Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -494,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
+				DEVELOPMENT_TEAM = S294JL6K3Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
