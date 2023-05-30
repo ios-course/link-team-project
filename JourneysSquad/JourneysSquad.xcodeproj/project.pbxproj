@@ -30,8 +30,6 @@
 		BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */; };
 		BAB398EF2A20E13B001328ED /* NavigationBarItemBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398EE2A20E13B001328ED /* NavigationBarItemBlue.swift */; };
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
-		BAB398F82A24FC4F001328ED /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F72A24FC4F001328ED /* String+AppIconName.swift */; };
-		BAB398FD2A2501E7001328ED /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F72A24FC4F001328ED /* String+AppIconName.swift */; };
 		BAB398FF2A2503A7001328ED /* String+AppIconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398FE2A2503A7001328ED /* String+AppIconNameTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +93,7 @@
 				9B0383B52A04D7F4005E333D /* JourneysSquad */,
 				9B1DBD962A0E2EE40082999A /* JourneysSquadTests */,
 				9B0383B42A04D7F4005E333D /* Products */,
+				9B5C38E12A261800007777B3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,21 +148,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9B5C38CB2A24D392007777B3 /* Helpers */ = {
+		9B5C38E12A261800007777B3 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				9B5C38CD2A25CA0B007777B3 /* AppStyle */,
 				9B5C38CE2A25CA22007777B3 /* String+AppButtonLabelNameTests.swift */,
 				9B5C38C92A24D38D007777B3 /* String+AppIconNameTests.swift */,
 			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		9B5C38CD2A25CA0B007777B3 /* AppStyle */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AppStyle;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		9BE7DB122A23C51800B4ADA4 /* AppStyle */ = {
@@ -219,14 +210,6 @@
 				AB1377022A1A56550085CEFE /* BillRowViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BAB398F02A20F54E001328ED /* ReusableStyles */ = {
-			isa = PBXGroup;
-			children = (
-				BAB398EE2A20E13B001328ED /* NavigationBarItemBlue.swift */,
-			);
-			path = ReusableStyles;
 			sourceTree = "<group>";
 		};
 		BAB398F52A24FBE4001328ED /* Helpers */ = {
@@ -393,7 +376,6 @@
 				BAB398EF2A20E13B001328ED /* NavigationBarItemBlue.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
-				BAB398F82A24FC4F001328ED /* String+AppIconName.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
 				9B50957A2A24D03900B3E28B /* String+AppButtonLabelName.swift in Sources */,
