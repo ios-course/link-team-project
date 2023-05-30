@@ -13,9 +13,9 @@
 		9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */; };
 		9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */; };
 		9B50957A2A24D03900B3E28B /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
-		9B5C38CA2A24D38D007777B3 /* AppIconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */; };
+		9B5C38CA2A24D38D007777B3 /* String+AppIconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C38C92A24D38D007777B3 /* String+AppIconNameTests.swift */; };
 		9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */; };
-		9B5C38CF2A25CA22007777B3 /* AppButtonLabelNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C38CE2A25CA22007777B3 /* AppButtonLabelNameTests.swift */; };
+		9B5C38CF2A25CA22007777B3 /* String+AppButtonLabelNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C38CE2A25CA22007777B3 /* String+AppButtonLabelNameTests.swift */; };
 		9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
 		9B66673A2A152B95006AB63B /* BillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6667392A152B95006AB63B /* BillTests.swift */; };
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
@@ -50,8 +50,8 @@
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
 		9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelName.swift"; sourceTree = "<group>"; };
-		9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconNameTests.swift; sourceTree = "<group>"; };
-		9B5C38CE2A25CA22007777B3 /* AppButtonLabelNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButtonLabelNameTests.swift; sourceTree = "<group>"; };
+		9B5C38C92A24D38D007777B3 /* String+AppIconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppIconNameTests.swift"; sourceTree = "<group>"; };
+		9B5C38CE2A25CA22007777B3 /* String+AppButtonLabelNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelNameTests.swift"; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppIconName.swift"; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				9B5C38CD2A25CA0B007777B3 /* AppStyle */,
-				9B5C38CE2A25CA22007777B3 /* AppButtonLabelNameTests.swift */,
-				9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */,
+				9B5C38CE2A25CA22007777B3 /* String+AppButtonLabelNameTests.swift */,
+				9B5C38C92A24D38D007777B3 /* String+AppIconNameTests.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -154,7 +154,6 @@
 		9B5C38CD2A25CA0B007777B3 /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
-				9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */,
 			);
 			path = AppStyle;
 			sourceTree = "<group>";
@@ -213,7 +212,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,8 +358,8 @@
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
 				9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */,
 				9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */,
-				9B5C38CF2A25CA22007777B3 /* AppButtonLabelNameTests.swift in Sources */,
-				9B5C38CA2A24D38D007777B3 /* AppIconNameTests.swift in Sources */,
+				9B5C38CF2A25CA22007777B3 /* String+AppButtonLabelNameTests.swift in Sources */,
+				9B5C38CA2A24D38D007777B3 /* String+AppIconNameTests.swift in Sources */,
 				9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */,
 				9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */,
 			);
