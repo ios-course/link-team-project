@@ -10,18 +10,6 @@ struct AddBillView: View {
             }
             .navigationTitle(titleText)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(false)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(
-                        action: {},
-                        label: {
-                            Image(systemName: .AppIconName.backwardChevron)
-                        }
-                    )
-                    .foregroundColor(.black)
-                }
-            }
         }
     }
 
