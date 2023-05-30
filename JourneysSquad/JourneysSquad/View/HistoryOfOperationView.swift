@@ -11,8 +11,7 @@ struct HistoryOfOperationsView: View {
             .navigationTitle(titleText)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button(labelText) {}
-                    .buttonStyle(NavigationBarItemBlue())
+                NavigationLink(labelText, destination: AddBillView())
             }
         }
     }
