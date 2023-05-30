@@ -1,4 +1,3 @@
-import SwiftUI
 import XCTest
 
 final class AppIconNameTests: XCTestCase {
