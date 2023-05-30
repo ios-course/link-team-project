@@ -137,9 +137,18 @@
 		9B5C38CB2A24D392007777B3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9B5C38CD2A25CA0B007777B3 /* AppStyle */,
 				9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9B5C38CD2A25CA0B007777B3 /* AppStyle */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */,
+			);
+			path = AppStyle;
 			sourceTree = "<group>";
 		};
 		9BE7DB122A23C51800B4ADA4 /* AppStyle */ = {
