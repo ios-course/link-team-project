@@ -12,6 +12,9 @@
 		9B0383BB2A04D7F6005E333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BA2A04D7F6005E333D /* Assets.xcassets */; };
 		9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */; };
 		9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */; };
+		9B50957A2A24D03900B3E28B /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
+		9B5C38CA2A24D38D007777B3 /* AppIconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */; };
+		9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */; };
 		9B66673A2A152B95006AB63B /* BillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6667392A152B95006AB63B /* BillTests.swift */; };
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
@@ -42,6 +45,8 @@
 		9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
+		9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelName.swift"; sourceTree = "<group>"; };
+		9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconNameTests.swift; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppIconName.swift"; sourceTree = "<group>"; };
@@ -114,6 +119,7 @@
 		9B1DBD962A0E2EE40082999A /* JourneysSquadTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B5C38CB2A24D392007777B3 /* Helpers */,
 				9B1DBD9E2A0E30ED0082999A /* Model */,
 			);
 			path = JourneysSquadTests;
@@ -128,18 +134,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9BE7DB122A23C51800B4ADA4 /* App Style */ = {
+		9B5C38CB2A24D392007777B3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C38C92A24D38D007777B3 /* AppIconNameTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9BE7DB122A23C51800B4ADA4 /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
 				9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */,
 			);
-			path = "App Style";
+			path = AppStyle;
 			sourceTree = "<group>";
 		};
 		9BE7DB132A23C53D00B4ADA4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9BE7DB122A23C51800B4ADA4 /* App Style */,
+				9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */,
+				9BE7DB122A23C51800B4ADA4 /* AppStyle */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -310,6 +325,7 @@
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
+				9B50957A2A24D03900B3E28B /* String+AppButtonLabelName.swift in Sources */,
 				AB1377032A1A56550085CEFE /* BillRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +336,8 @@
 			files = (
 				9B66673A2A152B95006AB63B /* BillTests.swift in Sources */,
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
+				9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */,
+				9B5C38CA2A24D38D007777B3 /* AppIconNameTests.swift in Sources */,
 				9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */,
 				9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */,
 			);
@@ -462,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
-				DEVELOPMENT_TEAM = S294JL6K3Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -495,7 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
-				DEVELOPMENT_TEAM = S294JL6K3Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
