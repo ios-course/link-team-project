@@ -1,6 +1,6 @@
 import XCTest
 
-final class StringExtensionAppIconNameTests: XCTestCase {
+final class AppIconNameTests: XCTestCase {
     func testAppIconNameBackwardChevronEqualSystemImageChevronBackward() {
         let iconName = String.AppIconName.backwardChevron
         let systemImageName = "chevron.backward"
