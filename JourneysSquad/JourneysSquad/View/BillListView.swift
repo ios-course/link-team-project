@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Displays a list of bills grouped into sections by date.
+/// A view that shows a list of bills grouped by the date of creation.
 struct BillListView: View {
     // MARK: - Internal interface
 
