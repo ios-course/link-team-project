@@ -16,9 +16,9 @@
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9B8B807F2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B807E2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
-		9BE7DB162A249D8B00B4ADA4 /* BillSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */; };
 		9BE6A3AA2A1CE60500B68023 /* LabelWithTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3A92A1CE60500B68023 /* LabelWithTextFieldView.swift */; };
 		9BE6A3AE2A1D03FC00B68023 /* LabelWithDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AD2A1D03FC00B68023 /* LabelWithDatePickerView.swift */; };
+		9BE7DB162A249D8B00B4ADA4 /* BillSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */; };
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRowView.swift */; };
@@ -51,9 +51,9 @@
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9B8B807E2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldViewAlignment.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
-		9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSectionView.swift; sourceTree = "<group>"; };
 		9BE6A3A92A1CE60500B68023 /* LabelWithTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldView.swift; sourceTree = "<group>"; };
 		9BE6A3AD2A1D03FC00B68023 /* LabelWithDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithDatePickerView.swift; sourceTree = "<group>"; };
+		9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSectionView.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 		AB1376FC2A173F530085CEFE /* BillRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowView.swift; sourceTree = "<group>"; };
 		AB1377022A1A56550085CEFE /* DummyBillRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillRowViewModel.swift; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 				AB1376FE2A173F5E0085CEFE /* View */,
 				AB1377012A1A56330085CEFE /* ViewModel */,
 				9BF8522F2A0F6E7E0000E0C0 /* Model */,
-				9B635ADF2A1742770011C49E /* View */,
 				9B0383B62A04D7F4005E333D /* JourneysSquadApp.swift */,
 				9B0383B82A04D7F4005E333D /* ContentView.swift */,
 				9B0383BA2A04D7F6005E333D /* Assets.xcassets */,
@@ -140,14 +139,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9B635ADF2A1742770011C49E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9BE6A3A82A1CE59200B68023 /* AddBillView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		9BE6A3A82A1CE59200B68023 /* AddBillView */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +161,7 @@
 		AB1376FE2A173F5E0085CEFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BE6A3A82A1CE59200B68023 /* AddBillView */,
 				BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */,
 				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 				BAB398F32A24997B001328ED /* AddBillView.swift */,
