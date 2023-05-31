@@ -13,7 +13,7 @@ struct CircleWithPlusButton_Previews: PreviewProvider {
         Button("") {}
             .buttonStyle(CircleWithPlusButton())
             .frame(width: 100, height: 100)
-        
+
         Button("") {}
             .buttonStyle(CircleWithPlusButton())
             .frame(width: 10, height: 10)
