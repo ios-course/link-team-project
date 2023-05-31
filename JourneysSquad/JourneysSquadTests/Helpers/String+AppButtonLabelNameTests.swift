@@ -1,9 +1,9 @@
 import XCTest
 
-final class AppButtonLabelNameTests: XCTestCase {
+final class StringAppButtonLabelTextTests: XCTestCase {
     func testAppButtonLabelNameReturnsCorrectValue() {
-        let saveButtonLabelName = "Save"
+        XCTAssertEqual(String.AppButtonLabelText.save, "Save")
 
-        XCTAssertEqual(saveButtonLabelName, String.AppButtonLabelName.save)
+        // add new checks later...
     }
 }

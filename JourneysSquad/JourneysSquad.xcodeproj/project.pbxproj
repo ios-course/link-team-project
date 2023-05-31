@@ -12,6 +12,7 @@
 		9B0383BB2A04D7F6005E333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BA2A04D7F6005E333D /* Assets.xcassets */; };
 		9B0383BE2A04D7F6005E333D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */; };
 		9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */; };
+		9B1EF24C2A27181200C7B62A /* String+AppButtonLabelNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1EF24A2A27181200C7B62A /* String+AppButtonLabelNameTests.swift */; };
 		9B50957A2A24D03900B3E28B /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
 		9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */; };
 		9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
@@ -49,6 +50,7 @@
 		9B0383BD2A04D7F6005E333D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
+		9B1EF24A2A27181200C7B62A /* String+AppButtonLabelNameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelNameTests.swift"; sourceTree = "<group>"; };
 		9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelName.swift"; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		BAB398F92A250042001328ED /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9B1EF24A2A27181200C7B62A /* String+AppButtonLabelNameTests.swift */,
 				BAB398FA2A250050001328ED /* AppStyle */,
 			);
 			path = Helpers;
@@ -357,6 +360,7 @@
 			files = (
 				BAB398FF2A2503A7001328ED /* String+AppIconNameTests.swift in Sources */,
 				9B66673A2A152B95006AB63B /* BillTests.swift in Sources */,
+				9B1EF24C2A27181200C7B62A /* String+AppButtonLabelNameTests.swift in Sources */,
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
 				9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */,
 				9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */,
