@@ -4,6 +4,8 @@ import SwiftUI
 ///
 /// Use to align views of the label and text field inside the root view.
 enum LabelWithTextFieldViewAlignment {
+    // MARK: - Internal interface
+
     /// Aligns the leading edges of views.
     case leading
 

@@ -2,6 +2,8 @@ import SwiftUI
 
 /// A text field that allows to enter and edit text and has a label above itself.
 struct LabelWithTextFieldView: View {
+    // MARK: - Internal interface
+
     /// The text entered into the field.
     @Binding var input: String
 

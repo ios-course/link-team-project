@@ -3,6 +3,8 @@ import SwiftUI
 /// A view that shows a date picker with the label containing a description text.
 /// The date picker allows to select a specific day.
 struct LabelWithDatePickerView: View {
+    // MARK: - Internal interface
+
     /// The selected date that is shown in the view.
     @Binding var date: Date
 
