@@ -10,12 +10,14 @@ struct CircleWithPlusButton: ButtonStyle {
 
 struct CircleWithPlusButton_Previews: PreviewProvider {
     static var previews: some View {
-        Button("") {}
-            .buttonStyle(CircleWithPlusButton())
-            .frame(width: 100, height: 100)
+        VStack {
+            Button("") {}
+                .buttonStyle(CircleWithPlusButton())
+                .frame(width: 100, height: 100)
 
-        Button("") {}
-            .buttonStyle(CircleWithPlusButton())
-            .frame(width: 10, height: 10)
+            Button("") {}
+                .buttonStyle(CircleWithPlusButton())
+                .frame(width: 10, height: 10)
+        }
     }
 }
