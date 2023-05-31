@@ -204,12 +204,9 @@
 		AB1376FE2A173F5E0085CEFE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */,
+				ABDE72162A279F53003810A8 /* HistoryOfOperationsView */,
 				9BE7DB142A23CD6F00B4ADA4 /* ReusableStyles */,
-				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 				BAB398F32A24997B001328ED /* AddBillView.swift */,
-				ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */,
-				9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,10 +215,29 @@
 			isa = PBXGroup;
 			children = (
 				9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */,
-				ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */,
 				ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */,
+				ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ABDE72162A279F53003810A8 /* HistoryOfOperationsView */ = {
+			isa = PBXGroup;
+			children = (
+				BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */,
+				ABDE72172A279FAA003810A8 /* HistoryOfOperationsSubviews */,
+			);
+			path = HistoryOfOperationsView;
+			sourceTree = "<group>";
+		};
+		ABDE72172A279FAA003810A8 /* HistoryOfOperationsSubviews */ = {
+			isa = PBXGroup;
+			children = (
+				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
+				9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */,
+				ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */,
+			);
+			path = HistoryOfOperationsSubviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
