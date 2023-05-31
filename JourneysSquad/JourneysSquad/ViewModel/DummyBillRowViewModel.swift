@@ -15,7 +15,6 @@ final class DummyBillRowViewModel: Identifiable {
     let id = UUID()
 
     /// Initializes a new instance with the provided data.
-    ///
     /// - Parameters:
     ///   - description: Description of the spending in the bill.
     ///   - participants:  A list of the participants' names involved in the bill.

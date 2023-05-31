@@ -1,7 +1,7 @@
 import Foundation
 
-/// Dummy view model that provides data to display for the `BillListView`.
-class DummyBillListViewModel {
+/// Dummy view model that provides data to display for the list of bills.
+final class DummyBillListViewModel {
     /// A list of bills grouped into sections by date.
     let billsGroupedIntoSectionsByDate: [DummySectionViewModel] = [
         DummySectionViewModel(
