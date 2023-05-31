@@ -65,5 +65,6 @@ struct LabelWithTextFieldView_Previews: PreviewProvider {
 
             Spacer()
         }
+        .padding()
     }
 }
