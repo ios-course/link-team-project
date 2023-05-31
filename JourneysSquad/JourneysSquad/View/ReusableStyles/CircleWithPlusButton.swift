@@ -3,7 +3,7 @@ import SwiftUI
 /// Create a button as a circle with a plus in the center.
 struct CircleWithPlusButton: ButtonStyle {
     func makeBody(configuration _: Configuration) -> some View {
-        Image(systemName: .AppIconName.plus)
+        Image(systemName: .AppIconName.circleWithPlusInCenter)
             .resizable()
             .frame(width: frameWidth,
                    height: frameHeight)

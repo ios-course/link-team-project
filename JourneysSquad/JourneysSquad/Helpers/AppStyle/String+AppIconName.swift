@@ -5,6 +5,6 @@ extension String {
         static let backwardChevron = "chevron.backward"
 
         /// The name of the icon to show "A circle with a plus sign in the center".
-        static let plus = "plus.circle"
+        static let circleWithPlusInCenter = "plus.circle"
     }
 }
