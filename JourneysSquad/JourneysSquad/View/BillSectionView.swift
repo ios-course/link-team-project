@@ -4,15 +4,15 @@ struct BillSectionView: View {
     // MARK: - Internal interface
 
     /// Dummy view model that provides data for the view.
-    let sectionViewModel: DummySectionViewModel
+    let viewModel: DummySectionViewModel
 
     var body: some View {
         Section {
-            ForEach(sectionViewModel.rows) { row in
+            ForEach(viewModel.rows) { row in
                 BillRowView(viewModel: row)
             }
         } header: {
-            Text(sectionViewModel.header)
+            Text(viewModel.header)
                 .font(.system(size: fontBodySize))
         }
     }
@@ -26,7 +26,7 @@ struct BillSectionView_Previews: PreviewProvider {
     static var previews: some View {
         List {
             BillSectionView(
-                sectionViewModel: DummySectionViewModel(
+                viewModel: DummySectionViewModel(
                     header: "2023-05-23",
                     rows: [
                         DummyBillRowViewModel(

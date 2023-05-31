@@ -9,7 +9,7 @@ struct BillListView: View {
 
     var body: some View {
         List(listViewModel.billsGroupedIntoSectionsByDate) { section in
-            BillSectionView(sectionViewModel: section)
+            BillSectionView(viewModel: section)
         }
         .listStyle(.grouped)
     }
