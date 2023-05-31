@@ -1,13 +1,17 @@
 import SwiftUI
 
-/// A view with the label `Date` that allows selecting a calendar date by tapping on the field below the label.
-struct DatePickerView: View {
+/// A view that shows a date picker with the label containing a description text.
+/// The date picker allows to select a specific day.
+struct LabelWithDatePickerView: View {
     /// The selected date that is shown in the view.
     @Binding var date: Date
 
+    /// The text of the label.
+    let labelText: String
+
     var body: some View {
         VStack(alignment: .leading) {
-            Text(label)
+            Text(labelText)
                 .font(.system(size: fontBodySize, weight: .bold))
 
             Divider()
@@ -24,11 +28,11 @@ struct DatePickerView: View {
     // MARK: - Private interface
 
     private let fontBodySize: CGFloat = 20
-    private let label = "Date"
 }
 
-struct DatePickerView_Previews: PreviewProvider {
+struct LabelWithDatePickerView_Previews: PreviewProvider {
     static var previews: some View {
-        DatePickerView(date: .constant(Date()))
+        LabelWithDatePickerView(date: .constant(Date()),
+                                labelText: "Date")
     }
 }

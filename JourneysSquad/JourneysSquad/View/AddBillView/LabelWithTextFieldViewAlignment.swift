@@ -1,9 +1,9 @@
 import SwiftUI
 
-/// An alignment position of the elements inside `DataInputFieldView` along the horizontal axis.
+/// An alignment position of the elements inside `LabelWithTextFieldView` along the horizontal axis.
 ///
 /// Use to align views of the label and text field inside the root view.
-enum DataInputFieldViewAlignment {
+enum LabelWithTextFieldViewAlignment {
     /// Aligns the leading edges of views.
     case leading
 
@@ -13,7 +13,7 @@ enum DataInputFieldViewAlignment {
     /// Aligns the trailing edges of views.
     case trailing
 
-    /// The corresponding value of the `HorizontalAlignment`.
+    /// Value of `HorizontalAlignment` based on the alignment case.
     var horizontalAlignment: HorizontalAlignment {
         switch self {
         case .leading:
@@ -25,7 +25,7 @@ enum DataInputFieldViewAlignment {
         }
     }
 
-    /// The corresponding value of the `TextAlignment`.
+    /// Value of `TextAlignment` based on the alignment case.
     var textAlignment: TextAlignment {
         switch self {
         case .leading:

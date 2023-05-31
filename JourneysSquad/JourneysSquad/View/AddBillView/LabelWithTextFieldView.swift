@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A text field that allows to enter and edit text and has a label above itself.
-struct DataInputFieldView: View {
+struct LabelWithTextFieldView: View {
     /// The text entered into the field.
     @Binding var input: String
 
@@ -15,7 +15,7 @@ struct DataInputFieldView: View {
     let keyboardType: UIKeyboardType
 
     /// An alignment of the label and the text field inside the view.
-    let alignment: DataInputFieldViewAlignment
+    let alignment: LabelWithTextFieldViewAlignment
 
     var body: some View {
         VStack(alignment: alignment.horizontalAlignment) {
@@ -27,7 +27,7 @@ struct DataInputFieldView: View {
             TextField(placeholder, text: $input)
                 .font(.system(size: fontBodySize))
                 .keyboardType(keyboardType)
-                .lineLimit(dataInputFieldLineLimit)
+                .lineLimit(textFieldLineLimit)
                 .multilineTextAlignment(alignment.textAlignment)
         }
     }
@@ -35,15 +35,24 @@ struct DataInputFieldView: View {
     // MARK: - Private interface
 
     private let fontBodySize: CGFloat = 20
-    private let dataInputFieldLineLimit = 1
+    private let textFieldLineLimit = 1
 }
 
-struct DataInputFieldView_Previews: PreviewProvider {
+struct LabelWithTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        DataInputFieldView(input: .constant(""),
-                           label: "Label",
-                           placeholder: "Placeholder",
-                           keyboardType: .default,
-                           alignment: .leading)
+        LabelWithTextFieldView(
+            input: .constant(""),
+            label: "Label",
+            placeholder: "Placeholder",
+            keyboardType: .default,
+            alignment: .leading
+        )
+        LabelWithTextFieldView(
+            input: .constant("Here's a field with a quite long fancy text that doesn't fit on one line."),
+            label: "Here's a label with a quite long fancy text that doesn't fit on one line.",
+            placeholder: "Placeholder",
+            keyboardType: .default,
+            alignment: .leading
+        )
     }
 }

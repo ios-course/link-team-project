@@ -14,10 +14,10 @@
 		9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */; };
 		9B66673A2A152B95006AB63B /* BillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6667392A152B95006AB63B /* BillTests.swift */; };
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
-		9B8B807F2A22129B006EEF35 /* DataInputFieldViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B807E2A22129B006EEF35 /* DataInputFieldViewAlignment.swift */; };
+		9B8B807F2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B807E2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
-		9BE6A3AA2A1CE60500B68023 /* DataInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */; };
-		9BE6A3AE2A1D03FC00B68023 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AD2A1D03FC00B68023 /* DatePickerView.swift */; };
+		9BE6A3AA2A1CE60500B68023 /* LabelWithTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3A92A1CE60500B68023 /* LabelWithTextFieldView.swift */; };
+		9BE6A3AE2A1D03FC00B68023 /* LabelWithDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6A3AD2A1D03FC00B68023 /* LabelWithDatePickerView.swift */; };
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 /* End PBXBuildFile section */
@@ -41,10 +41,10 @@
 		9B1DBD952A0E2EE40082999A /* JourneysSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneysSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillValidationErrorTests.swift; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
-		9B8B807E2A22129B006EEF35 /* DataInputFieldViewAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputFieldViewAlignment.swift; sourceTree = "<group>"; };
+		9B8B807E2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldViewAlignment.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
-		9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputFieldView.swift; sourceTree = "<group>"; };
-		9BE6A3AD2A1D03FC00B68023 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		9BE6A3A92A1CE60500B68023 /* LabelWithTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldView.swift; sourceTree = "<group>"; };
+		9BE6A3AD2A1D03FC00B68023 /* LabelWithDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithDatePickerView.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,9 +133,9 @@
 		9BE6A3A82A1CE59200B68023 /* AddBillView */ = {
 			isa = PBXGroup;
 			children = (
-				9BE6A3A92A1CE60500B68023 /* DataInputFieldView.swift */,
-				9B8B807E2A22129B006EEF35 /* DataInputFieldViewAlignment.swift */,
-				9BE6A3AD2A1D03FC00B68023 /* DatePickerView.swift */,
+				9BE6A3A92A1CE60500B68023 /* LabelWithTextFieldView.swift */,
+				9B8B807E2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift */,
+				9BE6A3AD2A1D03FC00B68023 /* LabelWithDatePickerView.swift */,
 			);
 			path = AddBillView;
 			sourceTree = "<group>";
@@ -272,11 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8B807F2A22129B006EEF35 /* DataInputFieldViewAlignment.swift in Sources */,
+				9B8B807F2A22129B006EEF35 /* LabelWithTextFieldViewAlignment.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
-				9BE6A3AA2A1CE60500B68023 /* DataInputFieldView.swift in Sources */,
-				9BE6A3AE2A1D03FC00B68023 /* DatePickerView.swift in Sources */,
+				9BE6A3AA2A1CE60500B68023 /* LabelWithTextFieldView.swift in Sources */,
+				9BE6A3AE2A1D03FC00B68023 /* LabelWithDatePickerView.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
 			);
@@ -430,7 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
-				DEVELOPMENT_TEAM = S294JL6K3Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -463,7 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
-				DEVELOPMENT_TEAM = S294JL6K3Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
