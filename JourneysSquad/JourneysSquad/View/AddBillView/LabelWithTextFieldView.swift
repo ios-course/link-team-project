@@ -42,6 +42,7 @@ struct LabelWithTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Spacer()
+
             LabelWithTextFieldView(
                 input: .constant(""),
                 label: "Label",
@@ -51,6 +52,7 @@ struct LabelWithTextFieldView_Previews: PreviewProvider {
             )
 
             Spacer()
+
             LabelWithTextFieldView(
                 input: .constant("Here's a field with a quite long fancy text that doesn't fit on one line."),
                 label: "Here's a label with a quite long fancy text that doesn't fit on one line.",
