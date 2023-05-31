@@ -13,3 +13,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `BillRowView` and `BillRowViewModel` to show the bills on the "History of operations" screen [#42](https://github.com/ios-course/link-team-project/issues/42)
 - Navigation bar for screen `History of Operations` [#52](https://github.com/ios-course/link-team-project/pull/52)
 - Bill list view for screen `History of Operations` [#43](https://github.com/ios-course/link-team-project/issues/43)
+- `BlackRoundedRectangleButton`, `CircleWithPlusButton` button styles [#60](https://github.com/ios-course/link-team-project/pull/60)
