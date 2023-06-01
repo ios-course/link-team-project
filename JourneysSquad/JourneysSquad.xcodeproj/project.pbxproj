@@ -18,8 +18,8 @@
 		9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */; };
 		9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
-		9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */; };
 		9BB749BC2A2892D800189FF1 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB749BB2A2892D800189FF1 /* HistoryOfOperationView.swift */; };
+		9BBE07852A2F278C003F8165 /* BillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE07842A2F278C003F8165 /* BillRowViewModel.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BDB8B982A279F2E00C2CBCC /* LabelWithTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */; };
 		9BDB8B992A279F2E00C2CBCC /* LabelWithDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */; };
@@ -32,7 +32,9 @@
 		AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRowView.swift */; };
 		AB6CCF292A29D5DE004E429A /* OutputPreparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */; };
 		AB6CCF2C2A29DD1E004E429A /* OutputPreparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */; };
+		AB6CCF2E2A29E051004E429A /* Bill+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CCF2D2A29E051004E429A /* Bill+Dummy.swift */; };
 		AB6CCF302A29E24F004E429A /* OutputPreparatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CCF2F2A29E24F004E429A /* OutputPreparatorTests.swift */; };
+		ABDE721B2A2881E3003810A8 /* OutputPreparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDE721A2A2881E3003810A8 /* OutputPreparator.swift */; };
 		ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */; };
 		ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */; };
 		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
@@ -61,8 +63,8 @@
 		9B1EF2552A271FCD00C7B62A /* String+AppIconNameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+AppIconNameTests.swift"; sourceTree = "<group>"; };
 		9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelName.swift"; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
-		9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyBillRowViewModel.swift; sourceTree = "<group>"; };
 		9BB749BB2A2892D800189FF1 /* HistoryOfOperationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryOfOperationView.swift; sourceTree = "<group>"; };
+		9BBE07842A2F278C003F8165 /* BillRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillRowViewModel.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldView.swift; sourceTree = "<group>"; };
 		9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithDatePickerView.swift; sourceTree = "<group>"; };
@@ -73,7 +75,9 @@
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 		AB1376FC2A173F530085CEFE /* BillRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowView.swift; sourceTree = "<group>"; };
 		AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPreparator.swift; sourceTree = "<group>"; };
+		AB6CCF2D2A29E051004E429A /* Bill+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+Dummy.swift"; sourceTree = "<group>"; };
 		AB6CCF2F2A29E24F004E429A /* OutputPreparatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPreparatorTests.swift; sourceTree = "<group>"; };
+		ABDE721A2A2881E3003810A8 /* OutputPreparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPreparator.swift; sourceTree = "<group>"; };
 		ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
 		ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySectionViewModel.swift; sourceTree = "<group>"; };
 		ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillListViewModel.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */,
+				ABDE721A2A2881E3003810A8 /* OutputPreparator.swift */,
 				9BE7DB122A23C51800B4ADA4 /* AppStyle */,
 				AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */,
 			);
@@ -225,6 +230,7 @@
 			children = (
 				9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */,
 				9BD630A62A125B1B00AF6406 /* Bill.swift */,
+				AB6CCF2D2A29E051004E429A /* Bill+Dummy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,7 +248,7 @@
 		AB1377012A1A56330085CEFE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */,
+				9BBE07842A2F278C003F8165 /* BillRowViewModel.swift */,
 				ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */,
 				ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */,
 			);
@@ -397,18 +403,20 @@
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */,
 				9BE7DB0E2A23C4D200B4ADA4 /* CircleWithPlusButton.swift in Sources */,
+				AB6CCF2E2A29E051004E429A /* Bill+Dummy.swift in Sources */,
 				9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
-				9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */,
 				9BDB8B982A279F2E00C2CBCC /* LabelWithTextFieldView.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
 				9BE7DB162A249D8B00B4ADA4 /* BillSectionView.swift in Sources */,
 				ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
+				9BBE07852A2F278C003F8165 /* BillRowViewModel.swift in Sources */,
 				9BDB8B992A279F2E00C2CBCC /* LabelWithDatePickerView.swift in Sources */,
 				ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */,
 				9B50957A2A24D03900B3E28B /* String+AppButtonLabelName.swift in Sources */,
+				ABDE721B2A2881E3003810A8 /* OutputPreparator.swift in Sources */,
 				9BB749BC2A2892D800189FF1 /* HistoryOfOperationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

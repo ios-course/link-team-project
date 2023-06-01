@@ -29,11 +29,8 @@ struct BillSectionView_Previews: PreviewProvider {
                 viewModel: DummySectionViewModel(
                     header: "2023-05-23",
                     rows: [
-                        DummyBillRowViewModel(
-                            description: "Restaurant near center",
-                            participants: "Ivan, Ulia, Egor",
-                            sumOfBill: "50.12"
-                        ),
+                        BillRowViewModel(Bill.Dummy.mac!),
+                        BillRowViewModel(Bill.Dummy.bk!),
                     ]
                 )
             )

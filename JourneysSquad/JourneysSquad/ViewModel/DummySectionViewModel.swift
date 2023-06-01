@@ -9,13 +9,13 @@ final class DummySectionViewModel: Identifiable {
     let header: String
 
     /// Dummy data that provides a list of bills under the header of the section.
-    let rows: [DummyBillRowViewModel]
+    let rows: [BillRowViewModel]
 
     /// Initializes a new instance of the `SectionViewModel`.
     /// - Parameters:
     ///   - header: A header text of the section.
     ///   - rows: A static list of bills to show in the section.
-    init(header: String, rows: [DummyBillRowViewModel]) {
+    init(header: String, rows: [BillRowViewModel]) {
         self.header = header
         self.rows = rows
     }
