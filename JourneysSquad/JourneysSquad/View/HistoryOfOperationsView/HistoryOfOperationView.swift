@@ -6,7 +6,7 @@ struct HistoryOfOperationsView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("No operations found")
+                BillListView()
             }
             .navigationTitle(titleText)
             .navigationBarTitleDisplayMode(.inline)
