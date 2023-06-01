@@ -4,7 +4,7 @@ class ListNode<T> {
     let value: T
     /// The reference to the next node in the list.
     var next: ListNode<T>?
-
+    
     /// Creates a new instance of `ListNode`.
     /// - Parameter value: The value to be stored in the node.
     init(value: T) {

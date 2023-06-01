@@ -4,7 +4,7 @@ import Foundation
 struct LinkedList<T> {
     /// The head node of the linked list.
     var head: ListNode<T>?
-
+    
     /// Inserts a new element into the linked list based on the provided condition.
     /// - Parameters:
     ///   - value: The value to be inserted.
@@ -20,7 +20,7 @@ struct LinkedList<T> {
         var currentNode = head
         var prevNode: ListNode<T>?
 
-        while let current = currentNode, condition(value, current.value) {
+        while currentNode != nil, condition(value, currentNode!.value) {
             prevNode = currentNode
             currentNode = currentNode?.next
         }
