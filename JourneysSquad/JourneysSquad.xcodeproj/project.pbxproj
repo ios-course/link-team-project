@@ -169,11 +169,19 @@
 			path = AppStyle;
 			sourceTree = "<group>";
 		};
-		9BDB8B932A279F2E00C2CBCC /* AddBillView */ = {
+		9BB749BA2A2889BF00189FF1 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
 				9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */,
 				9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		9BDB8B932A279F2E00C2CBCC /* AddBillView */ = {
+			isa = PBXGroup;
+			children = (
+				9BB749BA2A2889BF00189FF1 /* Subviews */,
 			);
 			path = AddBillView;
 			sourceTree = "<group>";
