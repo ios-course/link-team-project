@@ -19,6 +19,7 @@
 		9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BB749BC2A2892D800189FF1 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB749BB2A2892D800189FF1 /* HistoryOfOperationView.swift */; };
+		9BB749BE2A28D30600189FF1 /* AddBillScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB749BD2A28D30600189FF1 /* AddBillScreen.swift */; };
 		9BBE07852A2F278C003F8165 /* BillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE07842A2F278C003F8165 /* BillRowViewModel.swift */; };
 		9BBE07872A2F2909003F8165 /* SupportedCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE07862A2F2909003F8165 /* SupportedCurrency.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
@@ -61,6 +62,7 @@
 		9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelName.swift"; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BB749BB2A2892D800189FF1 /* HistoryOfOperationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryOfOperationView.swift; sourceTree = "<group>"; };
+		9BB749BD2A28D30600189FF1 /* AddBillScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillScreen.swift; sourceTree = "<group>"; };
 		9BBE07842A2F278C003F8165 /* BillRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillRowViewModel.swift; sourceTree = "<group>"; };
 		9BBE07862A2F2909003F8165 /* SupportedCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedCurrency.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				BAB398F32A24997B001328ED /* AddBillView.swift */,
+				9BB749BD2A28D30600189FF1 /* AddBillScreen.swift */,
 				9BB749BA2A2889BF00189FF1 /* Subviews */,
 			);
 			path = AddBillView;
@@ -401,6 +404,7 @@
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BDB8B982A279F2E00C2CBCC /* LabelWithTextFieldView.swift in Sources */,
+				9BB749BE2A28D30600189FF1 /* AddBillScreen.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
 				9BE7DB162A249D8B00B4ADA4 /* BillSectionView.swift in Sources */,
 				ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */,
@@ -564,7 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S294JL6K3Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -597,7 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"JourneysSquad/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S294JL6K3Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
