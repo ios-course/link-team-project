@@ -33,7 +33,7 @@
 		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
 		BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */; };
 		BA7CF1062A289A3D00B041DC /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF1052A289A3D00B041DC /* LinkedList.swift */; };
-		BA7CF1082A289A4C00B041DC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF1072A289A4C00B041DC /* ListNode.swift */; };
+		BA7CF1082A289A4C00B041DC /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF1072A289A4C00B041DC /* LinkedListNode.swift */; };
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,7 @@
 		ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillListViewModel.swift; sourceTree = "<group>"; };
 		BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOfOperationView.swift; sourceTree = "<group>"; };
 		BA7CF1052A289A3D00B041DC /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		BA7CF1072A289A4C00B041DC /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		BA7CF1072A289A4C00B041DC /* LinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
 		BAB398F32A24997B001328ED /* AddBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				BA7CF1052A289A3D00B041DC /* LinkedList.swift */,
-				BA7CF1072A289A4C00B041DC /* ListNode.swift */,
+				BA7CF1072A289A4C00B041DC /* LinkedListNode.swift */,
 			);
 			path = BillsInMemoryStorage;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
-				BA7CF1082A289A4C00B041DC /* ListNode.swift in Sources */,
+				BA7CF1082A289A4C00B041DC /* LinkedListNode.swift in Sources */,
 				9BE7DB162A249D8B00B4ADA4 /* BillSectionView.swift in Sources */,
 				ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
