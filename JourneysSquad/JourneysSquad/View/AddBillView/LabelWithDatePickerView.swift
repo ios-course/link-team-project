@@ -5,10 +5,10 @@ import SwiftUI
 struct LabelWithDatePickerView: View {
     // MARK: - Internal interface
 
-    /// The selected date that is shown in the view.
+    /// The date value being displayed and selected.
     @Binding var date: Date
 
-    /// The text of the label.
+    /// A text displayed in the label.
     let labelText: String
 
     var body: some View {
@@ -34,7 +34,9 @@ struct LabelWithDatePickerView: View {
 
 struct LabelWithDatePickerView_Previews: PreviewProvider {
     static var previews: some View {
-        LabelWithDatePickerView(date: .constant(Date()),
-                                labelText: "Date")
+        LabelWithDatePickerView(
+            date: .constant(.now),
+            labelText: "Date"
+        )
     }
 }

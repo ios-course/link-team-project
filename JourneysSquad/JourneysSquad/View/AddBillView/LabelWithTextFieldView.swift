@@ -7,8 +7,8 @@ struct LabelWithTextFieldView: View {
     /// The text entered into the field.
     @Binding var input: String
 
-    /// A label displayed above the field.
-    let label: String
+    /// A text displayed in the label.
+    let labelText: String
 
     /// A placeholder text displayed within the field.
     let placeholder: String
@@ -16,12 +16,15 @@ struct LabelWithTextFieldView: View {
     /// A type of keyboard to display when the field is tapped.
     let keyboardType: UIKeyboardType
 
-    /// An alignment of the label and the text field inside the view.
-    let alignment: LabelWithTextFieldViewAlignment
+    /// An alignment of the label inside the view.
+    let labelAlignment: HorizontalAlignment
+
+    /// An alignment of the text field inside the view.
+    let textFieldAlignment: TextAlignment
 
     var body: some View {
-        VStack(alignment: alignment.horizontalAlignment) {
-            Text(label)
+        VStack(alignment: labelAlignment) {
+            Text(labelText)
                 .font(.system(size: fontBodySize, weight: .bold))
 
             Divider()
@@ -30,8 +33,36 @@ struct LabelWithTextFieldView: View {
                 .font(.system(size: fontBodySize))
                 .keyboardType(keyboardType)
                 .lineLimit(textFieldLineLimit)
-                .multilineTextAlignment(alignment.textAlignment)
+                .multilineTextAlignment(textFieldAlignment)
         }
+    }
+
+    /// Creates a view with specified label text, placeholder, keyboard type,
+    /// label and text field alignments.
+    ///
+    /// The default alignments of the text field and the label are leading.
+    ///
+    /// - Parameters:
+    ///   - input: The text entered into the field.
+    ///   - labelText: A text displayed in the label.
+    ///   - placeholder:  A placeholder text displayed within the field.
+    ///   - keyboardType: A type of keyboard to display when the field is tapped.
+    ///   - labelAlignment: An alignment of the label inside the view.
+    ///   - textFieldAlignment: An alignment of the text field inside the view.
+    init(
+        input: Binding<String>,
+        labelText: String,
+        placeholder: String,
+        keyboardType: UIKeyboardType,
+        labelAlignment: HorizontalAlignment = .leading,
+        textFieldAlignment: TextAlignment = .leading
+    ) {
+        _input = input
+        self.labelText = labelText
+        self.placeholder = placeholder
+        self.keyboardType = keyboardType
+        self.labelAlignment = labelAlignment
+        self.textFieldAlignment = textFieldAlignment
     }
 
     // MARK: - Private interface
@@ -47,20 +78,20 @@ struct LabelWithTextFieldView_Previews: PreviewProvider {
 
             LabelWithTextFieldView(
                 input: .constant(""),
-                label: "Label",
+                labelText: "Label",
                 placeholder: "Placeholder",
                 keyboardType: .default,
-                alignment: .leading
+                labelAlignment: .center,
+                textFieldAlignment: .center
             )
 
             Spacer()
 
             LabelWithTextFieldView(
-                input: .constant("Here's a field with a quite long fancy text that doesn't fit on one line."),
-                label: "Here's a label with a quite long fancy text that doesn't fit on one line.",
+                input: .constant(""),
+                labelText: "Here's a label with a quite long fancy text that doesn't fit on one line.",
                 placeholder: "Placeholder",
-                keyboardType: .default,
-                alignment: .leading
+                keyboardType: .default
             )
 
             Spacer()

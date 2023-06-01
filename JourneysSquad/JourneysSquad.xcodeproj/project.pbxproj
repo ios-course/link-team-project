@@ -20,7 +20,6 @@
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
-		9BDB8B972A279F2E00C2CBCC /* LabelWithTextFieldViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB8B942A279F2E00C2CBCC /* LabelWithTextFieldViewAlignment.swift */; };
 		9BDB8B982A279F2E00C2CBCC /* LabelWithTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */; };
 		9BDB8B992A279F2E00C2CBCC /* LabelWithDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */; };
 		9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */; };
@@ -61,7 +60,6 @@
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyBillRowViewModel.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
-		9BDB8B942A279F2E00C2CBCC /* LabelWithTextFieldViewAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldViewAlignment.swift; sourceTree = "<group>"; };
 		9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldView.swift; sourceTree = "<group>"; };
 		9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithDatePickerView.swift; sourceTree = "<group>"; };
 		9BE7DB0B2A23C4B200B4ADA4 /* String+AppIconName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppIconName.swift"; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 		9BDB8B932A279F2E00C2CBCC /* AddBillView */ = {
 			isa = PBXGroup;
 			children = (
-				9BDB8B942A279F2E00C2CBCC /* LabelWithTextFieldViewAlignment.swift */,
 				9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */,
 				9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */,
 			);
@@ -371,7 +368,6 @@
 				9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */,
 				BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
-				9BDB8B972A279F2E00C2CBCC /* LabelWithTextFieldViewAlignment.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */,
 				9BDB8B982A279F2E00C2CBCC /* LabelWithTextFieldView.swift in Sources */,
