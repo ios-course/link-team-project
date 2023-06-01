@@ -19,6 +19,7 @@
 		9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */; };
 		9B66673B2A152EA4006AB63B /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */; };
+		9BB749BC2A2892D800189FF1 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB749BB2A2892D800189FF1 /* HistoryOfOperationView.swift */; };
 		9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD630A62A125B1B00AF6406 /* Bill.swift */; };
 		9BDB8B982A279F2E00C2CBCC /* LabelWithTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */; };
 		9BDB8B992A279F2E00C2CBCC /* LabelWithDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */; };
@@ -32,7 +33,6 @@
 		ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */; };
 		ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */; };
 		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
-		BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */; };
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +59,7 @@
 		9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppButtonLabelName.swift"; sourceTree = "<group>"; };
 		9B6667392A152B95006AB63B /* BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTests.swift; sourceTree = "<group>"; };
 		9BAE99E02A276EE8000FEA3E /* DummyBillRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyBillRowViewModel.swift; sourceTree = "<group>"; };
+		9BB749BB2A2892D800189FF1 /* HistoryOfOperationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryOfOperationView.swift; sourceTree = "<group>"; };
 		9BD630A62A125B1B00AF6406 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BDB8B952A279F2E00C2CBCC /* LabelWithTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithTextFieldView.swift; sourceTree = "<group>"; };
 		9BDB8B962A279F2E00C2CBCC /* LabelWithDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelWithDatePickerView.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
 		ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySectionViewModel.swift; sourceTree = "<group>"; };
 		ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillListViewModel.swift; sourceTree = "<group>"; };
-		BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOfOperationView.swift; sourceTree = "<group>"; };
 		BAB398F32A24997B001328ED /* AddBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +181,7 @@
 		9BDB8B932A279F2E00C2CBCC /* AddBillView */ = {
 			isa = PBXGroup;
 			children = (
+				BAB398F32A24997B001328ED /* AddBillView.swift */,
 				9BB749BA2A2889BF00189FF1 /* Subviews */,
 			);
 			path = AddBillView;
@@ -226,9 +227,7 @@
 			children = (
 				ABDE72162A279F53003810A8 /* HistoryOfOperationsView */,
 				9BDB8B932A279F2E00C2CBCC /* AddBillView */,
-				BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */,
 				9BE7DB142A23CD6F00B4ADA4 /* ReusableStyles */,
-				BAB398F32A24997B001328ED /* AddBillView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,7 +245,7 @@
 		ABDE72162A279F53003810A8 /* HistoryOfOperationsView */ = {
 			isa = PBXGroup;
 			children = (
-				BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */,
+				9BB749BB2A2892D800189FF1 /* HistoryOfOperationView.swift */,
 				ABDE72172A279FAA003810A8 /* Subviews */,
 			);
 			path = HistoryOfOperationsView;
@@ -391,7 +390,6 @@
 				ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */,
 				9BE7DB0E2A23C4D200B4ADA4 /* CircleWithPlusButton.swift in Sources */,
 				9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */,
-				BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */,
@@ -403,6 +401,7 @@
 				9BDB8B992A279F2E00C2CBCC /* LabelWithDatePickerView.swift in Sources */,
 				ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */,
 				9B50957A2A24D03900B3E28B /* String+AppButtonLabelName.swift in Sources */,
+				9BB749BC2A2892D800189FF1 /* HistoryOfOperationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
