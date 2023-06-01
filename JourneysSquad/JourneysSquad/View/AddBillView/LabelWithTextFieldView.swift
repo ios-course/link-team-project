@@ -16,10 +16,10 @@ struct LabelWithTextFieldView: View {
     /// A type of keyboard to display when the field is tapped.
     let keyboardType: UIKeyboardType
 
-    /// An alignment of the label inside the view.
+    /// An alignment of the label inside the view along the horizontal axis.
     let labelAlignment: HorizontalAlignment
 
-    /// An alignment of the text field inside the view.
+    /// An alignment of the text field inside the view along the horizontal axis.
     let textFieldAlignment: TextAlignment
 
     var body: some View {
