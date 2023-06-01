@@ -225,19 +225,19 @@
 			isa = PBXGroup;
 			children = (
 				BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */,
-				ABDE72172A279FAA003810A8 /* HistoryOfOperationsSubviews */,
+				ABDE72172A279FAA003810A8 /* Subviews */,
 			);
 			path = HistoryOfOperationsView;
 			sourceTree = "<group>";
 		};
-		ABDE72172A279FAA003810A8 /* HistoryOfOperationsSubviews */ = {
+		ABDE72172A279FAA003810A8 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
 				AB1376FC2A173F530085CEFE /* BillRowView.swift */,
 				9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */,
 				ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */,
 			);
-			path = HistoryOfOperationsSubviews;
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
