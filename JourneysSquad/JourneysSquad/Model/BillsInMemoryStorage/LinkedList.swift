@@ -2,35 +2,16 @@ import Foundation
 
 /// Represents a linked list data structure.
 struct LinkedList<T> {
-    /// The head node of the linked list.
-    private var head: LinkedListNode<T>?
-
-    /// Inserts a new element into the linked list based on the provided condition.
-    /// - Parameters:
-    ///   - value: The value to be inserted.
-    ///   - condition: The condition used to determine the insertion position.
-    mutating func insertElement(_ value: T, basedOn condition: (T, T) -> Bool) {
+    /// Adds a new node to the end of the linked list.
+    /// - Parameter value: he value to be added to the linked list.
+    mutating func add(value: T) {
         let newNode = LinkedListNode(value: value)
-
-        if head == nil {
-            head = newNode
-            return
-        }
-
-        var currentNode = head
-        var prevNode: LinkedListNode<T>?
-
-        while let current = currentNode, condition(value, current.value) {
-            prevNode = currentNode
-            currentNode = currentNode?.next
-        }
-
-        if prevNode == nil {
-            newNode.next = head
-            head = newNode
-        } else {
-            newNode.next = prevNode?.next
-            prevNode?.next = newNode
-        }
+        tail?.next = newNode
+        tail = newNode
     }
+
+    // MARK: - Private interface
+
+    private var head: LinkedListNode<T>?
+    private var tail: LinkedListNode<T>?
 }
