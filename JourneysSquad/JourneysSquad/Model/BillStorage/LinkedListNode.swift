@@ -2,6 +2,7 @@
 final class LinkedListNode<T> {
     /// The value stored in the node.
     var value: T
+
     /// The reference to the next node in the list.
     var next: LinkedListNode<T>?
 
