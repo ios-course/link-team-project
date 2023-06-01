@@ -40,6 +40,12 @@ struct BillRowView: View {
 
 struct BillRow_Previews: PreviewProvider {
     static var previews: some View {
-        BillRowView(viewModel: DummyBillRowViewModel())
+        BillRowView(
+            viewModel: DummyBillRowViewModel(
+                description: "Description",
+                participants: "Egor, Dima",
+                sumOfBill: "50.00"
+            )
+        )
     }
 }
