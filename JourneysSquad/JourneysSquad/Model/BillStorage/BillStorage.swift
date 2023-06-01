@@ -1,38 +1,33 @@
 import Foundation
 
+/// Storage to store bills.
 class BillStorage {
+    
+    /// The shared instance of the bill storage.
     static let shared = BillStorage()
-    private(set) var bills: [Bill] = []
-    var head: BillNode?
     
-    private init() {
-        self.head = nil
-    }
-    
-    func appendTheBill(_ newBill: Bill) -> Bool {
-        let newNode = BillNode(bill: newBill)
-        
-        if head == nil {
-            head = newNode
-            return true
-        } else {
-            var currentNode = head
-            var previous: BillNode? = nil
-            
-            while let currentBill = currentNode, currentBill.bill.date >= newBill.date {
-                previous = currentNode
-                currentNode = currentBill.next
-            }
-            
-            if previous == nil {
-                newNode.next = head
-                head = newNode
-            } else {
-                previous?.next = newNode
-                newNode.next = currentNode
-                return true
-            }
+    /// Inserts a bill into the storage based on its date.
+    /// - Parameter bill: The bill to be inserted.
+    func insertBill(_ bill: Bill) {
+        bills.insertElement(bill) { newBill, listBill in
+            newBill.date >= listBill.date
         }
-        return false
     }
+    
+    /// Retrieves all the bills from the storage.
+    /// - Returns: An array containing all the bills in the storage.
+    func getAllBills() -> [Bill] {
+        var allBills = [Bill]()
+        var currentNode = bills.head
+        
+        while currentNode != nil {
+            allBills.append(currentNode!.value)
+            currentNode = currentNode?.next
+        }
+        
+        return allBills
+    }
+   
+    // MARK: - Private interface
+    private(set) var bills = LinkedList<Bill>()
 }
