@@ -15,6 +15,7 @@ class BillStorage {
 
     /// Retrieves all the bills from the storage.
     /// - Returns: An array containing all the bills in the storage.
+    /// What is order of the bills?
     func getAllBills() -> [Bill] {
         var allBills = [Bill]()
         var currentNode = bills.head
