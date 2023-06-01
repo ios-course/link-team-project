@@ -20,12 +20,7 @@
 		AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRowView.swift */; };
 		AB1377032A1A56550085CEFE /* BillRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1377022A1A56550085CEFE /* BillRowViewModel.swift */; };
 		BA07E98F2A27757E00E1B99A /* BillStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07E98E2A27757E00E1B99A /* BillStorage.swift */; };
-		BA07E9912A278D8400E1B99A /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07E9902A278D8400E1B99A /* ListNode.swift */; };
 		BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */; };
-		BA7CF0FB2A2882A200B041DC /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF0FA2A2882A200B041DC /* LinkedList.swift */; };
-		BA7CF0FE2A28985B00B041DC /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF0FD2A28985B00B041DC /* LinkedListTests.swift */; };
-		BA7CF0FF2A28988600B041DC /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF0FA2A2882A200B041DC /* LinkedList.swift */; };
-		BA7CF1002A28988C00B041DC /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07E9902A278D8400E1B99A /* ListNode.swift */; };
 		BA7CF1012A28989200B041DC /* BillStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07E98E2A27757E00E1B99A /* BillStorage.swift */; };
 		BA7CF1032A2898FD00B041DC /* BillStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF1022A2898FD00B041DC /* BillStorageTests.swift */; };
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
@@ -55,10 +50,7 @@
 		AB1376FC2A173F530085CEFE /* BillRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowView.swift; sourceTree = "<group>"; };
 		AB1377022A1A56550085CEFE /* BillRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowViewModel.swift; sourceTree = "<group>"; };
 		BA07E98E2A27757E00E1B99A /* BillStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStorage.swift; sourceTree = "<group>"; };
-		BA07E9902A278D8400E1B99A /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		BA7BE3042A1DFEC8005D0395 /* HistoryOfOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOfOperationView.swift; sourceTree = "<group>"; };
-		BA7CF0FA2A2882A200B041DC /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		BA7CF0FD2A28985B00B041DC /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
 		BA7CF1022A2898FD00B041DC /* BillStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillStorageTests.swift; sourceTree = "<group>"; };
 		BAB398F32A24997B001328ED /* AddBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,8 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				BA07E98E2A27757E00E1B99A /* BillStorage.swift */,
-				BA07E9902A278D8400E1B99A /* ListNode.swift */,
-				BA7CF0FA2A2882A200B041DC /* LinkedList.swift */,
 			);
 			path = BillStorage;
 			sourceTree = "<group>";
@@ -180,7 +170,6 @@
 		BA7CF0FC2A28983700B041DC /* BillStorage */ = {
 			isa = PBXGroup;
 			children = (
-				BA7CF0FD2A28985B00B041DC /* LinkedListTests.swift */,
 				BA7CF1022A2898FD00B041DC /* BillStorageTests.swift */,
 			);
 			path = BillStorage;
@@ -310,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB398F42A24997B001328ED /* AddBillView.swift in Sources */,
-				BA07E9912A278D8400E1B99A /* ListNode.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				BA7BE3052A1DFEC8005D0395 /* HistoryOfOperationView.swift in Sources */,
 				BA07E98F2A27757E00E1B99A /* BillStorage.swift in Sources */,
@@ -318,7 +306,6 @@
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BD630A72A125B1B00AF6406 /* Bill.swift in Sources */,
 				9B0383B72A04D7F4005E333D /* JourneysSquadApp.swift in Sources */,
-				BA7CF0FB2A2882A200B041DC /* LinkedList.swift in Sources */,
 				AB1377032A1A56550085CEFE /* BillRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,10 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA7CF1032A2898FD00B041DC /* BillStorageTests.swift in Sources */,
-				BA7CF1002A28988C00B041DC /* ListNode.swift in Sources */,
-				BA7CF0FF2A28988600B041DC /* LinkedList.swift in Sources */,
 				9B66673A2A152B95006AB63B /* BillTests.swift in Sources */,
-				BA7CF0FE2A28985B00B041DC /* LinkedListTests.swift in Sources */,
 				BA7CF1012A28989200B041DC /* BillStorage.swift in Sources */,
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
 				9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */,
