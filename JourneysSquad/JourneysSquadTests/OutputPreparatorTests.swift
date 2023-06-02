@@ -19,7 +19,14 @@ class OutputPreparatorTests: XCTestCase {
         XCTAssertEqual(output, expectedOutput)
     }
 
-    func testAddCurrencyKindWithUSD() {
+    func testMakeCommaSeparatedListWithEmptyArray() {
+        let input: [String] = []
+        let result = OutputPreparator.makeCommaSeparatedList(input)
+
+        XCTAssertEqual(result, "")
+    }
+
+    func testAddCurrencyKindConvertsDecimalToStringAndAddsUSDSymbol() {
         let number: Decimal = 123.45
         let expectedOutput = number.formatted(.currency(code: "USD"))
 
