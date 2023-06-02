@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Navigation bar for screen `History of Operations` [#52](https://github.com/ios-course/link-team-project/pull/52)
 - Bill list view for screen `History of Operations` [#43](https://github.com/ios-course/link-team-project/issues/43)
 - `BlackRoundedRectangleButton`, `CircleWithPlusButton` button styles [#60](https://github.com/ios-course/link-team-project/pull/60)
+- `AddBillElementsView` [#72](https://github.com/ios-course/link-team-project/pull/72)
 
 ### Changed
 - `HistoryOfOperationsView` screen where user can see the static list of bills and navigate to the `AddBill` screen [#47](https://github.com/ios-course/link-team-project/issues/47)
+
