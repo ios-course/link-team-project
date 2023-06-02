@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view for adding a bill,
+/// A view for adding a bill.
 struct AddBillElementsView: View {
     // MARK: - Internal interface
 
@@ -15,7 +15,7 @@ struct AddBillElementsView: View {
             .padding()
 
             LabelWithTextFieldView(
-                input: $spendingDescription,
+                input: $billDescription,
                 labelText: whatIsItFieldLabel,
                 placeholderText: whatIsItFieldPlaceholder,
                 keyboardType: .default
@@ -68,7 +68,7 @@ struct AddBillElementsView: View {
     // MARK: - Private interface
 
     @State private var sumOfBill = ""
-    @State private var spendingDescription = ""
+    @State private var billDescription = ""
     @State private var participantName = ""
     @State private var paidAmount = ""
     @State private var selectedDate = Date()
