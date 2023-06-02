@@ -15,6 +15,10 @@ final class BillsInMemoryStorage {
     func addBill(_ bill: Bill) {
         guard let dateKey = bill.date.onlyDate else { return }
         
+//        var billsForDay = billsFor[dateFromNewBill, default: LinkedList<Bill>()]
+//        billsForDay.add(value: newBill)
+//        billsFor.updateValue(billsForDay, forKey: dateFromNewBill)
+        
         if var list = dateMap[dateKey] {
             list.add(value: bill)
         } else {

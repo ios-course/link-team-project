@@ -1,5 +1,5 @@
 /// Represents a node in a linked list.
-final class LinkedListNode<T> {
+final class LinkedListNode<T: Comparable> {
     /// The value stored in the node.
     var value: T
 
