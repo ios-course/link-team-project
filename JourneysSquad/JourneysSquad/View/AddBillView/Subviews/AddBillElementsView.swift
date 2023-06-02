@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A view for adding a bill,
-struct AddBillScreen: View {
+struct AddBillElementsView: View {
     // MARK: - Internal interface
 
     var body: some View {
@@ -41,7 +41,6 @@ struct AddBillScreen: View {
                         textFieldAlignment: .center
                     )
                     .frame(maxWidth: paidFieldMaxWidth)
-                    .minimumScaleFactor(0.8)
 
                     Button("") {}
                         .buttonStyle(CircleWithPlusButton())
@@ -88,8 +87,8 @@ struct AddBillScreen: View {
     private let circleWithPlusButtonFrameHeight: CGFloat = 30
 }
 
-struct AddBillScreen_Previews: PreviewProvider {
+struct AddBillElementsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddBillScreen()
+        AddBillElementsView()
     }
 }
