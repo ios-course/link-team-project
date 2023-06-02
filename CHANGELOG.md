@@ -18,4 +18,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - `HistoryOfOperationsView` screen where user can see the static list of bills and navigate to the `AddBill` screen [#47](https://github.com/ios-course/link-team-project/issues/47)
-
