@@ -30,6 +30,9 @@
 		9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */; };
 		AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1376FC2A173F530085CEFE /* BillRowView.swift */; };
+		AB6CCF292A29D5DE004E429A /* OutputPreparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */; };
+		AB6CCF2C2A29DD1E004E429A /* OutputPreparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */; };
+		AB6CCF302A29E24F004E429A /* OutputPreparatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6CCF2F2A29E24F004E429A /* OutputPreparatorTests.swift */; };
 		ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */; };
 		ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */; };
 		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
@@ -69,6 +72,8 @@
 		9BE7DB152A249D8B00B4ADA4 /* BillSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSectionView.swift; sourceTree = "<group>"; };
 		9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillValidationError.swift; sourceTree = "<group>"; };
 		AB1376FC2A173F530085CEFE /* BillRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillRowView.swift; sourceTree = "<group>"; };
+		AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPreparator.swift; sourceTree = "<group>"; };
+		AB6CCF2F2A29E24F004E429A /* OutputPreparatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPreparatorTests.swift; sourceTree = "<group>"; };
 		ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
 		ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySectionViewModel.swift; sourceTree = "<group>"; };
 		ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillListViewModel.swift; sourceTree = "<group>"; };
@@ -139,6 +144,7 @@
 			children = (
 				9B1EF2522A271FCD00C7B62A /* Helpers */,
 				9B1DBD9E2A0E30ED0082999A /* Model */,
+				AB6CCF2F2A29E24F004E429A /* OutputPreparatorTests.swift */,
 			);
 			path = JourneysSquadTests;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 			children = (
 				9B5095792A24D03900B3E28B /* String+AppButtonLabelName.swift */,
 				9BE7DB122A23C51800B4ADA4 /* AppStyle */,
+				AB6CCF282A29D5DE004E429A /* OutputPreparator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -385,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB398F42A24997B001328ED /* AddBillView.swift in Sources */,
+				AB6CCF292A29D5DE004E429A /* OutputPreparator.swift in Sources */,
 				9BE7DB102A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */,
@@ -413,7 +421,9 @@
 				9B1EF2562A271FCD00C7B62A /* String+AppButtonLabelNameTests.swift in Sources */,
 				9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */,
 				9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */,
+				AB6CCF2C2A29DD1E004E429A /* OutputPreparator.swift in Sources */,
 				9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */,
+				AB6CCF302A29E24F004E429A /* OutputPreparatorTests.swift in Sources */,
 				9B1EF2572A271FCD00C7B62A /* String+AppIconNameTests.swift in Sources */,
 				9B1DBD982A0E2EE40082999A /* BillValidationErrorTests.swift in Sources */,
 			);
