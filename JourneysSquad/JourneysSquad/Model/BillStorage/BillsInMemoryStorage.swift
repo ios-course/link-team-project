@@ -4,19 +4,17 @@ import Foundation
 final class BillsInMemoryStorage {
     /// The shared instance of the bill storage.
     static let shared = BillsInMemoryStorage()
-
+    
     /// A dictionary that maps dates to linked lists of bills.
-    var dateMap: [Date: LinkedList<Bill>]
-
-    private init() {
-        dateMap = [:]
-    }
-
+    private var dateMap = [Date: LinkedList<Bill>]()
+    
+    private init() {}
+    
     /// Adds a bill to the storage.
     /// - Parameter bill: The bill to be added.
     func addBill(_ bill: Bill) {
         guard let dateKey = bill.date.onlyDate else { return }
-
+        
         if var list = dateMap[dateKey] {
             list.add(value: bill)
         } else {
@@ -34,7 +32,7 @@ extension Date {
         formatter.dateStyle = .short
         formatter.timeStyle = .none
         formatter.timeZone = TimeZone.current
-
+        
         let dateString = formatter.string(from: self)
         return formatter.date(from: dateString)
     }
