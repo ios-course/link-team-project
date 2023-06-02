@@ -46,7 +46,7 @@ struct Bill {
 
     private static func validateBill(
         personPaid: [String: Decimal],
-        description: String,
+        description _: String,
         sumOfBill: Decimal,
         date: Date
     ) throws {

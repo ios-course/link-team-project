@@ -42,6 +42,6 @@ struct BillRow_Previews: PreviewProvider {
     static var previews: some View {
         BillRowView(
             viewModel: BillRowViewModel(Bill.Dummy.mac!)
-            )
+        )
     }
 }

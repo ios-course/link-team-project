@@ -30,7 +30,7 @@ struct BillSectionView_Previews: PreviewProvider {
                     header: "2023-05-23",
                     rows: [
                         BillRowViewModel(Bill.Dummy.mac!),
-                        BillRowViewModel(Bill.Dummy.bk!),
+                        BillRowViewModel(Bill.Dummy.burKing!),
                     ]
                 )
             )

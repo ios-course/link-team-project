@@ -8,7 +8,7 @@ final class DummyBillListViewModel {
             header: "2023-05-24",
             rows: [
                 BillRowViewModel(Bill.Dummy.mac!),
-                BillRowViewModel(Bill.Dummy.bk!),
+                BillRowViewModel(Bill.Dummy.burKing!),
             ]
         ),
         DummySectionViewModel(
