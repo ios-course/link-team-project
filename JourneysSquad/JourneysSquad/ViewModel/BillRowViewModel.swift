@@ -13,8 +13,16 @@ final class BillRowViewModel: Identifiable, ObservableObject {
     /// Total amount of the bill to be shown in the view.
     @Published var sumOfBill: String
 
-    var id: UUID
+    /// Unique identifire of the bill.
+    @Published var id: UUID
 
+    /// Initializes a new instance with the provided data.
+    /// - Parameters:
+    ///     - bill: Instance if the class bill.
+    ///   - description: Description of the spending in the bill.
+    ///   - participants:  A list of the participants' names involved in the bill, separated by commas.
+    ///   - sumOfBill: Total amount of the bill, with added dollar sign.
+    ///   - id: Unique id of the bill.
     init(_ bill: Bill) {
         self.bill = bill
         description = bill.description
