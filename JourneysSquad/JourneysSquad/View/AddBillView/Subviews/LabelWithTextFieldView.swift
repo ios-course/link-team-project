@@ -34,6 +34,9 @@ struct LabelWithTextFieldView: View {
                 .keyboardType(keyboardType)
                 .lineLimit(textFieldLineLimit)
                 .multilineTextAlignment(textFieldAlignment)
+                .onTapGesture {
+                    hideKeyboard()
+                }
         }
     }
 
