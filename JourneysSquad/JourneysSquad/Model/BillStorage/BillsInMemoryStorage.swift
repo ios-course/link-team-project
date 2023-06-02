@@ -13,17 +13,21 @@ final class BillsInMemoryStorage {
             return
         }
 
-        let billDate = bill.date
-
         for node in list {
-            if node.value.date < billDate {
+            let dateOfSectionInNode = node.value.date
+
+            if dateOfSectionInNode < bill.date {
                 list.insert(value: section, before: node)
-            } else if node.value.date == billDate {
+                return
+            } else if dateOfSectionInNode == bill.date {
                 node.value.bills.append(bill)
-            } else {
-                list.append(value: section)
+                return
             }
         }
+
+        // If all the list is traversed and no condition is met, add a new
+        // node to tail.
+        list.append(value: section)
     }
 }
 
