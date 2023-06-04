@@ -5,7 +5,10 @@ final class LinkedListNode<T> {
 
     /// The reference to the next node in the list.
     var next: LinkedListNode<T>?
+
+    /// The reference to the previous node in the list.
     var previos: LinkedListNode<T>?
+
     /// Creates a new instance of `LinkedListNode`.
     /// - Parameter value: The value to be stored in the node.
     init(value: T) {
