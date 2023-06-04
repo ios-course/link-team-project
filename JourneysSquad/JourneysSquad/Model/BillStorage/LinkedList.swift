@@ -1,6 +1,6 @@
 /// Represents a linked list data structure.
 struct LinkedList<T> {
-    /// Insert a new node with the specified value before the given node.
+    /// Inserts a new node with the specified value before the given node.
     /// - Parameters:
     ///   - value: The value to be inserted.
     ///   - node: The node after which the new node will be inserted.
@@ -50,6 +50,7 @@ extension LinkedList: Sequence {
 
 struct LinkedListIterator<T>: IteratorProtocol {
     var current: LinkedListNode<T>?
+
     /// An array of values in the linked list.
     /// - Returns: The next node in the linked list, or nil if there are no more nodes.
     func next() -> LinkedListNode<T>? {
