@@ -11,7 +11,7 @@ struct LinkedList<T> {
         node.previos?.next = newNode
         node.previos = newNode
     }
-    
+
     /// Adds a new node with the specified value to the end of the linked list.
     /// - Parameter value: The value to be added to the linked list.
     mutating func append(value: T) {
@@ -19,9 +19,9 @@ struct LinkedList<T> {
         tail?.next = newNode
         tail = newNode
     }
-    
+
     // MARK: - Private
-    
+
     var head: LinkedListNode<T>?
     var tail: LinkedListNode<T>?
 }
@@ -32,12 +32,12 @@ extension LinkedList {
     func toArray() -> [T] {
         var array = [T]()
         var currentNode = head
-        
+
         while let node = currentNode {
             array.append(node.value)
             currentNode = node.next
         }
-        
+
         return array
     }
 }
