@@ -5,7 +5,7 @@ struct BillRowView: View {
     // MARK: - Internal interface
 
     /// The view model to provide data to the view.
-    @ObservedObject var viewModel: BillRowViewModel
+    var viewModel: BillRowViewModel
 
     var body: some View {
         HStack {
@@ -41,7 +41,7 @@ struct BillRowView: View {
 struct BillRow_Previews: PreviewProvider {
     static var previews: some View {
         BillRowView(
-            viewModel: BillRowViewModel(Bill.Dummy.mac!)
+            viewModel: BillRowViewModel()
         )
     }
 }

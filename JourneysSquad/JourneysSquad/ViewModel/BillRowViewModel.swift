@@ -1,38 +1,29 @@
 import Foundation
 
 /// Dummy view model that provides data to display for a list row.
-final class BillRowViewModel: Identifiable, ObservableObject {
-    // MARK: Internal interface
-
+final class BillRowViewModel: Identifiable {
     /// Description of the bill to be shown in the view.
-    @Published var description: String
+    var description: String
 
-    /// List of the participants of the bill separated by a comma to be shown in the view.
-    @Published var participants: String
+    /// List of the participants of the bill.
+    var participants: String
 
     /// Total amount of the bill to be shown in the view.
-    @Published var sumOfBill: String
+    var sumOfBill: String
 
-    /// Unique identifire of the bill.
-    @Published var id: UUID
+    /// The bill's unique identifier.
+    let id: UUID
 
     /// Initializes a new instance with the provided data.
     /// - Parameters:
-    ///     - bill: Instance if the class bill.
     ///   - description: Description of the spending in the bill.
-    ///   - participants:  A list of the participants' names involved in the bill, separated by commas.
-    ///   - sumOfBill: Total amount of the bill, with added dollar sign.
-    ///   - id: Unique id of the bill.
-    init(_ bill: Bill) {
-        self.bill = bill
+    ///   - participants:  A list of the participants' names involved in the bill.
+    ///   - sumOfBill: Total amount of the bill.
+    init(bill: Bill = Bill.Dummy.bills[0]) {
         description = bill.description
-        let participants = Array(bill.personPaid.keys)
-        self.participants = OutputPreparator.makeCommaSeparatedList(participants)
-        sumOfBill = OutputPreparator.addCurrencyKind(to: bill.sumOfBill)
+        let arrayOfParticipants = bill.personPaid.keys
+        participants = arrayOfParticipants.joined(separator: ", ")
+        sumOfBill = bill.sumOfBill.formatted(.currency(code: SupportedCurrency.usd))
         id = bill.id
     }
-
-    // MARK: Private interface
-
-    private var bill: Bill
 }
