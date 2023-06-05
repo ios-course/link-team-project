@@ -6,7 +6,7 @@ struct AddBillView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("")
+                AddBillElementsView()
             }
             .navigationTitle(titleText)
             .navigationBarTitleDisplayMode(.inline)
