@@ -5,13 +5,17 @@ struct DoubleLinkedList<T> {
     /// - Parameters:
     ///   - value: The value to be inserted.
     ///   - node: The node before which the new node will be inserted.
+    ///   If `node` is `nil` or equal to the current head node,
+    ///   the new node will be inserted at the beginning of the list.
     mutating func insert(value: T, before node: DoubleLinkedListNode<T>?) {
         let newNode = DoubleLinkedListNode(value: value)
-
-        if head == nil {
+        guard head != nil else {
             head = newNode
             tail = newNode
-        } else if node === head {
+            return
+        }
+
+        if node === head || node == nil {
             newNode.next = head
             head?.previous = newNode
             head = newNode

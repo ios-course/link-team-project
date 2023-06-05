@@ -41,6 +41,17 @@ final class DoubleLinkedListTests: XCTestCase {
         XCTAssertEqual(linkedList.tail?.value, 5)
     }
 
+    func testInsertionWithMultipleValuesWhenNodeBeforeInsertIsNil() {
+        var linkedList = DoubleLinkedList<Int>()
+
+        linkedList.append(value: 3)
+        linkedList.append(value: 7)
+        linkedList.append(value: 10)
+        linkedList.insert(value: 5, before: nil)
+
+        XCTAssertEqual(linkedList.head?.value, 5)
+    }
+
     func testInsertionBeforeHead() {
         var linkedList = DoubleLinkedList<Int>()
 
