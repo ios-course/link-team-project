@@ -1,0 +1,68 @@
+/// Represents a linked list data structure.
+struct DoubleLinkedList<T> {
+    /// Inserts a new node with the specified value before the given node.
+    ///
+    /// - Parameters:
+    ///   - value: The value to be inserted.
+    ///   - node: The node before which the new node will be inserted.
+    mutating func insert(value: T, before node: DoubleLinkedListNode<T>) {
+        let newNode = DoubleLinkedListNode(value: value)
+
+        if node === head {
+            newNode.next = head
+            head?.previous = newNode
+            head = newNode
+        } else {
+            newNode.next = node
+            newNode.previous = node.previous
+            node.previous?.next = newNode
+            node.previous = newNode
+        }
+    }
+
+    /// Adds a new node with the specified value to the end of the linked list.
+    ///
+    /// - Parameter value: The value to be added to the linked list.
+    mutating func append(value: T) {
+        let newNode = DoubleLinkedListNode(value: value)
+        newNode.previous = tail
+        tail?.next = newNode
+        tail = newNode
+
+        if head == nil {
+            head = newNode
+        }
+    }
+
+    /// Returns an array of values stored in the linked list.
+    /// 
+    /// - Returns: An array containing the values of the linked list in order their store in the linked list.
+    func listValues() -> [T] {
+        var array = [T]()
+        var currentNode = head
+
+        while let node = currentNode {
+            array.append(node.value)
+            currentNode = node.next
+        }
+        return array
+    }
+
+    // MARK: - Private interface
+
+    private var head: DoubleLinkedListNode<T>?
+    private var tail: DoubleLinkedListNode<T>?
+}
+
+extension DoubleLinkedList: Sequence {
+    func makeIterator() -> LinkedListIterator<T> {
+        LinkedListIterator(current: head)
+    }
+}
+
+struct LinkedListIterator<T>: IteratorProtocol {
+    var current: DoubleLinkedListNode<T>?
+    func next() -> DoubleLinkedListNode<T>? {
+        current?.next
+    }
+}
