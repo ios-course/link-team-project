@@ -35,7 +35,7 @@ struct DoubleLinkedList<T> {
     }
 
     /// Returns an array of values stored in the linked list.
-    /// 
+    ///
     /// - Returns: An array containing the values of the linked list in order their store in the linked list.
     func listValues() -> [T] {
         var array = [T]()
@@ -50,8 +50,8 @@ struct DoubleLinkedList<T> {
 
     // MARK: - Private interface
 
-    private var head: DoubleLinkedListNode<T>?
-    private var tail: DoubleLinkedListNode<T>?
+    private(set) var head: DoubleLinkedListNode<T>?
+    private(set) var tail: DoubleLinkedListNode<T>?
 }
 
 extension DoubleLinkedList: Sequence {

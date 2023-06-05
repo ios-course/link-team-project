@@ -37,6 +37,8 @@
 		BA7CF10C2A28DFA200B041DC /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* DoubleLinkedList.swift */; };
 		BA7CF10E2A28DFD700B041DC /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* LinkedListNode.swift */; };
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
+		BAC3271B2A2DC83B00EBF1E2 /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* LinkedListNode.swift */; };
+		BAC3271C2A2DC83D00EBF1E2 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* DoubleLinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,10 +438,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC3271B2A2DC83B00EBF1E2 /* LinkedListNode.swift in Sources */,
 				BA7CF1032A2898FD00B041DC /* BillStorageTests.swift in Sources */,
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
 				9B1EF2562A271FCD00C7B62A /* String+AppButtonLabelNameTests.swift in Sources */,
 				9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */,
+				BAC3271C2A2DC83D00EBF1E2 /* DoubleLinkedList.swift in Sources */,
 				9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */,
 				9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */,
 				9B1EF2572A271FCD00C7B62A /* String+AppIconNameTests.swift in Sources */,
