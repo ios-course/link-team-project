@@ -34,20 +34,6 @@ struct DoubleLinkedList<T> {
         }
     }
 
-    /// Returns an array of values stored in the linked list.
-    ///
-    /// - Returns: An array containing the values of the linked list in order their store in the linked list.
-    func listValues() -> [T] {
-        var array = [T]()
-        var currentNode = head
-
-        while let node = currentNode {
-            array.append(node.value)
-            currentNode = node.next
-        }
-        return array
-    }
-
     // MARK: - Private interface
 
     private(set) var head: DoubleLinkedListNode<T>?
