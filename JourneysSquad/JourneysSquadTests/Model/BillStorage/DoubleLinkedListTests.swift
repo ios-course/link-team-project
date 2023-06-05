@@ -1,6 +1,6 @@
 import XCTest
 
-final class BillStorageTests: XCTestCase {
+final class DoubleLinkedListTests: XCTestCase {
     func testAppendingToTheEmptyList() {
         var linkedList = DoubleLinkedList<Int>()
 
