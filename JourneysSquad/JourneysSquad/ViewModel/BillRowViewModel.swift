@@ -3,13 +3,13 @@ import Foundation
 /// Dummy view model that provides data to display for a list row.
 final class BillRowViewModel: Identifiable {
     /// Description of the bill to be shown in the view.
-    var description: String
+    let description: String
 
     /// List of the participants of the bill.
-    var participants: String
+    let participants: String
 
     /// Total amount of the bill to be shown in the view.
-    var sumOfBill: String
+    let sumOfBill: String
 
     /// The bill's unique identifier.
     let id: UUID
