@@ -34,12 +34,11 @@
 		ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */; };
 		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
 		BA7CF1032A2898FD00B041DC /* DoubleLinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF1022A2898FD00B041DC /* DoubleLinkedListTests.swift */; };
-		BA7CF10C2A28DFA200B041DC /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* DoubleLinkedList.swift */; };
-		BA7CF10E2A28DFD700B041DC /* DoubleLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* DoubleLinkedListNode.swift */; };
+		BA7CF10C2A28DFA200B041DC /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */; };
+		BA7CF10E2A28DFD700B041DC /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */; };
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
-		BAC3271B2A2DC83B00EBF1E2 /* DoubleLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* DoubleLinkedListNode.swift */; };
-		BAC3271C2A2DC83D00EBF1E2 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* DoubleLinkedList.swift */; };
-		BAC327282A2E0D5A00EBF1E2 /* LinkedListIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC327272A2E0D5A00EBF1E2 /* LinkedListIterator.swift */; };
+		BAC3271B2A2DC83B00EBF1E2 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */; };
+		BAC3271C2A2DC83D00EBF1E2 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +78,9 @@
 		ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySectionViewModel.swift; sourceTree = "<group>"; };
 		ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillListViewModel.swift; sourceTree = "<group>"; };
 		BA7CF1022A2898FD00B041DC /* DoubleLinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedListTests.swift; sourceTree = "<group>"; };
-		BA7CF10B2A28DFA200B041DC /* DoubleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedList.swift; sourceTree = "<group>"; };
-		BA7CF10D2A28DFD700B041DC /* DoubleLinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedListNode.swift; sourceTree = "<group>"; };
+		BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
 		BAB398F32A24997B001328ED /* AddBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillView.swift; sourceTree = "<group>"; };
-		BAC327272A2E0D5A00EBF1E2 /* LinkedListIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListIterator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,9 +274,8 @@
 		BA07E9922A278DD800E1B99A /* DoubleLinkedList */ = {
 			isa = PBXGroup;
 			children = (
-				BAC327272A2E0D5A00EBF1E2 /* LinkedListIterator.swift */,
-				BA7CF10B2A28DFA200B041DC /* DoubleLinkedList.swift */,
-				BA7CF10D2A28DFD700B041DC /* DoubleLinkedListNode.swift */,
+				BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */,
+				BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */,
 			);
 			path = DoubleLinkedList;
 			sourceTree = "<group>";
@@ -414,15 +411,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7CF10E2A28DFD700B041DC /* DoubleLinkedListNode.swift in Sources */,
+				BA7CF10E2A28DFD700B041DC /* BinarySearchTreeNode.swift in Sources */,
 				BAB398F42A24997B001328ED /* AddBillView.swift in Sources */,
 				9BE7DB102A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift in Sources */,
-				BAC327282A2E0D5A00EBF1E2 /* LinkedListIterator.swift in Sources */,
 				9B0383B92A04D7F4005E333D /* ContentView.swift in Sources */,
 				ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */,
 				9BE7DB0E2A23C4D200B4ADA4 /* CircleWithPlusButton.swift in Sources */,
 				9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */,
-				BA7CF10C2A28DFA200B041DC /* DoubleLinkedList.swift in Sources */,
+				BA7CF10C2A28DFA200B041DC /* BinarySearchTree.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */,
@@ -442,12 +438,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAC3271B2A2DC83B00EBF1E2 /* DoubleLinkedListNode.swift in Sources */,
+				BAC3271B2A2DC83B00EBF1E2 /* BinarySearchTreeNode.swift in Sources */,
 				BA7CF1032A2898FD00B041DC /* DoubleLinkedListTests.swift in Sources */,
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
 				9B1EF2562A271FCD00C7B62A /* String+AppButtonLabelNameTests.swift in Sources */,
 				9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */,
-				BAC3271C2A2DC83D00EBF1E2 /* DoubleLinkedList.swift in Sources */,
+				BAC3271C2A2DC83D00EBF1E2 /* BinarySearchTree.swift in Sources */,
 				9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */,
 				9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */,
 				9B1EF2572A271FCD00C7B62A /* String+AppIconNameTests.swift in Sources */,
