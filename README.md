@@ -20,7 +20,7 @@ Versions of our environment:
 
 ## Installation
 
-** For the application to work correctly, please make sure that your environment matches the versions specified in the [dev enviroment](https://github.com/ios-course/link-team-project#badges). **
+**NOTE:** For the application to work correctly, please make sure that your environment matches the versions specified in the [dev enviroment](https://github.com/ios-course/link-team-project#badges).
 
 1. Head to the [Releases](https://github.com/ios-course/link-team-project/releases) section within the existing repository.
 2. Choose the most recent release or any specific release you wish to install.
