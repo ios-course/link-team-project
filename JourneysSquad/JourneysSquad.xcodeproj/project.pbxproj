@@ -35,7 +35,12 @@
 		ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */; };
 		ABF7B5C22A20AB61006EB1EF /* DummySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */; };
 		ABF7B5C42A20AB93006EB1EF /* DummyBillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */; };
+		BA7CF1032A2898FD00B041DC /* BinarySearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF1022A2898FD00B041DC /* BinarySearchTreeTests.swift */; };
+		BA7CF10C2A28DFA200B041DC /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */; };
+		BA7CF10E2A28DFD700B041DC /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */; };
 		BAB398F42A24997B001328ED /* AddBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB398F32A24997B001328ED /* AddBillView.swift */; };
+		BAC3271B2A2DC83B00EBF1E2 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */; };
+		BAC3271C2A2DC83D00EBF1E2 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,9 @@
 		ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListView.swift; sourceTree = "<group>"; };
 		ABF7B5C12A20AB61006EB1EF /* DummySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySectionViewModel.swift; sourceTree = "<group>"; };
 		ABF7B5C32A20AB93006EB1EF /* DummyBillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBillListViewModel.swift; sourceTree = "<group>"; };
+		BA7CF1022A2898FD00B041DC /* BinarySearchTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeTests.swift; sourceTree = "<group>"; };
+		BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
 		BAB398F32A24997B001328ED /* AddBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +160,7 @@
 			children = (
 				9B1DBD972A0E2EE40082999A /* BillValidationErrorTests.swift */,
 				9B6667392A152B95006AB63B /* BillTests.swift */,
+				BA7CF0FC2A28983700B041DC /* BinarySearchTree */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 		9BF8522F2A0F6E7E0000E0C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA07E9922A278DD800E1B99A /* BinarySearchTree */,
 				9BF852302A0F6E7E0000E0C0 /* BillValidationError.swift */,
 				9BD630A62A125B1B00AF6406 /* Bill.swift */,
 			);
@@ -273,6 +283,23 @@
 				ABF7B5BF2A20AB3A006EB1EF /* BillListView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		BA07E9922A278DD800E1B99A /* BinarySearchTree */ = {
+			isa = PBXGroup;
+			children = (
+				BA7CF10B2A28DFA200B041DC /* BinarySearchTree.swift */,
+				BA7CF10D2A28DFD700B041DC /* BinarySearchTreeNode.swift */,
+			);
+			path = BinarySearchTree;
+			sourceTree = "<group>";
+		};
+		BA7CF0FC2A28983700B041DC /* BinarySearchTree */ = {
+			isa = PBXGroup;
+			children = (
+				BA7CF1022A2898FD00B041DC /* BinarySearchTreeTests.swift */,
+			);
+			path = BinarySearchTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7CF10E2A28DFD700B041DC /* BinarySearchTreeNode.swift in Sources */,
 				BAB398F42A24997B001328ED /* AddBillView.swift in Sources */,
 				9BE7DB102A23C4E600B4ADA4 /* BlackRoundedRectangleButton.swift in Sources */,
 				9BB749C02A28E9F400189FF1 /* View.swift in Sources */,
@@ -405,6 +433,7 @@
 				ABF7B5C02A20AB3A006EB1EF /* BillListView.swift in Sources */,
 				9BE7DB0E2A23C4D200B4ADA4 /* CircleWithPlusButton.swift in Sources */,
 				9BE7DB0C2A23C4B200B4ADA4 /* String+AppIconName.swift in Sources */,
+				BA7CF10C2A28DFA200B041DC /* BinarySearchTree.swift in Sources */,
 				9BF852312A0F6E7E0000E0C0 /* BillValidationError.swift in Sources */,
 				AB1376FD2A173F530085CEFE /* BillRowView.swift in Sources */,
 				9BAE99E12A276EE8000FEA3E /* DummyBillRowViewModel.swift in Sources */,
@@ -425,9 +454,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC3271B2A2DC83B00EBF1E2 /* BinarySearchTreeNode.swift in Sources */,
+				BA7CF1032A2898FD00B041DC /* BinarySearchTreeTests.swift in Sources */,
 				9B66673B2A152EA4006AB63B /* Bill.swift in Sources */,
 				9B1EF2562A271FCD00C7B62A /* String+AppButtonLabelNameTests.swift in Sources */,
 				9B5C38D02A25CAB3007777B3 /* String+AppButtonLabelName.swift in Sources */,
+				BAC3271C2A2DC83D00EBF1E2 /* BinarySearchTree.swift in Sources */,
 				9B5C38CC2A25C799007777B3 /* String+AppIconName.swift in Sources */,
 				9BF852322A0F6E850000E0C0 /* BillValidationError.swift in Sources */,
 				9B1EF2572A271FCD00C7B62A /* String+AppIconNameTests.swift in Sources */,
