@@ -5,7 +5,7 @@ struct BillRowView: View {
     // MARK: - Internal interface
 
     /// The view model to provide data to the view.
-    var viewModel: BillRowViewModel
+    let viewModel: BillRowViewModel
 
     var body: some View {
         HStack {

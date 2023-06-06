@@ -19,7 +19,7 @@ final class BillRowViewModel: Identifiable {
     ///   - description: Description of the spending in the bill.
     ///   - participants:  A list of the participants' names involved in the bill.
     ///   - sumOfBill: Total amount of the bill.
-    init(bill: Bill = Bill.Dummy.twoBills[0]) {
+    init(bill: Bill = Bill.Dummy.bills[0]) {
         description = bill.description
         let arrayOfParticipants = bill.personPaid.keys
         participants = arrayOfParticipants.joined(separator: ", ")

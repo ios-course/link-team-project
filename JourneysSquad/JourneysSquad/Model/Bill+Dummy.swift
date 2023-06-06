@@ -1,8 +1,10 @@
 import Foundation
 
 extension Bill {
+    /// Provides the lists of dummy bills.
     enum Dummy {
-        static let twoBills: [Bill] = {
+        /// The list of dummy bills.
+        static let bills: [Bill] = {
             var bills = [Bill]()
 
             if let mac = try? Bill(
@@ -21,11 +23,6 @@ extension Bill {
             ) {
                 bills.append(burKing)
             }
-            return bills
-        }()
-
-        static let threeBills: [Bill] = {
-            var bills = [Bill]()
             if let rentCar = try? Bill(
                 personPaid: ["Kate": 100, "Vanya": 100, "Said": 100],
                 description: "Rent car",

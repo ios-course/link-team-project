@@ -7,13 +7,13 @@ final class DummyBillListViewModel {
         [
             DummySectionViewModel(
                 header: "2023-05-24",
-                rows: Bill.Dummy.twoBills.map { bill in
+                rows: Bill.Dummy.bills.map { bill in
                     BillRowViewModel(bill: bill)
                 }
             ),
             DummySectionViewModel(
                 header: "2023-05-22",
-                rows: Bill.Dummy.threeBills.map { bill in
+                rows: Bill.Dummy.bills.map { bill in
                     BillRowViewModel(bill: bill)
                 }
             ),
