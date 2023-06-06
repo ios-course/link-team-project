@@ -5,7 +5,7 @@ struct BillRowView: View {
     // MARK: - Internal interface
 
     /// The view model to provide data to the view.
-    let viewModel: DummyBillRowViewModel
+    let viewModel: BillRowViewModel
 
     var body: some View {
         HStack {
@@ -41,11 +41,7 @@ struct BillRowView: View {
 struct BillRow_Previews: PreviewProvider {
     static var previews: some View {
         BillRowView(
-            viewModel: DummyBillRowViewModel(
-                description: "Description",
-                participants: "Egor, Dima",
-                sumOfBill: "50.00"
-            )
+            viewModel: BillRowViewModel()
         )
     }
 }

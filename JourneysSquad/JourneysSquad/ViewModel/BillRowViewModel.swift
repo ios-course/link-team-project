@@ -1,7 +1,7 @@
 import Foundation
 
 /// Dummy view model that provides data to display for a list row.
-final class DummyBillRowViewModel: Identifiable {
+final class BillRowViewModel: Identifiable {
     /// Description of the bill to be shown in the view.
     let description: String
 
@@ -12,20 +12,18 @@ final class DummyBillRowViewModel: Identifiable {
     let sumOfBill: String
 
     /// The bill's unique identifier.
-    let id = UUID()
+    let id: UUID
 
     /// Initializes a new instance with the provided data.
     /// - Parameters:
     ///   - description: Description of the spending in the bill.
     ///   - participants:  A list of the participants' names involved in the bill.
     ///   - sumOfBill: Total amount of the bill.
-    init(
-        description: String,
-        participants: String,
-        sumOfBill: String
-    ) {
-        self.description = description
-        self.participants = participants
-        self.sumOfBill = sumOfBill
+    init(bill: Bill = Bill.Dummy.bills[0]) {
+        description = bill.description
+        let arrayOfParticipants = bill.personPaid.keys
+        participants = arrayOfParticipants.joined(separator: ", ")
+        sumOfBill = bill.sumOfBill.formatted(.currency(code: SupportedCurrency.usd))
+        id = bill.id
     }
 }
