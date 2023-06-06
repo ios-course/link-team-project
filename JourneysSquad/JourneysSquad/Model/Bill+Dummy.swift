@@ -46,7 +46,7 @@ extension Bill {
                 bills.append(taxi)
             }
 
-                return bills
-            }()
+            return bills
+        }()
     }
 }
