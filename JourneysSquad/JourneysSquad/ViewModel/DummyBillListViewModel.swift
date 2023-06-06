@@ -7,24 +7,15 @@ final class DummyBillListViewModel {
         [
             DummySectionViewModel(
                 header: "2023-05-24",
-                rows: [
-                    BillRowViewModel(bill: Bill.Dummy.bills[0]),
-                    BillRowViewModel(bill: Bill.Dummy.bills[1]),
-                ]
-            ),
-            DummySectionViewModel(
-                header: "2023-05-23",
-                rows: [
-                    BillRowViewModel(bill: Bill.Dummy.bills[0]),
-                ]
+                rows: Bill.Dummy.twoBills.map { bill in
+                    BillRowViewModel(bill: bill)
+                }
             ),
             DummySectionViewModel(
                 header: "2023-05-22",
-                rows: [
-                    BillRowViewModel(bill: Bill.Dummy.bills[0]),
-                    BillRowViewModel(bill: Bill.Dummy.bills[1]),
-                    BillRowViewModel(bill: Bill.Dummy.bills[2]),
-                ]
+                rows: Bill.Dummy.threeBills.map { bill in
+                    BillRowViewModel(bill: bill)
+                }
             ),
         ]
 }
